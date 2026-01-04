@@ -1,16 +1,15 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 export default function ThemeToggle() {
-  const [isDark, setIsDark] = useState(false);
-
-  useEffect(() => {
-    // Check initial theme
-    const isDarkMode = document.documentElement.classList.contains("dark");
-    setIsDark(isDarkMode);
-  }, []);
+  const [isDark, setIsDark] = useState(() => {
+    if (typeof window !== "undefined") {
+      return document.documentElement.classList.contains("dark");
+    }
+    return false;
+  });
 
   const toggleTheme = () => {
     const newIsDark = !isDark;
@@ -30,7 +29,7 @@ export default function ThemeToggle() {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       onClick={toggleTheme}
-      className="p-3 rounded-xl bg-card-bg border border-border hover:bg-card-hover transition-all duration-300"
+      className="p-3 cursor-pointer rounded-xl bg-card-bg border border-border hover:bg-card-hover transition-all duration-300"
       aria-label="Toggle theme"
     >
       {isDark ? (
