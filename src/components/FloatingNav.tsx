@@ -20,6 +20,7 @@ const defaultNavItems: NavItem[] = [
   { id: "hero", labelKey: "hero" },
   { id: "skills", labelKey: "skills" },
   { id: "projects", labelKey: "projects" },
+  { id: "business-projects", labelKey: "businessProjects" },
   { id: "experience", labelKey: "experience" },
   { id: "about", labelKey: "about" },
   { id: "contact", labelKey: "contact" },
@@ -59,7 +60,7 @@ export default function FloatingNav({
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [navItems]);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
