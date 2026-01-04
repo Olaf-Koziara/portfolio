@@ -6,11 +6,10 @@ import { routing } from "@/i18n/routing";
 import ThemeProvider from "@/components/ThemeProvider";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import ThemeToggle from "@/components/ThemeToggle";
-import FloatingNav from "@/components/FloatingNav";
 import "../globals.css";
 
 export const metadata: Metadata = {
-  title: "Your Name - Frontend Developer",
+  title: "Olaf Koziara - Frontend Developer",
   description:
     "Frontend Developer specializing in Next.js, React, TypeScript, and modern web technologies.",
   keywords: [
@@ -20,9 +19,9 @@ export const metadata: Metadata = {
     "TypeScript",
     "Web Development",
   ],
-  authors: [{ name: "Your Name" }],
+  authors: [{ name: "Olaf Koziara" }],
   openGraph: {
-    title: "Your Name - Frontend Developer",
+    title: "Olaf Koziara - Frontend Developer",
     description:
       "Frontend Developer specializing in Next.js, React, TypeScript, and modern web technologies.",
     type: "website",
@@ -80,7 +79,7 @@ export default async function LocaleLayout({
             <footer className="border-t border-border py-8 px-4 sm:px-6 lg:px-8">
               <div className="max-w-6xl mx-auto text-center text-muted text-sm">
                 <p>
-                  © {new Date().getFullYear()} Your Name.{" "}
+                  © {new Date().getFullYear()} Olaf Koziara{" "}
                   {locale === "en"
                     ? "All rights reserved."
                     : "Wszelkie prawa zastrzeżone."}

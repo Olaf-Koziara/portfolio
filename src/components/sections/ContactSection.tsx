@@ -27,7 +27,7 @@ export default function ContactSection() {
             className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12"
           >
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:olaf.koziara@gmail.com"
               className="px-8 py-4 bg-accent text-white rounded-xl font-medium hover:bg-accent-hover transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
               {t("email")}
@@ -42,7 +42,7 @@ export default function ContactSection() {
             className="flex gap-8 justify-center"
           >
             <a
-              href="https://github.com"
+              href="https://github.com/Olaf-Koziara/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted hover:text-accent transition-colors duration-300 text-lg font-medium"
@@ -50,20 +50,12 @@ export default function ContactSection() {
               GitHub
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/olaf-koziara-0b7b47164/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted hover:text-accent transition-colors duration-300 text-lg font-medium"
             >
               LinkedIn
-            </a>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted hover:text-accent transition-colors duration-300 text-lg font-medium"
-            >
-              Twitter
             </a>
           </motion.div>
         </motion.div>
