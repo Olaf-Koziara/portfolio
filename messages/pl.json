@@ -1,0 +1,263 @@
+{
+  "nav": {
+    "hero": "Start",
+    "skills": "Umiejętności",
+    "projects": "Projekty",
+    "experience": "Doświadczenie",
+    "about": "O mnie",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "greeting": "Cześć, jestem",
+    "name": "Olaf Koziara",
+    "role": "Frontend Developer",
+    "description": "Tworzę wydajne, dostępne aplikacje webowe z ponad 3-letnim doświadczeniem w ekosystemach React i Angular.",
+    "cta": {
+      "projects": "Zobacz Projekty",
+      "cv": "Pobierz CV"
+    }
+  },
+  "skills": {
+    "title": "Technologie",
+    "subtitle": "Narzędzia, z którymi pracuję"
+  },
+  "projects": {
+    "title": "Wybrane Projekty",
+    "subtitle": "Moje najnowsze prace",
+    "viewLive": "Demo",
+    "viewCode": "GitHub",
+    "viewCaseStudy": "Case study",
+    "items": [
+      {
+        "name": "Orbitask manager",
+        "description": "Menedżer zadań z aktualizacjami w czasie rzeczywistym, drag & drop i funkcjami zespołowymi.",
+        "stack": [
+          "React",
+          "TypeScript",
+          "Tailwind",
+          "Zustand",
+          "Node.js",
+          "MongoDB"
+        ],
+        "liveUrl": "https://example.com",
+        "githubUrl": "https://github.com",
+        "caseStudies": [
+          {
+            "title": ""
+          }
+        ]
+      },
+      {
+        "name": "Angular finance",
+        "description": "Współdzielony menedżer zadań z aktualizacjami w czasie rzeczywistym, drag & drop i funkcjami zespołowymi.",
+        "stack": ["React", "Node.js", "Socket.io", "MongoDB"],
+        "liveUrl": "https://example.com",
+        "githubUrl": "https://github.com"
+      },
+      {
+        "name": "Dashboard Pogodowy",
+        "description": "Piękna aplikacja pogodowa z prognozami, mapami i wyszukiwaniem lokalizacji zasilana przez API pogodowe.",
+        "stack": ["Next.js", "TypeScript", "Chart.js", "Leaflet"],
+        "liveUrl": "https://example.com",
+        "githubUrl": "https://github.com"
+      },
+      {
+        "name": "CMS Portfolio",
+        "description": "Headless CMS do zarządzania treścią portfolio z niestandardowymi polami i biblioteką mediów.",
+        "stack": ["Angular", "NestJS", "PostgreSQL", "AWS"],
+        "liveUrl": "https://example.com",
+        "githubUrl": "https://github.com"
+      }
+    ]
+  },
+  "experience": {
+    "title": "Doświadczenie",
+    "subtitle": "Moja zawodowa podróż",
+    "items": [
+      {
+        "company": "SunGroup",
+        "role": "Frontend Developer",
+        "period": "Kwi 2025 - Lip 2025",
+        "points": [
+          "Tworzyłem bibliotekę reużywalnych komponentów webowych (PHP, JS, CSS) w pełni zgodnych z WCAG 2.2",
+          "Wdrożyłem dostępne komponenty na ponad 100 landing pages zapewniając spójność",
+          "Ściśle współpracowałem z UI/UX designerami przy implementacji pixel-perfect interfejsów"
+        ]
+      },
+      {
+        "company": "PGE Systemy",
+        "role": "Frontend Developer",
+        "period": "Lip 2021 - Wrz 2024",
+        "points": [
+          "Rozwijałem aplikacje w ekosystemach React i Angular dla Grupy PGE",
+          "PWA Newsletter: Zaimplementowałem offline-first z Service Workers, osiągając Lighthouse 95+",
+          "Aplikacja Raportowania Finansowego: Zaprojektowałem Next.js z GraphQL API obsługującym 1000+ zapytań dziennie",
+          "CMS FormBuilder: Zbudowałem dynamiczne formularze z zależnościami pól używane w całej grupie kapitałowej",
+          "Core Theme: Zaprojektowałem reużywalne komponenty TWIG/SASS/JS dla wszystkich stron GK PGE"
+        ]
+      },
+      {
+        "company": "Freelance",
+        "role": "Fullstack Developer",
+        "period": "Mar 2022 - Obecnie",
+        "points": [
+          "Customizacja rozwiązań Comarch B2B z wykorzystaniem Angular na frontendzie i C#/.NET/SQL na backendzie",
+          "Rozwój aplikacji WordPress i Next.js z bezpieczną integracją bramek płatności",
+          "Optymalizacja SEO legacy websites — wzrost ruchu organicznego o ponad 30%",
+          "Stworzenie pluginu osTicket do automatycznej migracji ticketów do Redmine"
+        ]
+      }
+    ]
+  },
+  "about": {
+    "title": "O Mnie",
+    "subtitle": "Trochę więcej o tym, kim jestem",
+    "paragraphs": [
+      "Frontend developer z ponad 3-letnim doświadczeniem komercyjnym. Specjalizuję się w React, ale swobodnie poruszam się również w ekosystemie Angular oraz technologiach backendowych. Ta wszechstronność pozwala mi efektywnie współpracować z różnymi zespołami i podejmować się złożonych projektów.",
+      "W swojej karierze dostarczałem rozwiązania dla dużych organizacji — od Progressive Web Apps z wynikiem Lighthouse 95+ po systemy formularzy obsługujące całe korporacje. Cenię czysty kod, dostępność i wydajność.",
+      "Chętnie dzielę się wiedzą i nieustannie poszerzam swoje kompetencje. Jeśli szukasz kogoś, kto podejdzie do projektu z zaangażowaniem — porozmawiajmy."
+    ]
+  },
+  "contact": {
+    "title": "Skontaktuj się",
+    "subtitle": "Pracujmy razem",
+    "email": "Wyślij Email",
+    "form": {
+      "name": "Imię",
+      "email": "Email",
+      "message": "Wiadomość",
+      "send": "Wyślij Wiadomość"
+    }
+  },
+  "footer": {
+    "rights": "Wszelkie prawa zastrzeżone."
+  },
+  "caseStudy": {
+    "backToProjects": "Powrót do Projektów",
+    "overview": "Przegląd",
+    "techStack": "Stack Technologiczny",
+    "keyFeatures": "Kluczowe Funkcje",
+    "technicalHighlights": "Aspekty Techniczne",
+    "demoAccount": "Konto Demo",
+    "orbitaskmanager": {
+      "title": "OrbiTask Manager",
+      "tagline": "Nowoczesne Zarządzanie Zadaniami i Projektami",
+      "description": "Kompleksowa aplikacja do zarządzania zadaniami i projektami, zaprojektowana w celu zwiększenia produktywności poprzez inteligentną organizację, wizualne przepływy pracy i płynną współpracę.",
+      "demoUrl": "https://orbitask-manager-1.onrender.com/",
+      "demoCredentials": {
+        "email": "test@gmail.com",
+        "password": "12test34"
+      },
+      "overview": {
+        "intro": "OrbiTask Manager to gotowa do produkcji aplikacja full-stack, która demonstruje nowoczesne praktyki tworzenia aplikacji webowych. Zbudowana jako narzędzie do zwiększania produktywności, łączy potężne technologie z intuicyjnym interfejsem użytkownika.",
+        "goals": [
+          "Usprawnienie zarządzania zadaniami i planowania projektów",
+          "Implementacja skalowalnej architektury dla rosnącej złożoności",
+          "Stworzenie intuicyjnego interfejsu z wieloma trybami widoku",
+          "Budowa modularnego designu ułatwiającego dodawanie funkcji"
+        ]
+      },
+      "features": [
+        {
+          "title": "Wiele Trybów Widoku",
+          "description": "Tablica Kanban, widok Kalendarza i Lista dla różnych przepływów pracy"
+        },
+        {
+          "title": "System Priorytetów",
+          "description": "Klasyfikacja priorytetów: Niski, Średni, Wysoki i Pilny"
+        },
+        {
+          "title": "Aktualizacje w Czasie Rzeczywistym",
+          "description": "Synchronizacja na żywo między wszystkimi podłączonymi urządzeniami"
+        },
+        {
+          "title": "Przeciągnij i Upuść",
+          "description": "Intuicyjne zarządzanie zadaniami z płynnym przeciąganiem"
+        },
+        {
+          "title": "Współpraca Zespołowa",
+          "description": "Przypisywanie zadań, udostępnianie projektów i wspólna praca"
+        },
+        {
+          "title": "Zaawansowane Filtrowanie",
+          "description": "Filtruj według projektu, osoby przypisanej, priorytetu i więcej"
+        }
+      ],
+      "techStack": {
+        "frontend": [
+          "React 18",
+          "TypeScript",
+          "Vite",
+          "Tailwind CSS",
+          "Shadcn/ui",
+          "React Query",
+          "Zustand"
+        ],
+        "backend": [
+          "Node.js",
+          "Express.js",
+          "tRPC",
+          "MongoDB",
+          "Mongoose",
+          "JWT",
+          "Zod"
+        ]
+      },
+      "highlights": [
+        {
+          "id": "type-safety",
+          "title": "Magia Bezpieczeństwa Typów End-to-End",
+          "problem": "W tradycyjnych REST API, gdy zmienisz pole na backendzie, frontend dowiaduje się o tym dopiero gdy wystąpią błędy w czasie wykonania.",
+          "solution": "Użycie tRPC do automatycznej synchronizacji typów między frontendem a backendem bez generowania kodu.",
+          "impact": "Zero błędów typów w czasie wykonania, natychmiastowy refactoring w całym stacku, autocomplete wszędzie.",
+          "code": {
+            "backend": "export const taskRouter = router({\n  create: protectedProcedure\n    .input(z.object({\n      title: z.string().min(1).max(100),\n      priority: z.enum(['low', 'medium', 'high', 'urgent']),\n      dueDate: z.date().optional(),\n    }))\n    .mutation(async ({ input, ctx }) => {\n      return await TaskModel.create({\n        ...input,\n        createdBy: ctx.user.id,\n      });\n    }),\n});",
+            "frontend": "export const useTasks = () => {\n  const createTask = trpc.tasks.create.useMutation();\n  \n  // TypeScript ZNA WSZYSTKO o tym API\n  createTask.mutate({\n    title: \"Nowe zadanie\",\n    priority: \"high\",\n    dueDate: new Date('2026-02-01'),\n  });\n};"
+          }
+        },
+        {
+          "id": "drag-drop",
+          "title": "Kanban z Przeciąganiem i Klikalnym Przyciskami",
+          "problem": "Standardowe przeciąganie blokuje WSZYSTKIE kliknięcia podczas przeciągania. Nie można kliknąć przycisku Usuń wewnątrz przeciąganej karty.",
+          "solution": "Niestandardowy sensor wykrywający atrybut data-no-dnd, pozwalający na interaktywne elementy wewnątrz przeciąganych kart.",
+          "impact": "Użytkownicy mogą płynnie przeciągać karty ORAZ klikać przyciski w ich wnętrzu. Najlepsze z obu światów!",
+          "code": {
+            "sensor": "export class CustomSensor extends PointerSensor {\n  static activators = [{\n    eventName: 'onPointerDown' as const,\n    handler: ({nativeEvent: event}) => {\n      let element = event.target as HTMLElement;\n      while (element) {\n        if (element.dataset?.noDnd) {\n          return false; // Nie rozpoczynaj przeciągania\n        }\n        element = element.parentElement;\n      }\n      return true; // OK, można przeciągać\n    }\n  }];\n}",
+            "usage": "export const TaskCard = ({ task }) => (\n  <div className=\"task-card\">\n    <h3>{task.title}</h3>\n    <div className=\"actions\" data-no-dnd>\n      <Button onClick={handleEdit}>\n        <PencilIcon /> Edytuj\n      </Button>\n      <Button onClick={handleDelete}>\n        <TrashIcon /> Usuń\n      </Button>\n    </div>\n  </div>\n);"
+          }
+        },
+        {
+          "id": "optimistic-updates",
+          "title": "Optymistyczne Aktualizacje z Cofnięciem",
+          "problem": "Użytkownik klika 'Oznacz jako Wykonane' → czeka 500ms na API → w końcu widzi zmianę. Czuje się wolno.",
+          "solution": "Natychmiastowa aktualizacja UI (optymistycznie), synchronizacja z backendem w tle, automatyczne cofnięcie przy błędach.",
+          "impact": "Aplikacja działa błyskawicznie. Nie czekamy na API. Automatyczne cofnięcie przy błędach.",
+          "code": {
+            "implementation": "export const useTasks = () => {\n  const updateTaskStatus = useCallback(\n    async (taskId: string, newStatus: TaskStatus) => {\n      // Zrób migawkę PRZED jakąkolwiek zmianą\n      const originalTasks = [...tasks];\n      \n      // NATYCHMIASTOWA AKTUALIZACJA - użytkownik widzi zmianę od razu\n      const optimisticTasks = tasks.map(task =>\n        task._id === taskId ? { ...task, status: newStatus } : task\n      );\n      setTasks(optimisticTasks);\n      \n      try {\n        // Aktualizuj backend w tle\n        await utils.client.tasks.update.mutate({\n          id: taskId,\n          data: { status: newStatus },\n        });\n        \n        // Odśwież aby otrzymać prawdziwe dane z serwera\n        await utils.tasks.invalidate();\n      } catch (error) {\n        // COFNIJ jeśli coś poszło nie tak\n        setTasks(originalTasks);\n        toast.error(\"Nie udało się zaktualizować zadania. Zmiany cofnięte.\");\n      }\n    },\n    [tasks, utils]\n  );\n};"
+          }
+        },
+        {
+          "id": "debouncing",
+          "title": "Inteligentne Debouncing dla Wyszukiwania",
+          "problem": "Użytkownik wpisuje 'implementacja autentykacji' w wyszukiwarkę → 28 znaków = 28 zapytań API w 2 sekundy!",
+          "solution": "Niestandardowy hook debounce, który czeka 300ms po tym jak użytkownik przestanie pisać przed wysłaniem zapytania.",
+          "impact": "28 zapytań → 1 zapytanie. Znacznie szczęśliwszy serwer API!",
+          "code": {
+            "hook": "export function useDebounce<T>(value: T, delay: number): T {\n  const [debouncedValue, setDebouncedValue] = useState<T>(value);\n\n  useEffect(() => {\n    const handler = setTimeout(() => {\n      setDebouncedValue(value);\n    }, delay);\n\n    return () => clearTimeout(handler);\n  }, [value, delay]);\n\n  return debouncedValue;\n}",
+            "usage": "export const useTasks = () => {\n  const { taskFilters } = useFiltersStore();\n  \n  // Czekaj 300ms po tym jak użytkownik przestanie pisać\n  const debouncedFilters = useDebounce(taskFilters, 300);\n  \n  const queryInput = useMemo(\n    () => FilterService.prepareQueryFilters(debouncedFilters),\n    [debouncedFilters]\n  );\n  \n  const { data: tasks } = trpc.tasks.list.useQuery(queryInput, {\n    staleTime: 30000,\n  });\n};"
+          }
+        },
+        {
+          "id": "performance",
+          "title": "Mistrzowska Optymalizacja Wydajności",
+          "problem": "Lista 50 kart zadań renderuje się całkowicie przy każdej zmianie stanu rodzica, nawet jeśli zadania się nie zmieniły.",
+          "solution": "Strategiczne użycie useMemo, useCallback i React.memo aby zapobiec niepotrzebnym re-renderom.",
+          "impact": "O 73% szybsze renderowanie! Z 450ms do 120ms dla 50 zadań.",
+          "code": {
+            "optimized": "export const KanbanBoard = () => {\n  const { tasks } = useTasks();\n  \n  // Przelicz TYLKO gdy zadania się zmienią\n  const tasksByStatus = useMemo(() => {\n    return COLUMNS.reduce((acc, col) => {\n      acc[col.status] = tasks.filter(t => t.status === col.status);\n      return acc;\n    }, {} as Record<TaskStatus, Task[]>);\n  }, [tasks]);\n  \n  // Stabilna referencja funkcji\n  const handleDragEnd = useCallback((event: DragEndEvent) => {\n    const taskId = event.active.id as string;\n    const newStatus = event.over.id as TaskStatus;\n    setTaskStatus(taskId, newStatus);\n  }, [setTaskStatus]);\n  \n  return (\n    <DndContext onDragEnd={handleDragEnd}>\n      {COLUMNS.map(col => (\n        <Column \n          key={col.status}\n          tasks={tasksByStatus[col.status]}\n        />\n      ))}\n    </DndContext>\n  );\n};"
+          }
+        }
+      ]
+    }
+  }
+}

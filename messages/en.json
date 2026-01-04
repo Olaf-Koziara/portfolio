@@ -1,0 +1,250 @@
+{
+  "nav": {
+    "hero": "Home",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Olaf Koziara",
+    "role": "Frontend Developer",
+    "description": "I build performant, accessible web applications with 3+ years of experience in React and Angular ecosystems.",
+    "cta": {
+      "projects": "View Projects",
+      "cv": "Download CV"
+    }
+  },
+  "skills": {
+    "title": "Tech Stack",
+    "subtitle": "Technologies I work with"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "Some of my recent work",
+    "viewLive": "Live Demo",
+    "viewCode": "GitHub",
+    "items": [
+      {
+        "name": "E-Commerce Platform",
+        "description": "Modern online store with cart, payments, and admin dashboard. Built with Next.js and Stripe integration.",
+        "stack": ["Next.js", "TypeScript", "Tailwind", "Stripe"],
+        "liveUrl": "https://example.com",
+        "githubUrl": "https://github.com"
+      },
+      {
+        "name": "Task Management App",
+        "description": "Collaborative task manager with real-time updates, drag & drop, and team features.",
+        "stack": ["React", "Node.js", "Socket.io", "MongoDB"],
+        "liveUrl": "https://example.com",
+        "githubUrl": "https://github.com"
+      },
+      {
+        "name": "Weather Dashboard",
+        "description": "Beautiful weather app with forecasts, maps, and location search powered by weather API.",
+        "stack": ["Next.js", "TypeScript", "Chart.js", "Leaflet"],
+        "liveUrl": "https://example.com",
+        "githubUrl": "https://github.com"
+      },
+      {
+        "name": "Portfolio CMS",
+        "description": "Headless CMS for managing portfolio content with custom fields and media library.",
+        "stack": ["Angular", "NestJS", "PostgreSQL", "AWS"],
+        "liveUrl": "https://example.com",
+        "githubUrl": "https://github.com"
+      }
+    ]
+  },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "My professional journey",
+    "items": [
+      {
+        "company": "SunGroup",
+        "role": "Frontend Developer",
+        "period": "Apr 2025 - Jul 2025",
+        "points": [
+          "Built a library of reusable web components (PHP, JS, CSS) fully compliant with WCAG 2.2 standards",
+          "Deployed accessible components across 100+ landing pages ensuring consistency",
+          "Collaborated closely with UI/UX designers to translate mockups into pixel-perfect interfaces"
+        ]
+      },
+      {
+        "company": "PGE Systemy",
+        "role": "Frontend Developer",
+        "period": "Jul 2021 - Sep 2024",
+        "points": [
+          "Developed applications in React and Angular ecosystems for PGE Group",
+          "PWA Newsletter: Implemented offline-first functionality with Service Workers, achieving Lighthouse 95+",
+          "Financial Reporting App: Engineered Next.js application with GraphQL API handling 1,000+ daily requests",
+          "CMS FormBuilder: Built dynamic forms with field dependencies used across the entire capital group",
+          "Core Theme: Designed reusable TWIG/SASS/JS components for all PGE Group websites"
+        ]
+      },
+      {
+        "company": "Freelance",
+        "role": "Fullstack Developer",
+        "period": "Mar 2022 - Present",
+        "points": [
+          "Customized Comarch B2B solutions using Angular frontend and C#/.NET/SQL backend",
+          "Developed WordPress and Next.js applications with secure payment gateway integration",
+          "Optimized SEO for legacy websites — driving 30%+ increase in organic traffic",
+          "Engineered custom osTicket plugin for automated ticket migration to Redmine"
+        ]
+      }
+    ]
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "A bit more about who I am",
+    "paragraphs": [
+      "Frontend developer with over 3 years of commercial experience. I specialize in React but am equally comfortable working with Angular and backend technologies. This versatility allows me to collaborate effectively with diverse teams and take on complex projects.",
+      "Throughout my career, I've delivered solutions for large organizations — from Progressive Web Apps scoring 95+ on Lighthouse to enterprise-wide form systems. I value clean code, accessibility, and performance.",
+      "I enjoy sharing knowledge and continuously expanding my skill set. If you're looking for someone who approaches projects with genuine engagement — let's talk."
+    ]
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Let's work together",
+    "email": "Email Me",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send Message"
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  },
+  "caseStudy": {
+    "backToProjects": "Back to Projects",
+    "overview": "Overview",
+    "techStack": "Tech Stack",
+    "keyFeatures": "Key Features",
+    "technicalHighlights": "Technical Highlights",
+    "demoAccount": "Demo Account",
+    "orbitaskmanager": {
+      "title": "OrbiTask Manager",
+      "tagline": "Modern Full-Stack Task & Project Management",
+      "description": "A comprehensive task and project management application designed to enhance personal productivity through intelligent organization, visual workflows, and seamless collaboration.",
+      "demoUrl": "https://orbitask-manager-1.onrender.com/",
+      "demoCredentials": {
+        "email": "test@gmail.com",
+        "password": "12test34"
+      },
+      "overview": {
+        "intro": "OrbiTask Manager is a production-ready full-stack application that demonstrates modern web development practices. Built as a personal productivity tool, it combines powerful technologies with an intuitive user experience.",
+        "goals": [
+          "Streamline task management and project planning",
+          "Implement scalable architecture for growing complexity",
+          "Create intuitive interface with multiple viewing modes",
+          "Build modular design for easy feature additions"
+        ]
+      },
+      "features": [
+        {
+          "title": "Multiple View Modes",
+          "description": "Kanban board, Calendar view, and List view for different workflows"
+        },
+        {
+          "title": "Priority System",
+          "description": "Low, Medium, High, and Urgent priority classification"
+        },
+        {
+          "title": "Real-time Updates",
+          "description": "Live synchronization across all connected devices"
+        },
+        {
+          "title": "Drag & Drop",
+          "description": "Intuitive task management with smooth drag-and-drop"
+        },
+        {
+          "title": "Team Collaboration",
+          "description": "Assign tasks, share projects, and work together"
+        },
+        {
+          "title": "Advanced Filtering",
+          "description": "Filter by project, assignee, priority, and more"
+        }
+      ],
+      "techStack": {
+        "frontend": [
+          "React 18",
+          "TypeScript",
+          "Vite",
+          "Tailwind CSS",
+          "Shadcn/ui",
+          "React Query",
+          "Zustand"
+        ],
+        "backend": [
+          "Node.js",
+          "Express.js",
+          "tRPC",
+          "MongoDB",
+          "Mongoose",
+          "JWT",
+          "Zod"
+        ]
+      },
+      "highlights": [
+        {
+          "id": "type-safety",
+          "title": "End-to-End Type Safety Magic",
+          "problem": "In traditional REST APIs, when you change a field on the backend, the frontend doesn't know about it until runtime errors appear.",
+          "solution": "Using tRPC for automatic type synchronization between frontend and backend without code generation.",
+          "impact": "Zero runtime type errors, instant refactoring across stack, autocomplete everywhere.",
+          "code": {
+            "backend": "export const taskRouter = router({\n  create: protectedProcedure\n    .input(z.object({\n      title: z.string().min(1).max(100),\n      priority: z.enum(['low', 'medium', 'high', 'urgent']),\n      dueDate: z.date().optional(),\n    }))\n    .mutation(async ({ input, ctx }) => {\n      return await TaskModel.create({\n        ...input,\n        createdBy: ctx.user.id,\n      });\n    }),\n});",
+            "frontend": "export const useTasks = () => {\n  const createTask = trpc.tasks.create.useMutation();\n  \n  // TypeScript knows EVERYTHING about this API\n  createTask.mutate({\n    title: \"New task\",\n    priority: \"high\",\n    dueDate: new Date('2026-02-01'),\n  });\n};"
+          }
+        },
+        {
+          "id": "drag-drop",
+          "title": "Kanban Drag & Drop with Clickable Buttons",
+          "problem": "Standard drag & drop blocks ALL clicks during drag. Can't click Delete button inside a draggable card.",
+          "solution": "Custom sensor that detects data-no-dnd attribute to allow interactive elements within draggable cards.",
+          "impact": "Users can drag cards smoothly AND click buttons inside them. Best of both worlds!",
+          "code": {
+            "sensor": "export class CustomSensor extends PointerSensor {\n  static activators = [{\n    eventName: 'onPointerDown' as const,\n    handler: ({nativeEvent: event}) => {\n      let element = event.target as HTMLElement;\n      while (element) {\n        if (element.dataset?.noDnd) {\n          return false; // Don't start dragging\n        }\n        element = element.parentElement;\n      }\n      return true; // OK to drag\n    }\n  }];\n}",
+            "usage": "export const TaskCard = ({ task }) => (\n  <div className=\"task-card\">\n    <h3>{task.title}</h3>\n    <div className=\"actions\" data-no-dnd>\n      <Button onClick={handleEdit}>\n        <PencilIcon /> Edit\n      </Button>\n      <Button onClick={handleDelete}>\n        <TrashIcon /> Delete\n      </Button>\n    </div>\n  </div>\n);"
+          }
+        },
+        {
+          "id": "optimistic-updates",
+          "title": "Optimistic Updates with Rollback",
+          "problem": "User clicks 'Mark as Done' → waits 500ms for API → finally sees change. Feels slow.",
+          "solution": "Update UI instantly (optimistic), sync with backend in background, auto-rollback on errors.",
+          "impact": "App feels instant. No waiting for API. Auto-rollback on errors.",
+          "code": {
+            "implementation": "export const useTasks = () => {\n  const updateTaskStatus = useCallback(\n    async (taskId: string, newStatus: TaskStatus) => {\n      // Take snapshot BEFORE changing anything\n      const originalTasks = [...tasks];\n      \n      // INSTANT UPDATE - User sees change immediately\n      const optimisticTasks = tasks.map(task =>\n        task._id === taskId ? { ...task, status: newStatus } : task\n      );\n      setTasks(optimisticTasks);\n      \n      try {\n        // Update backend in background\n        await utils.client.tasks.update.mutate({\n          id: taskId,\n          data: { status: newStatus },\n        });\n        \n        // Refresh to get real data from server\n        await utils.tasks.invalidate();\n      } catch (error) {\n        // ROLLBACK if something went wrong\n        setTasks(originalTasks);\n        toast.error(\"Failed to update task. Changes reverted.\");\n      }\n    },\n    [tasks, utils]\n  );\n};"
+          }
+        },
+        {
+          "id": "debouncing",
+          "title": "Smart Debouncing for Search",
+          "problem": "User types 'implement authentication' in search → 23 characters = 23 API requests in 2 seconds!",
+          "solution": "Custom debounce hook that waits 300ms after user stops typing before querying.",
+          "impact": "23 requests → 1 request. Much happier API server!",
+          "code": {
+            "hook": "export function useDebounce<T>(value: T, delay: number): T {\n  const [debouncedValue, setDebouncedValue] = useState<T>(value);\n\n  useEffect(() => {\n    const handler = setTimeout(() => {\n      setDebouncedValue(value);\n    }, delay);\n\n    return () => clearTimeout(handler);\n  }, [value, delay]);\n\n  return debouncedValue;\n}",
+            "usage": "export const useTasks = () => {\n  const { taskFilters } = useFiltersStore();\n  \n  // Wait 300ms after user stops typing\n  const debouncedFilters = useDebounce(taskFilters, 300);\n  \n  const queryInput = useMemo(\n    () => FilterService.prepareQueryFilters(debouncedFilters),\n    [debouncedFilters]\n  );\n  \n  const { data: tasks } = trpc.tasks.list.useQuery(queryInput, {\n    staleTime: 30000,\n  });\n};"
+          }
+        },
+        {
+          "id": "performance",
+          "title": "Performance Optimization Masterclass",
+          "problem": "List of 50 task cards re-renders completely on every parent state change, even if tasks didn't change.",
+          "solution": "Strategic use of useMemo, useCallback, and React.memo to prevent unnecessary re-renders.",
+          "impact": "73% faster renders! From 450ms to 120ms for 50 tasks.",
+          "code": {
+            "optimized": "export const KanbanBoard = () => {\n  const { tasks } = useTasks();\n  \n  // Re-calculate ONLY when tasks change\n  const tasksByStatus = useMemo(() => {\n    return COLUMNS.reduce((acc, col) => {\n      acc[col.status] = tasks.filter(t => t.status === col.status);\n      return acc;\n    }, {} as Record<TaskStatus, Task[]>);\n  }, [tasks]);\n  \n  // Stable function reference\n  const handleDragEnd = useCallback((event: DragEndEvent) => {\n    const taskId = event.active.id as string;\n    const newStatus = event.over.id as TaskStatus;\n    setTaskStatus(taskId, newStatus);\n  }, [setTaskStatus]);\n  \n  return (\n    <DndContext onDragEnd={handleDragEnd}>\n      {COLUMNS.map(col => (\n        <Column \n          key={col.status}\n          tasks={tasksByStatus[col.status]}\n        />\n      ))}\n    </DndContext>\n  );\n};"
+          }
+        }
+      ]
+    }
+  }
+}
