@@ -106,9 +106,9 @@
         "role": "Frontend Developer",
         "period": "Kwi 2025 - Lip 2025",
         "points": [
-          "Tworzyłem bibliotekę reużywalnych komponentów webowych (PHP, JS, CSS) w pełni zgodnych z WCAG 2.2",
-          "Wdrożyłem dostępne komponenty na ponad 100 landing pages zapewniając spójność",
-          "Ściśle współpracowałem z UI/UX designerami przy implementacji pixel-perfect interfejsów"
+          "Rozwijałem bibliotekę reużywalnych komponentów webowych (PHP, JS, CSS) w pełnej zgodności z WCAG 2.2",
+          "Biblioteka została wdrożona na ponad 100 stronach landing page, zapewniając spójność wizualną i dostępność",
+          "Współpracowałem z zespołem UI/UX przy implementacji pixel-perfect interfejsów"
         ]
       },
       {
@@ -116,11 +116,11 @@
         "role": "Frontend Developer",
         "period": "Lip 2021 - Wrz 2024",
         "points": [
-          "Rozwijałem aplikacje w ekosystemach React i Angular dla Grupy PGE",
-          "PWA Newsletter: Zaimplementowałem offline-first z Service Workers, osiągając Lighthouse 95+",
-          "Aplikacja Raportowania Finansowego: Zaprojektowałem Next.js z GraphQL API obsługującym 1000+ zapytań dziennie",
-          "CMS FormBuilder: Zbudowałem dynamiczne formularze z zależnościami pól używane w całej grupie kapitałowej",
-          "Core Theme: Zaprojektowałem reużywalne komponenty TWIG/SASS/JS dla wszystkich stron GK PGE"
+          "Tworzyłem aplikacje webowe w React i Angular dla największej grupy energetycznej w Polsce",
+          "PWA Newsletter — zaimplementowałem offline-first z Service Workers, osiągając wynik Lighthouse 95+",
+          "Aplikacja raportowania finansowego — zbudowałem rozwiązanie Next.js z GraphQL API obsługujące ponad 1000 zapytań dziennie",
+          "Form Builder CMS — zaprojektowałem system dynamicznych formularzy z zależnościami między polami, używany w całej grupie kapitałowej",
+          "Core Theme — stworzyłem bibliotekę reużywalnych komponentów (TWIG/SASS/JS) dla wszystkich witryn Grupy PGE"
         ]
       },
       {
@@ -128,21 +128,22 @@
         "role": "Fullstack Developer",
         "period": "Mar 2022 - Obecnie",
         "points": [
-          "Customizacja rozwiązań Comarch B2B z wykorzystaniem Angular na frontendzie i C#/.NET/SQL na backendzie",
-          "Rozwój aplikacji WordPress i Next.js z bezpieczną integracją bramek płatności",
+          "Customizacja rozwiązań Comarch B2B — Angular na frontendzie, C#/.NET/SQL na backendzie",
+          "Budowa aplikacji WordPress i Next.js z bezpieczną integracją bramek płatności",
           "Optymalizacja SEO legacy websites — wzrost ruchu organicznego o ponad 30%",
-          "Stworzenie pluginu osTicket do automatycznej migracji ticketów do Redmine"
+          "Automatyzacja przepływu pracy — plugin osTicket do migracji ticketów do Redmine"
         ]
       }
     ]
   },
+
   "about": {
     "title": "O Mnie",
     "subtitle": "Trochę więcej o tym, kim jestem",
     "paragraphs": [
-      "Frontend developer z ponad 3-letnim doświadczeniem komercyjnym. Specjalizuję się w React, ale swobodnie poruszam się również w ekosystemie Angular oraz technologiach backendowych. Ta wszechstronność pozwala mi efektywnie współpracować z różnymi zespołami i podejmować się złożonych projektów.",
-      "W swojej karierze dostarczałem rozwiązania dla dużych organizacji — od Progressive Web Apps z wynikiem Lighthouse 95+ po systemy formularzy obsługujące całe korporacje. Cenię czysty kod, dostępność i wydajność.",
-      "Chętnie dzielę się wiedzą i nieustannie poszerzam swoje kompetencje. Jeśli szukasz kogoś, kto podejdzie do projektu z zaangażowaniem — porozmawiajmy."
+      "Frontend developer z 3+ letnim doświadczeniem komercyjnym, specjalizujący się w React i Angular. Dodatkowo uczę się i wykorzystuję Node.js w projektach, co pozwala mi efektywnie współpracować z backendem i rozumieć pełny cykl życia aplikacji.",
+      "Pracowałem nad aplikacjami dla dużych organizacji — od zaawansowanych form builderów obsługujących setki użytkowników po responsywne PWA z wynikiem Lighthouse 95+. Dostarczam rozwiązania, które działają, są czytelne w kodzie i przyjemne w użyciu.",
+      "Lubię zagłębiać się w architekturę aplikacji, eksperymentować z nowymi technologiami i dzielić się wiedzą z innymi. Jeśli szukasz kogoś, kto podejdzie do projektu z prawdziwym zaangażowaniem i nie boi się wyzwań technicznych — porozmawiajmy."
     ]
   },
   "contact": {
@@ -337,12 +338,7 @@
           "CSS Grid",
           "Flexbox"
         ],
-        "backend": [
-          "Symfony",
-          "PHP",
-          "MySQL",
-          "Doctrine ORM"
-        ]
+        "backend": ["Symfony", "PHP", "MySQL", "Doctrine ORM"]
       },
       "comparison": {
         "title": "Transformacja Wizualna",
@@ -398,12 +394,7 @@
           "Angular CDK",
           "SCSS"
         ],
-        "backend": [
-          "Symfony",
-          "TWIG",
-          "PHP",
-          "MySQL"
-        ]
+        "backend": ["Symfony", "TWIG", "PHP", "MySQL"]
       },
       "process": {
         "title": "Proces Realizacji Projektu",

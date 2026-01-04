@@ -94,9 +94,9 @@
         "role": "Frontend Developer",
         "period": "Apr 2025 - Jul 2025",
         "points": [
-          "Built a library of reusable web components (PHP, JS, CSS) fully compliant with WCAG 2.2 standards",
-          "Deployed accessible components across 100+ landing pages ensuring consistency",
-          "Collaborated closely with UI/UX designers to translate mockups into pixel-perfect interfaces"
+          "Developed a library of reusable web components (PHP, JS, CSS) fully compliant with WCAG 2.2 standards",
+          "Library deployed across 100+ landing pages, ensuring visual consistency and accessibility",
+          "Collaborated with UI/UX team on pixel-perfect interface implementations"
         ]
       },
       {
@@ -104,11 +104,11 @@
         "role": "Frontend Developer",
         "period": "Jul 2021 - Sep 2024",
         "points": [
-          "Developed applications in React and Angular ecosystems for PGE Group",
-          "PWA Newsletter: Implemented offline-first functionality with Service Workers, achieving Lighthouse 95+",
-          "Financial Reporting App: Engineered Next.js application with GraphQL API handling 1,000+ daily requests",
-          "CMS FormBuilder: Built dynamic forms with field dependencies used across the entire capital group",
-          "Core Theme: Designed reusable TWIG/SASS/JS components for all PGE Group websites"
+          "Developed web applications in React and Angular for Poland's largest energy group",
+          "PWA Newsletter — implemented offline-first architecture with Service Workers, achieving Lighthouse score of 95+",
+          "Financial reporting app — built Next.js solution with GraphQL API handling 1000+ queries daily",
+          "Form Builder CMS — designed dynamic form system with field dependencies, used across entire capital group",
+          "Core Theme — created reusable component library (TWIG/SASS/JS) for all PGE Group websites"
         ]
       },
       {
@@ -116,21 +116,22 @@
         "role": "Fullstack Developer",
         "period": "Mar 2022 - Present",
         "points": [
-          "Customized Comarch B2B solutions using Angular frontend and C#/.NET/SQL backend",
-          "Developed WordPress and Next.js applications with secure payment gateway integration",
-          "Optimized SEO for legacy websites — driving 30%+ increase in organic traffic",
-          "Engineered custom osTicket plugin for automated ticket migration to Redmine"
+          "Customized Comarch B2B solutions — Angular frontend with C#/.NET/SQL backend",
+          "Built WordPress and Next.js applications with secure payment gateway integrations",
+          "Optimized SEO for legacy websites — increased organic traffic by over 30%",
+          "Automated workflows — created osTicket plugin for ticket migration to Redmine"
         ]
       }
     ]
   },
+
   "about": {
     "title": "About Me",
     "subtitle": "A bit more about who I am",
     "paragraphs": [
-      "Frontend developer with over 3 years of commercial experience. I specialize in React but am equally comfortable working with Angular and backend technologies. This versatility allows me to collaborate effectively with diverse teams and take on complex projects.",
-      "Throughout my career, I've delivered solutions for large organizations — from Progressive Web Apps scoring 95+ on Lighthouse to enterprise-wide form systems. I value clean code, accessibility, and performance.",
-      "I enjoy sharing knowledge and continuously expanding my skill set. If you're looking for someone who approaches projects with genuine engagement — let's talk."
+      "Frontend developer with 3+ years of commercial experience, specializing in React and Angular. I'm also learning and applying Node.js in my projects, which allows me to collaborate effectively with backend teams and understand the full application lifecycle.",
+      "I've worked on applications for large organizations — from advanced form builders serving hundreds of users to responsive PWAs scoring 95+ on Lighthouse. I deliver solutions that work, maintain clean code, and provide great user experience.",
+      "I enjoy diving deep into application architecture, experimenting with new technologies, and sharing knowledge with others. If you're looking for someone who approaches projects with genuine commitment and isn't afraid of technical challenges — let's talk."
     ]
   },
   "contact": {
@@ -325,12 +326,7 @@
           "CSS Grid",
           "Flexbox"
         ],
-        "backend": [
-          "Symfony",
-          "PHP",
-          "MySQL",
-          "Doctrine ORM"
-        ]
+        "backend": ["Symfony", "PHP", "MySQL", "Doctrine ORM"]
       },
       "comparison": {
         "title": "Visual Transformation",
@@ -386,12 +382,7 @@
           "Angular CDK",
           "SCSS"
         ],
-        "backend": [
-          "Symfony",
-          "TWIG",
-          "PHP",
-          "MySQL"
-        ]
+        "backend": ["Symfony", "TWIG", "PHP", "MySQL"]
       },
       "process": {
         "title": "Project Development Process",
