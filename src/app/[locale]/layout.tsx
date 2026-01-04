@@ -1,0 +1,95 @@
+import type { Metadata } from "next";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
+import ThemeProvider from "@/components/ThemeProvider";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import ThemeToggle from "@/components/ThemeToggle";
+import FloatingNav from "@/components/FloatingNav";
+import "../globals.css";
+
+export const metadata: Metadata = {
+  title: "Your Name - Frontend Developer",
+  description:
+    "Frontend Developer specializing in Next.js, React, TypeScript, and modern web technologies.",
+  keywords: [
+    "Frontend Developer",
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Web Development",
+  ],
+  authors: [{ name: "Your Name" }],
+  openGraph: {
+    title: "Your Name - Frontend Developer",
+    description:
+      "Frontend Developer specializing in Next.js, React, TypeScript, and modern web technologies.",
+    type: "website",
+  },
+};
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export default async function LocaleLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+
+  // Ensure that the incoming `locale` is valid
+  if (!routing.locales.includes(locale as any)) {
+    notFound();
+  }
+
+  // Providing all messages to the client
+  // side is the easiest way to get started
+  const messages = await getMessages();
+
+  return (
+    <html lang={locale} suppressHydrationWarning>
+      <body className="antialiased">
+        <ThemeProvider>
+          <NextIntlClientProvider messages={messages}>
+            {/* Navigation */}
+            <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+              <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex justify-between items-center h-16">
+                  <a href="#" className="text-xl font-bold">
+                    Portfolio
+                  </a>
+                  <div className="flex items-center gap-4">
+                    <LanguageSwitcher />
+                    <ThemeToggle />
+                  </div>
+                </div>
+              </div>
+            </nav>
+
+            {/* Floating side navigation */}
+
+            {/* Main content with top padding for fixed nav */}
+            <div className="pt-16">{children}</div>
+
+            {/* Footer */}
+            <footer className="border-t border-border py-8 px-4 sm:px-6 lg:px-8">
+              <div className="max-w-6xl mx-auto text-center text-muted text-sm">
+                <p>
+                  © {new Date().getFullYear()} Your Name.{" "}
+                  {locale === "en"
+                    ? "All rights reserved."
+                    : "Wszelkie prawa zastrzeżone."}
+                </p>
+              </div>
+            </footer>
+          </NextIntlClientProvider>
+        </ThemeProvider>
+      </body>
+    </html>
+  );
+}
