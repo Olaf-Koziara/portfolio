@@ -5,3 +5,5 @@ export { TechStack } from "./TechStack";
 export { TechnicalHighlights } from "./TechnicalHighlights";
 export { CodeBlock } from "./CodeBlock";
 export { ImageGallery } from "./ImageGallery";
+export { BeforeAfterComparison } from "./BeforeAfterComparison";
+export { ProcessTimeline } from "./ProcessTimeline";
