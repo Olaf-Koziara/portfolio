@@ -10,6 +10,8 @@ import { KeyFeatures } from "@/components/caseStudy/KeyFeatures";
 import { TechStack } from "@/components/caseStudy/TechStack";
 import { TechnicalHighlights } from "@/components/caseStudy/TechnicalHighlights";
 import { ImageGallery } from "@/components/caseStudy/ImageGallery";
+import { BeforeAfterComparison } from "@/components/caseStudy/BeforeAfterComparison";
+import { ProcessTimeline } from "@/components/caseStudy/ProcessTimeline";
 
 export default function CaseStudyPage({
   params,
@@ -35,6 +37,12 @@ export default function CaseStudyPage({
   const handleBack = () => {
     router.push(`/${resolvedParams.locale}/#projects`);
   };
+
+  // Check if this is a CMS case study with before/after comparison
+  const isCMSProject = projectKey === "gkpge-cms";
+  
+  // Check if this is a FormBuilder case study with process timeline
+  const isFormBuilderProject = projectKey === "gkpge-formbuilder";
 
   return (
     <div className="min-h-screen bg-background">
@@ -67,15 +75,52 @@ export default function CaseStudyPage({
         backend={projectData.techStack.backend}
       />
 
-      {/* Technical Highlights - Horizontal Slider */}
-      <TechnicalHighlights
-        title={t("technicalHighlights")}
-        subtitle="Scroll through the most impressive technical solutions"
-        highlights={projectData.highlights}
-      />
+      {/* Before/After Comparison for CMS project */}
+      {isCMSProject && projectData.comparison && (
+        <section className="py-20 px-6">
+          <div className="max-w-5xl mx-auto">
+            <motion.div
+              initial={{ y: 40, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
+                {projectData.comparison.title}
+              </h2>
+              <p className="text-muted mb-12 text-center">{t("visualComparison")}</p>
+              
+              <BeforeAfterComparison
+                beforeImage="/cms-before.webp"
+                afterImage="/cms-after.webp"
+                beforeLabel={projectData.comparison.beforeLabel}
+                afterLabel={projectData.comparison.afterLabel}
+              />
+            </motion.div>
+          </div>
+        </section>
+      )}
 
-      {/* Image/GIF Gallery */}
-      <ImageGallery />
+      {/* Process Timeline for FormBuilder project */}
+      {isFormBuilderProject && projectData.process && (
+        <ProcessTimeline
+          title={projectData.process.title}
+          subtitle={projectData.process.subtitle}
+          steps={projectData.process.steps}
+        />
+      )}
+
+      {/* Technical Highlights - only for projects that have them */}
+      {projectData.highlights && (
+        <TechnicalHighlights
+          title={t("technicalHighlights")}
+          subtitle="Scroll through the most impressive technical solutions"
+          highlights={projectData.highlights}
+        />
+      )}
+
+      {/* Image/GIF Gallery - only for projects that need it */}
+      {!isCMSProject && !isFormBuilderProject && <ImageGallery />}
 
       {/* Back to Projects CTA */}
       <section className="py-20 px-6">
