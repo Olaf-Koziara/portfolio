@@ -84,9 +84,9 @@ export default function FloatingNav({
       <>
         {/* Dot indicator */}
         <div
-          className={`w-2 h-2 rounded-full transition-all duration-300 ${
+          className={`w-3 h-2 rounded-full transition-all duration-300 ${
             activeSection === item.id
-              ? "bg-accent w-3"
+              ? "bg-accent h-3"
               : "bg-muted group-hover:bg-foreground"
           }`}
         />
