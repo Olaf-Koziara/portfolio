@@ -3,6 +3,7 @@
     "hero": "Home",
     "skills": "Skills",
     "projects": "Projects",
+    "businessProjects": "Business Projects",
     "experience": "Experience",
     "about": "About",
     "contact": "Contact"
@@ -26,6 +27,7 @@
     "subtitle": "Some of my recent work",
     "viewLive": "Live Demo",
     "viewCode": "GitHub",
+    "viewCaseStudy": "Case study",
     "items": [
       {
         "name": "E-Commerce Platform",
@@ -54,6 +56,32 @@
         "stack": ["Angular", "NestJS", "PostgreSQL", "AWS"],
         "liveUrl": "https://example.com",
         "githubUrl": "https://github.com"
+      }
+    ]
+  },
+  "businessProjects": {
+    "title": "Business Projects",
+    "subtitle": "Deliveries for large organizations and corporations",
+    "client": "Client",
+    "year": "Period",
+    "scopeOfWork": "Scope of Work",
+    "viewCaseStudy": "View case study",
+    "items": [
+      {
+        "id": "gkpge-cms",
+        "name": "CMS Theme and Components for PGE Group",
+        "client": "PGE Capital Group",
+        "year": "2021-2023",
+        "description": "Development of a new, modern theme and a set of reusable components for the PGE Group's Content Management System. The main goal was to update the visual identity of the group's websites while streamlining the management and maintenance process.",
+        "scope": ["Web Design", "Web Development", "TWIG", "SCSS", "JavaScript"]
+      },
+      {
+        "id": "gkpge-formbuilder",
+        "name": "FormBuilder for Internal CMS",
+        "client": "PGE Systemy",
+        "year": "2021-2023",
+        "description": "A form builder tool integrated into the company's CMS platform designed for creating websites within the corporate group. The FormBuilder panel was built on Angular with TypeScript and integrated with a Symfony/Twig backend.",
+        "scope": ["Angular", "TypeScript", "RxJS", "TWIG", "SCSS"]
       }
     ]
   },
@@ -126,6 +154,9 @@
     "keyFeatures": "Key Features",
     "technicalHighlights": "Technical Highlights",
     "demoAccount": "Demo Account",
+    "processTitle": "Development Process",
+    "processSubtitle": "From initial talks to production deployment",
+    "visualComparison": "Visual Comparison",
     "orbitaskmanager": {
       "title": "OrbiTask Manager",
       "tagline": "Modern Full-Stack Task & Project Management",
@@ -209,29 +240,29 @@
           "solution": "Custom sensor that detects data-no-dnd attribute to allow interactive elements within draggable cards.",
           "impact": "Users can drag cards smoothly AND click buttons inside them. Best of both worlds!",
           "code": {
-            "sensor": "export class CustomSensor extends PointerSensor {\n  static activators = [{\n    eventName: 'onPointerDown' as const,\n    handler: ({nativeEvent: event}) => {\n      let element = event.target as HTMLElement;\n      while (element) {\n        if (element.dataset?.noDnd) {\n          return false; // Don't start dragging\n        }\n        element = element.parentElement;\n      }\n      return true; // OK to drag\n    }\n  }];\n}",
+            "sensor": "export class CustomSensor extends PointerSensor {\n  static activators = [{\n    eventName: 'onPointerDown' as const,\n    handler: ({nativeEvent: event}) => {\n      let element = event.target as HTMLElement;\n      while (element) {\n        if (element.dataset?.noDnd) {\n          return false;\n        }\n        element = element.parentElement;\n      }\n      return true;\n    }\n  }];\n}",
             "usage": "export const TaskCard = ({ task }) => (\n  <div className=\"task-card\">\n    <h3>{task.title}</h3>\n    <div className=\"actions\" data-no-dnd>\n      <Button onClick={handleEdit}>\n        <PencilIcon /> Edit\n      </Button>\n      <Button onClick={handleDelete}>\n        <TrashIcon /> Delete\n      </Button>\n    </div>\n  </div>\n);"
           }
         },
         {
           "id": "optimistic-updates",
           "title": "Optimistic Updates with Rollback",
-          "problem": "User clicks 'Mark as Done' → waits 500ms for API → finally sees change. Feels slow.",
+          "problem": "User clicks 'Mark as Done' -> waits 500ms for API -> finally sees change. Feels slow.",
           "solution": "Update UI instantly (optimistic), sync with backend in background, auto-rollback on errors.",
           "impact": "App feels instant. No waiting for API. Auto-rollback on errors.",
           "code": {
-            "implementation": "export const useTasks = () => {\n  const updateTaskStatus = useCallback(\n    async (taskId: string, newStatus: TaskStatus) => {\n      // Take snapshot BEFORE changing anything\n      const originalTasks = [...tasks];\n      \n      // INSTANT UPDATE - User sees change immediately\n      const optimisticTasks = tasks.map(task =>\n        task._id === taskId ? { ...task, status: newStatus } : task\n      );\n      setTasks(optimisticTasks);\n      \n      try {\n        // Update backend in background\n        await utils.client.tasks.update.mutate({\n          id: taskId,\n          data: { status: newStatus },\n        });\n        \n        // Refresh to get real data from server\n        await utils.tasks.invalidate();\n      } catch (error) {\n        // ROLLBACK if something went wrong\n        setTasks(originalTasks);\n        toast.error(\"Failed to update task. Changes reverted.\");\n      }\n    },\n    [tasks, utils]\n  );\n};"
+            "implementation": "export const useTasks = () => {\n  const updateTaskStatus = useCallback(\n    async (taskId: string, newStatus: TaskStatus) => {\n      const originalTasks = [...tasks];\n      \n      const optimisticTasks = tasks.map(task =>\n        task._id === taskId ? { ...task, status: newStatus } : task\n      );\n      setTasks(optimisticTasks);\n      \n      try {\n        await utils.client.tasks.update.mutate({\n          id: taskId,\n          data: { status: newStatus },\n        });\n        \n        await utils.tasks.invalidate();\n      } catch (error) {\n        setTasks(originalTasks);\n        toast.error(\"Failed to update task. Changes reverted.\");\n      }\n    },\n    [tasks, utils]\n  );\n};"
           }
         },
         {
           "id": "debouncing",
           "title": "Smart Debouncing for Search",
-          "problem": "User types 'implement authentication' in search → 23 characters = 23 API requests in 2 seconds!",
+          "problem": "User types 'implement authentication' in search -> 23 characters = 23 API requests in 2 seconds!",
           "solution": "Custom debounce hook that waits 300ms after user stops typing before querying.",
-          "impact": "23 requests → 1 request. Much happier API server!",
+          "impact": "23 requests -> 1 request. Much happier API server!",
           "code": {
             "hook": "export function useDebounce<T>(value: T, delay: number): T {\n  const [debouncedValue, setDebouncedValue] = useState<T>(value);\n\n  useEffect(() => {\n    const handler = setTimeout(() => {\n      setDebouncedValue(value);\n    }, delay);\n\n    return () => clearTimeout(handler);\n  }, [value, delay]);\n\n  return debouncedValue;\n}",
-            "usage": "export const useTasks = () => {\n  const { taskFilters } = useFiltersStore();\n  \n  // Wait 300ms after user stops typing\n  const debouncedFilters = useDebounce(taskFilters, 300);\n  \n  const queryInput = useMemo(\n    () => FilterService.prepareQueryFilters(debouncedFilters),\n    [debouncedFilters]\n  );\n  \n  const { data: tasks } = trpc.tasks.list.useQuery(queryInput, {\n    staleTime: 30000,\n  });\n};"
+            "usage": "export const useTasks = () => {\n  const { taskFilters } = useFiltersStore();\n  \n  const debouncedFilters = useDebounce(taskFilters, 300);\n  \n  const queryInput = useMemo(\n    () => FilterService.prepareQueryFilters(debouncedFilters),\n    [debouncedFilters]\n  );\n  \n  const { data: tasks } = trpc.tasks.list.useQuery(queryInput, {\n    staleTime: 30000,\n  });\n};"
           }
         },
         {
@@ -241,10 +272,200 @@
           "solution": "Strategic use of useMemo, useCallback, and React.memo to prevent unnecessary re-renders.",
           "impact": "73% faster renders! From 450ms to 120ms for 50 tasks.",
           "code": {
-            "optimized": "export const KanbanBoard = () => {\n  const { tasks } = useTasks();\n  \n  // Re-calculate ONLY when tasks change\n  const tasksByStatus = useMemo(() => {\n    return COLUMNS.reduce((acc, col) => {\n      acc[col.status] = tasks.filter(t => t.status === col.status);\n      return acc;\n    }, {} as Record<TaskStatus, Task[]>);\n  }, [tasks]);\n  \n  // Stable function reference\n  const handleDragEnd = useCallback((event: DragEndEvent) => {\n    const taskId = event.active.id as string;\n    const newStatus = event.over.id as TaskStatus;\n    setTaskStatus(taskId, newStatus);\n  }, [setTaskStatus]);\n  \n  return (\n    <DndContext onDragEnd={handleDragEnd}>\n      {COLUMNS.map(col => (\n        <Column \n          key={col.status}\n          tasks={tasksByStatus[col.status]}\n        />\n      ))}\n    </DndContext>\n  );\n};"
+            "optimized": "export const KanbanBoard = () => {\n  const { tasks } = useTasks();\n  \n  const tasksByStatus = useMemo(() => {\n    return COLUMNS.reduce((acc, col) => {\n      acc[col.status] = tasks.filter(t => t.status === col.status);\n      return acc;\n    }, {} as Record<TaskStatus, Task[]>);\n  }, [tasks]);\n  \n  const handleDragEnd = useCallback((event: DragEndEvent) => {\n    const taskId = event.active.id as string;\n    const newStatus = event.over.id as TaskStatus;\n    setTaskStatus(taskId, newStatus);\n  }, [setTaskStatus]);\n  \n  return (\n    <DndContext onDragEnd={handleDragEnd}>\n      {COLUMNS.map(col => (\n        <Column \n          key={col.status}\n          tasks={tasksByStatus[col.status]}\n        />\n      ))}\n    </DndContext>\n  );\n};"
           }
         }
       ]
+    },
+    "gkpge-cms": {
+      "title": "CMS Theme for PGE Group",
+      "tagline": "Modern component system for corporate CMS",
+      "description": "Design and implementation of a new theme and reusable component library for the PGE Capital Group content management system. The project included refreshing the visual identity while maintaining consistency across all group websites.",
+      "overview": {
+        "intro": "PGE Capital Group is the largest Polish energy company, operating dozens of websites managed through an internal CMS. My task was to create a new, unified visual theme and a set of components that could be used across all websites in the group.",
+        "goals": [
+          "Refresh the visual identity in line with new branding",
+          "Create a library of reusable components",
+          "Streamline the process of creating new pages",
+          "Ensure visual consistency across all group websites"
+        ]
+      },
+      "features": [
+        {
+          "title": "Component System",
+          "description": "Over 40 reusable components from buttons to complex layouts"
+        },
+        {
+          "title": "Responsiveness",
+          "description": "Full responsiveness across all devices from mobile to desktop"
+        },
+        {
+          "title": "Accessibility",
+          "description": "WCAG 2.1 compliance to ensure accessibility for all users"
+        },
+        {
+          "title": "Documentation",
+          "description": "Detailed documentation for each component with usage examples"
+        },
+        {
+          "title": "Scalability",
+          "description": "Architecture enabling easy addition of new components"
+        },
+        {
+          "title": "Performance",
+          "description": "Optimized CSS and JS code for fast page loading"
+        }
+      ],
+      "techStack": {
+        "frontend": [
+          "TWIG",
+          "SCSS",
+          "JavaScript ES6+",
+          "BEM",
+          "CSS Grid",
+          "Flexbox"
+        ],
+        "backend": [
+          "Symfony",
+          "PHP",
+          "MySQL",
+          "Doctrine ORM"
+        ]
+      },
+      "comparison": {
+        "title": "Visual Transformation",
+        "beforeLabel": "Before",
+        "afterLabel": "After"
+      }
+    },
+    "gkpge-formbuilder": {
+      "title": "FormBuilder for PGE CMS",
+      "tagline": "Tool for building dynamic forms",
+      "description": "A comprehensive tool for creating forms with a drag & drop interface, support for field dependencies, and the ability to define custom submit actions. FormBuilder was integrated with the capital group's internal CMS.",
+      "overview": {
+        "intro": "FormBuilder is a tool that allows content editors to create complex forms without developer involvement. The Angular-based admin panel enables visual form design, which is then exported as JSON and rendered by the Symfony backend. On the browser side, I created a dedicated TypeScript engine that recreates all dynamic behaviors defined in the builder based on a dependency graph.",
+        "goals": [
+          "Enable editors to create forms independently",
+          "Implement a system of field dependencies",
+          "Create an intuitive drag & drop interface",
+          "Ensure full validation on both client and server side",
+          "Build a dependency graph engine to recreate dynamic behaviors"
+        ]
+      },
+      "features": [
+        {
+          "title": "Drag & Drop",
+          "description": "Intuitive dragging of form components onto the canvas"
+        },
+        {
+          "title": "Field Dependencies",
+          "description": "Defining conditions for showing and hiding fields"
+        },
+        {
+          "title": "Dependency Graph Engine",
+          "description": "Dedicated TypeScript engine recreating dependencies based on a graph of field connections"
+        },
+        {
+          "title": "Custom Actions",
+          "description": "Configuring behavior after form submission"
+        },
+        {
+          "title": "Validation",
+          "description": "Real-time client-side validation"
+        },
+        {
+          "title": "JSON Export",
+          "description": "Form structure exported to JSON for the backend"
+        }
+      ],
+      "techStack": {
+        "frontend": [
+          "Angular 12+",
+          "TypeScript",
+          "RxJS",
+          "Angular CDK",
+          "SCSS"
+        ],
+        "backend": [
+          "Symfony",
+          "TWIG",
+          "PHP",
+          "MySQL"
+        ]
+      },
+      "process": {
+        "title": "Project Development Process",
+        "subtitle": "From initial business talks to production deployment",
+        "steps": [
+          {
+            "id": "discovery",
+            "title": "Business Talks",
+            "period": "Week 1-2",
+            "icon": "discovery",
+            "description": "The project started with a series of meetings with the business team and content editors. I wanted to understand their daily problems and frustrations with the current form creation process. It turned out that every new form required IT tickets and waiting up to several weeks for implementation.",
+            "details": [
+              "Conducted interviews with 8 content editors from different group companies",
+              "Identified the main problem - too long time from idea to form publication",
+              "Gathered requirements for field types and dependencies between them",
+              "Established feature priorities with the product owner"
+            ]
+          },
+          {
+            "id": "planning",
+            "title": "Architecture Planning",
+            "period": "Week 3-4",
+            "icon": "planning",
+            "description": "After gathering requirements, it was time to design the system architecture. I had to make several key technical decisions - how to store form structure, how to handle field dependencies, and how to integrate the tool with the existing Symfony-based CMS.",
+            "details": [
+              "Chose Angular due to its support for complex applications",
+              "Designed the JSON format for form structures",
+              "Thought through a dependency system based on conditional rules",
+              "Prepared technical documentation and data flow diagrams"
+            ]
+          },
+          {
+            "id": "development",
+            "title": "Development Phase",
+            "period": "Week 5-14",
+            "icon": "development",
+            "description": "The main implementation phase took about 10 weeks. I started with basic components like inputs and selects, then added drag & drop logic. The most challenging part was building the dependency engine - I had to design a graph structure that allowed defining complex relationships between fields and dynamically recreating them on the browser side.",
+            "details": [
+              "Created a library of form components (input, select, checkbox, radio, textarea)",
+              "Implemented the drag & drop mechanism based on Angular CDK",
+              "Designed and built a dependency graph engine in TypeScript",
+              "The engine analyzed JSON structure and built a graph of connections between fields",
+              "Based on the graph, it dynamically assigned listeners and recreated behaviors (show/hide, enable/disable, validation)",
+              "Optimized graph traversal to avoid circular dependencies"
+            ]
+          },
+          {
+            "id": "testing",
+            "title": "Testing",
+            "period": "Week 15-17",
+            "icon": "testing",
+            "description": "Before deployment, I conducted intensive testing with real users. I invited a group of editors to beta testing where they could create real forms and report issues. Thanks to their feedback, I improved many UX details.",
+            "details": [
+              "Conducted beta testing with 5 editors from different companies",
+              "Fixed bugs related to validation and state saving",
+              "Optimized performance for large forms",
+              "Added tooltips and hints based on user feedback"
+            ]
+          },
+          {
+            "id": "deployment",
+            "title": "Deployment",
+            "period": "Week 18-20",
+            "icon": "deployment",
+            "description": "Deployment was done in stages. First to the test environment, then to selected group websites, and finally to all sites. I also conducted training for editorial teams so they could fully utilize the tool's capabilities.",
+            "details": [
+              "Deployed the tool to production environment in read-only mode",
+              "Conducted 3 training sessions for editorial teams",
+              "Monitored metrics and collected post-deployment feedback",
+              "Developed user documentation and FAQ"
+            ]
+          }
+        ]
+      }
     }
   }
 }
