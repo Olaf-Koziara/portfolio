@@ -12,7 +12,7 @@
     "greeting": "Cześć, jestem",
     "name": "Olaf Koziara",
     "role": "Frontend Developer",
-    "description": "Tworzę wydajne, dostępne aplikacje webowe z ponad 3-letnim doświadczeniem w ekosystemach React i Angular.",
+    "description": "Buduję skalowalne aplikacje webowe w React i Angular. 3+ lata doświadczenia komercyjnego, focus na performance i dostępność.",
     "cta": {
       "projects": "Zobacz Projekty",
       "cv": "Pobierz CV"
@@ -31,7 +31,7 @@
     "items": [
       {
         "name": "Orbitask manager",
-        "description": "Menedżer zadań z aktualizacjami w czasie rzeczywistym, drag & drop i funkcjami zespołowymi.",
+        "description": "Menedżer zadań z synchronizacją real-time, drag & drop i funkcjami zespołowymi.",
         "stack": [
           "React",
           "TypeScript",
@@ -50,22 +50,8 @@
       },
       {
         "name": "Angular finance",
-        "description": "Współdzielony menedżer zadań z aktualizacjami w czasie rzeczywistym, drag & drop i funkcjami zespołowymi.",
-        "stack": ["React", "Node.js", "Socket.io", "MongoDB"],
-        "liveUrl": "https://example.com",
-        "githubUrl": "https://github.com"
-      },
-      {
-        "name": "Dashboard Pogodowy",
-        "description": "Piękna aplikacja pogodowa z prognozami, mapami i wyszukiwaniem lokalizacji zasilana przez API pogodowe.",
-        "stack": ["Next.js", "TypeScript", "Chart.js", "Leaflet"],
-        "liveUrl": "https://example.com",
-        "githubUrl": "https://github.com"
-      },
-      {
-        "name": "CMS Portfolio",
-        "description": "Headless CMS do zarządzania treścią portfolio z niestandardowymi polami i biblioteką mediów.",
-        "stack": ["Angular", "NestJS", "PostgreSQL", "AWS"],
+        "description": "Aplikacja do zarządzania finansami z dashboardem i wizualizacją danych.",
+        "stack": ["Angular", "TypeScript", "RxJS", "Node.js"],
         "liveUrl": "https://example.com",
         "githubUrl": "https://github.com"
       }
@@ -73,7 +59,7 @@
   },
   "businessProjects": {
     "title": "Projekty Biznesowe",
-    "subtitle": "Realizacje dla duzych organizacji i korporacji",
+    "subtitle": "Realizacje dla organizacji i korporacji",
     "client": "Klient",
     "year": "Okres",
     "scopeOfWork": "Zakres prac",
@@ -84,15 +70,15 @@
         "name": "Motyw i komponenty CMS dla Grupy PGE",
         "client": "Grupa Kapitalowa PGE",
         "year": "2021-2023",
-        "description": "Stworzenie nowego, nowoczesnego motywu oraz zestawu wielokrotnego uzytku komponentow dla systemu CMS Grupy PGE. Glownym celem byla aktualizacja identyfikacji wizualnej stron grupy przy jednoczesnym usprawnieniu procesu zarzadzania i utrzymania.",
+        "description": "Stworzenie motywu oraz biblioteki reużywalnych komponentów dla CMS Grupy PGE. Projekt obejmował unifikację identyfikacji wizualnej i usprawnienie procesu zarządzania contentem.",
         "scope": ["Web Design", "Web Development", "TWIG", "SCSS", "JavaScript"]
       },
       {
         "id": "gkpge-formbuilder",
-        "name": "FormBuilder dla wewnetrznego CMS",
+        "name": "FormBuilder dla wewnętrznego CMS",
         "client": "PGE Systemy",
         "year": "2021-2023",
-        "description": "Narzedzie do budowania formularzy zintegrowane z platforma CMS firmy, przeznaczone do tworzenia stron w ramach grupy kapitalowej. Panel FormBuildera zostal oparty na Angularze z TypeScriptem i zintegrowany z backendem Symfony/Twig.",
+        "description": "Narzędzie do budowania formularzy zintegrowane z platformą CMS. Panel oparty na Angular z TypeScriptem, zintegrowany z backendem Symfony/Twig.",
         "scope": ["Angular", "TypeScript", "RxJS", "TWIG", "SCSS"]
       }
     ]
@@ -129,14 +115,13 @@
         "period": "Mar 2022 - Obecnie",
         "points": [
           "Customizacja rozwiązań Comarch B2B — Angular na frontendzie, C#/.NET/SQL na backendzie",
-          "Budowa aplikacji WordPress i Next.js z bezpieczną integracją bramek płatności",
+          "Budowa aplikacji WordPress i Next.js z integracją bramek płatności",
           "Optymalizacja SEO legacy websites — wzrost ruchu organicznego o ponad 30%",
           "Automatyzacja przepływu pracy — plugin osTicket do migracji ticketów do Redmine"
         ]
       }
     ]
   },
-
   "about": {
     "title": "O Mnie",
     "subtitle": "Trochę więcej o tym, kim jestem",
@@ -161,57 +146,57 @@
     "rights": "Wszelkie prawa zastrzeżone."
   },
   "caseStudy": {
-    "backToProjects": "Powrot do Projektow",
-    "overview": "Przeglad",
+    "backToProjects": "Powrót do Projektów",
+    "overview": "Przegląd",
     "techStack": "Stack Technologiczny",
     "keyFeatures": "Kluczowe Funkcje",
     "technicalHighlights": "Aspekty Techniczne",
     "demoAccount": "Konto Demo",
     "processTitle": "Proces Realizacji",
-    "processSubtitle": "Od pierwszych rozmow do wdrozenia na produkcje",
-    "visualComparison": "Porownanie Wizualne",
+    "processSubtitle": "Od pierwszych rozmów do wdrożenia na produkcję",
+    "visualComparison": "Porównanie Wizualne",
     "orbitaskmanager": {
       "title": "OrbiTask Manager",
-      "tagline": "Nowoczesne Zarzadzanie Zadaniami i Projektami",
-      "description": "Kompleksowa aplikacja do zarzadzania zadaniami i projektami, zaprojektowana w celu zwiekszenia produktywnosci poprzez inteligentna organizacje, wizualne przeplywy pracy i plynna wspolprace.",
+      "tagline": "Zarządzanie Zadaniami i Projektami",
+      "description": "Aplikacja do zarządzania zadaniami i projektami, zaprojektowana w celu zwiększenia produktywności poprzez inteligentną organizację, wizualne przepływy pracy i współpracę.",
       "demoUrl": "https://orbitask-manager-1.onrender.com/",
       "demoCredentials": {
         "email": "test@gmail.com",
         "password": "12test34"
       },
       "overview": {
-        "intro": "OrbiTask Manager to gotowa do produkcji aplikacja full-stack, ktora demonstruje nowoczesne praktyki tworzenia aplikacji webowych. Zbudowana jako narzedzie do zwiekszania produktywnosci, laczy potezne technologie z intuicyjnym interfejsem uzytkownika.",
+        "intro": "OrbiTask Manager to aplikacja full-stack demonstrująca nowoczesne praktyki tworzenia aplikacji webowych. Zbudowana jako narzędzie do zwiększania produktywności, łączy potężne technologie z intuicyjnym interfejsem użytkownika.",
         "goals": [
-          "Usprawnienie zarzadzania zadaniami i planowania projektow",
-          "Implementacja skalowalnej architektury dla rosnacej zlozonosci",
+          "Usprawnienie zarządzania zadaniami i planowania projektów",
+          "Implementacja skalowalnej architektury dla rosnącej złożoności",
           "Stworzenie intuicyjnego interfejsu z wieloma trybami widoku",
-          "Budowa modularnego designu ulatwiajacego dodawanie funkcji"
+          "Budowa modularnego designu ułatwiającego dodawanie funkcji"
         ]
       },
       "features": [
         {
-          "title": "Wiele Trybow Widoku",
-          "description": "Tablica Kanban, widok Kalendarza i Lista dla roznych przeplywow pracy"
+          "title": "Wiele Trybów Widoku",
+          "description": "Tablica Kanban, widok Kalendarza i Lista dla różnych przepływów pracy"
         },
         {
-          "title": "System Priorytetow",
-          "description": "Klasyfikacja priorytetow: Niski, Sredni, Wysoki i Pilny"
+          "title": "System Priorytetów",
+          "description": "Klasyfikacja priorytetów: Niski, Średni, Wysoki i Pilny"
         },
         {
-          "title": "Aktualizacje w Czasie Rzeczywistym",
-          "description": "Synchronizacja na zywo miedzy wszystkimi polaczonymi urzadzeniami"
+          "title": "Synchronizacja Real-time",
+          "description": "Aktualizacje na żywo między wszystkimi połączonymi urządzeniami"
         },
         {
-          "title": "Przeciagnij i Upusc",
-          "description": "Intuicyjne zarzadzanie zadaniami z plynnym przeciaganiem"
+          "title": "Przeciągnij i Upuść",
+          "description": "Intuicyjne zarządzanie zadaniami z płynnym przeciąganiem"
         },
         {
-          "title": "Wspolpraca Zespolowa",
-          "description": "Przypisywanie zadan, udostepnianie projektow i wspolna praca"
+          "title": "Współpraca Zespołowa",
+          "description": "Przypisywanie zadań, udostępnianie projektów i wspólna praca"
         },
         {
           "title": "Zaawansowane Filtrowanie",
-          "description": "Filtruj wedlug projektu, osoby przypisanej, priorytetu i wiecej"
+          "description": "Filtruj według projektu, osoby przypisanej, priorytetu i więcej"
         }
       ],
       "techStack": {
@@ -237,10 +222,10 @@
       "highlights": [
         {
           "id": "type-safety",
-          "title": "Magia Bezpieczenstwa Typow End-to-End",
-          "problem": "W tradycyjnych REST API, gdy zmienisz pole na backendzie, frontend dowiaduje sie o tym dopiero gdy wystapie bledy w czasie wykonania.",
-          "solution": "Uzycie tRPC do automatycznej synchronizacji typow miedzy frontendem a backendem bez generowania kodu.",
-          "impact": "Zero bledow typow w czasie wykonania, natychmiastowy refactoring w calym stacku, autocomplete wszedzie.",
+          "title": "End-to-End Type Safety",
+          "problem": "W tradycyjnych REST API, gdy zmienisz pole na backendzie, frontend dowiaduje się o tym dopiero gdy wystąpią błędy w czasie wykonania.",
+          "solution": "Użycie tRPC do automatycznej synchronizacji typów między frontendem a backendem bez generowania kodu.",
+          "impact": "Zero błędów typów w runtime, natychmiastowy refactoring w całym stacku, autocomplete wszędzie.",
           "code": {
             "backend": "export const taskRouter = router({\n  create: protectedProcedure\n    .input(z.object({\n      title: z.string().min(1).max(100),\n      priority: z.enum(['low', 'medium', 'high', 'urgent']),\n      dueDate: z.date().optional(),\n    }))\n    .mutation(async ({ input, ctx }) => {\n      return await TaskModel.create({\n        ...input,\n        createdBy: ctx.user.id,\n      });\n    }),\n});",
             "frontend": "export const useTasks = () => {\n  const createTask = trpc.tasks.create.useMutation();\n  \n  // TypeScript ZNA WSZYSTKO o tym API\n  createTask.mutate({\n    title: \"Nowe zadanie\",\n    priority: \"high\",\n    dueDate: new Date('2026-02-01'),\n  });\n};"
@@ -248,31 +233,31 @@
         },
         {
           "id": "drag-drop",
-          "title": "Kanban z Przeciaganiem i Klikalnym Przyciskami",
-          "problem": "Standardowe przeciaganie blokuje WSZYSTKIE klikniecia podczas przeciagania. Nie mozna kliknac przycisku Usun wewnatrz przeciaganej karty.",
-          "solution": "Niestandardowy sensor wykrywajacy atrybut data-no-dnd, pozwalajacy na interaktywne elementy wewnatrz przeciaganych kart.",
-          "impact": "Uzytkownicy moga plynnie przeciagac karty ORAZ klikac przyciski w ich wnetrzu. Najlepsze z obu swiatow!",
+          "title": "Kanban z Przeciąganiem i Klikalnym Przyciskami",
+          "problem": "Standardowe przeciąganie blokuje WSZYSTKIE kliknięcia podczas przeciągania. Nie można kliknąć przycisku Usuń wewnątrz przeciąganej karty.",
+          "solution": "Niestandardowy sensor wykrywający atrybut data-no-dnd, pozwalający na interaktywne elementy wewnątrz przeciąganych kart.",
+          "impact": "Użytkownicy mogą płynnie przeciągać karty ORAZ klikać przyciski w ich wnętrzu.",
           "code": {
             "sensor": "export class CustomSensor extends PointerSensor {\n  static activators = [{\n    eventName: 'onPointerDown' as const,\n    handler: ({nativeEvent: event}) => {\n      let element = event.target as HTMLElement;\n      while (element) {\n        if (element.dataset?.noDnd) {\n          return false;\n        }\n        element = element.parentElement;\n      }\n      return true;\n    }\n  }];\n}",
-            "usage": "export const TaskCard = ({ task }) => (\n  <div className=\"task-card\">\n    <h3>{task.title}</h3>\n    <div className=\"actions\" data-no-dnd>\n      <Button onClick={handleEdit}>\n        <PencilIcon /> Edytuj\n      </Button>\n      <Button onClick={handleDelete}>\n        <TrashIcon /> Usun\n      </Button>\n    </div>\n  </div>\n);"
+            "usage": "export const TaskCard = ({ task }) => (\n  <div className=\"task-card\">\n    <h3>{task.title}</h3>\n    <div className=\"actions\" data-no-dnd>\n      <Button onClick={handleEdit}>\n        <PencilIcon /> Edytuj\n      </Button>\n      <Button onClick={handleDelete}>\n        <TrashIcon /> Usuń\n      </Button>\n    </div>\n  </div>\n);"
           }
         },
         {
           "id": "optimistic-updates",
-          "title": "Optymistyczne Aktualizacje z Cofnieciem",
-          "problem": "Uzytkownik klika 'Oznacz jako Wykonane' -> czeka 500ms na API -> w koncu widzi zmiane. Czuje sie wolno.",
-          "solution": "Natychmiastowa aktualizacja UI (optymistycznie), synchronizacja z backendem w tle, automatyczne cofniecie przy bledach.",
-          "impact": "Aplikacja dziala blyskawicznie. Nie czekamy na API. Automatyczne cofniecie przy bledach.",
+          "title": "Optymistyczne Aktualizacje z Cofnięciem",
+          "problem": "Użytkownik klika 'Oznacz jako Wykonane' → czeka 500ms na API → w końcu widzi zmianę. Czuje się wolno.",
+          "solution": "Natychmiastowa aktualizacja UI (optymistycznie), synchronizacja z backendem w tle, automatyczne cofnięcie przy błędach.",
+          "impact": "Aplikacja działa błyskawicznie. Nie czekamy na API. Automatyczne cofnięcie przy błędach.",
           "code": {
-            "implementation": "export const useTasks = () => {\n  const updateTaskStatus = useCallback(\n    async (taskId: string, newStatus: TaskStatus) => {\n      const originalTasks = [...tasks];\n      \n      const optimisticTasks = tasks.map(task =>\n        task._id === taskId ? { ...task, status: newStatus } : task\n      );\n      setTasks(optimisticTasks);\n      \n      try {\n        await utils.client.tasks.update.mutate({\n          id: taskId,\n          data: { status: newStatus },\n        });\n        \n        await utils.tasks.invalidate();\n      } catch (error) {\n        setTasks(originalTasks);\n        toast.error(\"Nie udalo sie zaktualizowac zadania.\");\n      }\n    },\n    [tasks, utils]\n  );\n};"
+            "implementation": "export const useTasks = () => {\n  const updateTaskStatus = useCallback(\n    async (taskId: string, newStatus: TaskStatus) => {\n      const originalTasks = [...tasks];\n      \n      const optimisticTasks = tasks.map(task =>\n        task._id === taskId ? { ...task, status: newStatus } : task\n      );\n      setTasks(optimisticTasks);\n      \n      try {\n        await utils.client.tasks.update.mutate({\n          id: taskId,\n          data: { status: newStatus },\n        });\n        \n        await utils.tasks.invalidate();\n      } catch (error) {\n        setTasks(originalTasks);\n        toast.error(\"Nie udało się zaktualizować zadania.\");\n      }\n    },\n    [tasks, utils]\n  );\n};"
           }
         },
         {
           "id": "debouncing",
           "title": "Inteligentne Debouncing dla Wyszukiwania",
-          "problem": "Uzytkownik wpisuje 'implementacja autentykacji' w wyszukiwarke -> 28 znakow = 28 zapytan API w 2 sekundy!",
-          "solution": "Niestandardowy hook debounce, ktory czeka 300ms po tym jak uzytkownik przestanie pisac przed wyslaniem zapytania.",
-          "impact": "28 zapytan -> 1 zapytanie. Znacznie szczesliwszy serwer API!",
+          "problem": "Użytkownik wpisuje 'implementacja autentykacji' w wyszukiwarkę → 28 znaków = 28 zapytań API w 2 sekundy!",
+          "solution": "Niestandardowy hook debounce, który czeka 300ms po tym jak użytkownik przestanie pisać przed wysłaniem zapytania.",
+          "impact": "28 zapytań → 1 zapytanie. Znacznie szczęśliwszy serwer API!",
           "code": {
             "hook": "export function useDebounce<T>(value: T, delay: number): T {\n  const [debouncedValue, setDebouncedValue] = useState<T>(value);\n\n  useEffect(() => {\n    const handler = setTimeout(() => {\n      setDebouncedValue(value);\n    }, delay);\n\n    return () => clearTimeout(handler);\n  }, [value, delay]);\n\n  return debouncedValue;\n}",
             "usage": "export const useTasks = () => {\n  const { taskFilters } = useFiltersStore();\n  \n  const debouncedFilters = useDebounce(taskFilters, 300);\n  \n  const queryInput = useMemo(\n    () => FilterService.prepareQueryFilters(debouncedFilters),\n    [debouncedFilters]\n  );\n  \n  const { data: tasks } = trpc.tasks.list.useQuery(queryInput, {\n    staleTime: 30000,\n  });\n};"
@@ -280,10 +265,10 @@
         },
         {
           "id": "performance",
-          "title": "Mistrzowska Optymalizacja Wydajnosci",
-          "problem": "Lista 50 kart zadan renderuje sie calkowicie przy kazdej zmianie stanu rodzica, nawet jesli zadania sie nie zmienily.",
-          "solution": "Strategiczne uzycie useMemo, useCallback i React.memo aby zapobiec niepotrzebnym re-renderom.",
-          "impact": "O 73% szybsze renderowanie! Z 450ms do 120ms dla 50 zadan.",
+          "title": "Optymalizacja Wydajności",
+          "problem": "Lista 50 kart zadań renderuje się całkowicie przy każdej zmianie stanu rodzica, nawet jeśli zadania się nie zmieniły.",
+          "solution": "Strategiczne użycie useMemo, useCallback i React.memo aby zapobiec niepotrzebnym re-renderom.",
+          "impact": "O 73% szybsze renderowanie! Z 450ms do 120ms dla 50 zadań.",
           "code": {
             "optimized": "export const KanbanBoard = () => {\n  const { tasks } = useTasks();\n  \n  const tasksByStatus = useMemo(() => {\n    return COLUMNS.reduce((acc, col) => {\n      acc[col.status] = tasks.filter(t => t.status === col.status);\n      return acc;\n    }, {} as Record<TaskStatus, Task[]>);\n  }, [tasks]);\n  \n  const handleDragEnd = useCallback((event: DragEndEvent) => {\n    const taskId = event.active.id as string;\n    const newStatus = event.over.id as TaskStatus;\n    setTaskStatus(taskId, newStatus);\n  }, [setTaskStatus]);\n  \n  return (\n    <DndContext onDragEnd={handleDragEnd}>\n      {COLUMNS.map(col => (\n        <Column \n          key={col.status}\n          tasks={tasksByStatus[col.status]}\n        />\n      ))}\n    </DndContext>\n  );\n};"
           }
@@ -292,41 +277,41 @@
     },
     "gkpge-cms": {
       "title": "Motyw CMS dla Grupy PGE",
-      "tagline": "Nowoczesny system komponentow dla korporacyjnego CMS",
-      "description": "Zaprojektowanie i wdrozenie nowego motywu oraz biblioteki komponentow wielokrotnego uzytku dla systemu zarzadzania trescia Grupy Kapitalowej PGE. Projekt objal odswiezenie identyfikacji wizualnej przy zachowaniu spojnosci na wszystkich stronach grupy.",
+      "tagline": "System komponentów dla korporacyjnego CMS",
+      "description": "Zaprojektowanie i wdrożenie motywu oraz biblioteki komponentów reużywalnych dla systemu zarządzania treścią Grupy Kapitalowej PGE. Projekt objął odświeżenie identyfikacji wizualnej przy zachowaniu spójności na wszystkich stronach grupy.",
       "overview": {
-        "intro": "Grupa Kapitalowa PGE to najwieksza polska firma energetyczna, posiadajaca kilkadziesiat stron internetowych zarzadzanych przez wewnetrzny CMS. Moim zadaniem bylo stworzenie nowego, spolnego motywu wizualnego oraz zestawu komponentow, ktore moga byc uzywane przez wszystkie strony w grupie.",
+        "intro": "Grupa Kapitalowa PGE to największa polska firma energetyczna, posiadająca kilkadziesiąt stron internetowych zarządzanych przez wewnętrzny CMS. Moim zadaniem było stworzenie nowego, wspólnego motywu wizualnego oraz zestawu komponentów, które mogą być używane przez wszystkie strony w grupie.",
         "goals": [
-          "Odswiezenie identyfikacji wizualnej zgodnie z nowym brandingiem",
-          "Stworzenie biblioteki komponentow wielokrotnego uzytku",
+          "Odświeżenie identyfikacji wizualnej zgodnie z nowym brandingiem",
+          "Stworzenie biblioteki komponentów wielokrotnego użytku",
           "Usprawnienie procesu tworzenia nowych stron",
-          "Zapewnienie spojnosci wizualnej na wszystkich witrynach grupy"
+          "Zapewnienie spójności wizualnej na wszystkich witrynach grupy"
         ]
       },
       "features": [
         {
-          "title": "System Komponentow",
-          "description": "Ponad 40 komponentow wielokrotnego uzytku od przyciskow po zlozone layouty"
+          "title": "System Komponentów",
+          "description": "Ponad 40 komponentów wielokrotnego użytku od przycisków po złożone layouty"
         },
         {
-          "title": "Responsywnosc",
-          "description": "Pelna responsywnosc na wszystkich urzadzeniach od mobile po desktop"
+          "title": "Responsywność",
+          "description": "Pełna responsywność na wszystkich urządzeniach od mobile po desktop"
         },
         {
-          "title": "Dostepnosc",
-          "description": "Zgodnosc z WCAG 2.1 dla zapewnienia dostepnosci dla wszystkich uzytkownikow"
+          "title": "Dostępność",
+          "description": "Zgodność z WCAG 2.1 dla zapewnienia dostępności dla wszystkich użytkowników"
         },
         {
           "title": "Dokumentacja",
-          "description": "Szczegolowa dokumentacja kazdego komponentu z przykladami uzycia"
+          "description": "Szczegółowa dokumentacja każdego komponentu z przykładami użycia"
         },
         {
-          "title": "Skalowalnosc",
-          "description": "Architektura umozliwiajaca latwe dodawanie nowych komponentow"
+          "title": "Skalowalność",
+          "description": "Architektura umożliwiająca łatwe dodawanie nowych komponentów"
         },
         {
-          "title": "Wydajnosc",
-          "description": "Zoptymalizowany kod CSS i JS dla szybkiego ladowania stron"
+          "title": "Wydajność",
+          "description": "Zoptymalizowany kod CSS i JS dla szybkiego ładowania stron"
         }
       ],
       "techStack": {
@@ -348,34 +333,34 @@
     },
     "gkpge-formbuilder": {
       "title": "FormBuilder dla CMS PGE",
-      "tagline": "Narzedzie do budowania dynamicznych formularzy",
-      "description": "Kompleksowe narzedzie do tworzenia formularzy z interfejsem drag & drop, obsluga zaleznosci miedzy polami oraz mozliwoscia definiowania niestandardowych akcji po wyslaniu. FormBuilder zostal zintegrowany z wewnetrznym CMS grupy kapitalowej.",
+      "tagline": "Narzędzie do budowania dynamicznych formularzy",
+      "description": "Narzędzie do tworzenia formularzy z interfejsem drag & drop, obsługą zależności między polami oraz możliwością definiowania niestandardowych akcji po wysłaniu. FormBuilder został zintegrowany z wewnętrznym CMS grupy kapitalowej.",
       "overview": {
-        "intro": "FormBuilder to narzedzie pozwalajace redaktorom tresci na tworzenie zlozonych formularzy bez udzialu programistow. Panel administracyjny oparty na Angularze umozliwia wizualne projektowanie formularzy, ktore nastepnie sa eksportowane jako JSON i renderowane przez backend Symfony. Po stronie przegladarki stworzylem dedykowany silnik w TypeScript, ktory na podstawie grafu zaleznosci odtwarza wszystkie dynamiczne zachowania zdefiniowane w builderze.",
+        "intro": "FormBuilder to narzędzie pozwalające redaktorom treści na tworzenie złożonych formularzy bez udziału programistów. Panel administracyjny oparty na Angular umożliwia wizualne projektowanie formularzy, które następnie są eksportowane jako JSON i renderowane przez backend Symfony. Po stronie przeglądarki stworzyłem dedykowany silnik w TypeScript, który na podstawie grafu zależności odtwarza wszystkie dynamiczne zachowania zdefiniowane w builderze.",
         "goals": [
-          "Umozliwienie redaktorom samodzielnego tworzenia formularzy",
-          "Implementacja systemu zaleznosci miedzy polami",
+          "Umożliwienie redaktorom samodzielnego tworzenia formularzy",
+          "Implementacja systemu zależności między polami",
           "Stworzenie intuicyjnego interfejsu drag & drop",
-          "Zapewnienie pelnej walidacji po stronie klienta i serwera",
-          "Budowa silnika grafu zaleznosci do odtwarzania dynamicznych zachowan"
+          "Zapewnienie pełnej walidacji po stronie klienta i serwera",
+          "Budowa silnika grafu zależności do odtwarzania dynamicznych zachowań"
         ]
       },
       "features": [
         {
           "title": "Drag & Drop",
-          "description": "Intuicyjne przeciaganie komponentow formularza na canvas"
+          "description": "Intuicyjne przeciąganie komponentów formularza na canvas"
         },
         {
-          "title": "Zaleznosci Pol",
-          "description": "Definiowanie warunkow pokazywania i ukrywania pol"
+          "title": "Zależności Pól",
+          "description": "Definiowanie warunków pokazywania i ukrywania pól"
         },
         {
-          "title": "Silnik Grafu Zaleznosci",
-          "description": "Dedykowany silnik TypeScript odtwarzajacy zaleznosci na podstawie grafu polaczen miedzy polami"
+          "title": "Silnik Grafu Zależności",
+          "description": "Dedykowany silnik TypeScript odtwarzający zależności na podstawie grafu połączeń między polami"
         },
         {
           "title": "Niestandardowe Akcje",
-          "description": "Konfiguracja zachowania po wyslaniu formularza"
+          "description": "Konfiguracja zachowania po wysłaniu formularza"
         },
         {
           "title": "Walidacja",
@@ -398,73 +383,73 @@
       },
       "process": {
         "title": "Proces Realizacji Projektu",
-        "subtitle": "Od pierwszych rozmow z biznesem do wdrozenia na produkcje",
+        "subtitle": "Od pierwszych rozmów z biznesem do wdrożenia na produkcję",
         "steps": [
           {
             "id": "discovery",
             "title": "Rozmowy z Biznesem",
-            "period": "Tydzien 1-2",
+            "period": "Tydzień 1-2",
             "icon": "discovery",
-            "description": "Projekt zaczal sie od serii spotkan z zespolem biznesowym i redaktorami tresci. Chcialem zrozumiec ich codzienne problemy i frustracje zwiazane z obecnym procesem tworzenia formularzy. Okazalo sie, ze kazdy nowy formularz wymaga zgloszen do IT i czekania nawet kilka tygodni na realizacje.",
+            "description": "Projekt zaczął się od serii spotkań z zespołem biznesowym i redaktorami treści. Chciałem zrozumieć ich codzienne problemy i frustracje związane z obecnym procesem tworzenia formularzy. Okazało się, że każdy nowy formularz wymaga zgłoszeń do IT i czekania nawet kilka tygodni na realizację.",
             "details": [
-              "Przeprowadzilem wywiady z 8 redaktorami tresci z roznych spolek grupy",
-              "Zidentyfikowalem glowny problem - zbyt dlugi czas od pomyslu do publikacji formularza",
-              "Zebralem wymagania dotyczace typow pol i zaleznosci miedzy nimi",
-              "Ustalilem priorytety funkcjonalnosci z product ownerem"
+              "Przeprowadziłem wywiady z 8 redaktorami treści z różnych spółek grupy",
+              "Zidentyfikowałem główny problem - zbyt długi czas od pomysłu do publikacji formularza",
+              "Zebrałem wymagania dotyczące typów pól i zależności między nimi",
+              "Ustaliłem priorytety funkcjonalności z product ownerem"
             ]
           },
           {
             "id": "planning",
             "title": "Planowanie Architektury",
-            "period": "Tydzien 3-4",
+            "period": "Tydzień 3-4",
             "icon": "planning",
-            "description": "Po zebraniu wymagan przyszedl czas na zaprojektowanie architektury systemu. Musialem podjac kilka kluczowych decyzji technicznych - jak przechowywac strukture formularza, jak obslugiwac zaleznosci miedzy polami i jak zintegrować narzedzie z istniejacym CMS opartym na Symfony.",
+            "description": "Po zebraniu wymagań przyszedł czas na zaprojektowanie architektury systemu. Musiałem podjąć kilka kluczowych decyzji technicznych - jak przechowywać strukturę formularza, jak obsługiwać zależności między polami i jak zintegrować narzędzie z istniejącym CMS opartym na Symfony.",
             "details": [
-              "Zdecydowalem sie na Angular ze wzgledu na jego wsparcie dla zlozonych aplikacji",
-              "Zaprojektowalem format JSON dla struktur formularzy",
-              "Przemyslalem system zaleznosci oparty na regułach warunkowych",
-              "Przygotowalem dokumentacje techniczna i diagramy przepływu danych"
+              "Zdecydowałem się na Angular ze względu na jego wsparcie dla złożonych aplikacji",
+              "Zaprojektowałem format JSON dla struktur formularzy",
+              "Przemyślałem system zależności oparty na regułach warunkowych",
+              "Przygotowałem dokumentację techniczną i diagramy przepływu danych"
             ]
           },
           {
             "id": "development",
             "title": "Faza Developmentu",
-            "period": "Tydzien 5-14",
+            "period": "Tydzień 5-14",
             "icon": "development",
-            "description": "Glowna faza implementacji zajela okolo 10 tygodni. Zaczalem od podstawowych komponentow jak inputy i selecty, potem dodalem logike drag & drop. Najtrudniejszym elementem bylo stworzenie silnika zaleznosci - musialem zaprojektowac strukture grafu, ktora pozwalala na definiowanie zlozonych relacji miedzy polami i ich dynamiczne odtwarzanie po stronie przegladarki.",
+            "description": "Główna faza implementacji zajęła około 10 tygodni. Zacząłem od podstawowych komponentów jak inputy i selecty, potem dodałem logikę drag & drop. Najtrudniejszym elementem było stworzenie silnika zależności - musiałem zaprojektować strukturę grafu, która pozwalała na definiowanie złożonych relacji między polami i ich dynamiczne odtwarzanie po stronie przeglądarki.",
             "details": [
-              "Stworzylem biblioteke komponentow formularza (input, select, checkbox, radio, textarea)",
-              "Zaimplementowalem mechanizm drag & drop oparty na Angular CDK",
-              "Zaprojektowalem i zbudowalem silnik grafu zaleznosci w TypeScript",
-              "Silnik analizowal strukture JSON i budowal graf polaczen miedzy polami",
-              "Na podstawie grafu dynamicznie przypisywal listenery i odtwarzal zachowania (show/hide, enable/disable, walidacje)",
-              "Zoptymalizowalem traversowanie grafu zeby uniknac cyklicznych zaleznosci"
+              "Stworzyłem bibliotekę komponentów formularza (input, select, checkbox, radio, textarea)",
+              "Zaimplementowałem mechanizm drag & drop oparty na Angular CDK",
+              "Zaprojektowałem i zbudowałem silnik grafu zależności w TypeScript",
+              "Silnik analizował strukturę JSON i budował graf połączeń między polami",
+              "Na podstawie grafu dynamicznie przypisywał listenery i odtwarzał zachowania (show/hide, enable/disable, walidacje)",
+              "Zoptymalizowałem traversowanie grafu żeby uniknąć cyklicznych zależności"
             ]
           },
           {
             "id": "testing",
             "title": "Testowanie",
-            "period": "Tydzien 15-17",
+            "period": "Tydzień 15-17",
             "icon": "testing",
-            "description": "Przed wdrozeniem przeprowadzilem intensywne testy z rzeczywistymi uzytkownikami. Zaprosłlem grupę redaktorów do testów beta, gdzie mogli tworzyc prawdziwe formularze i zgłaszac problemy. Dzieki ich feedbackowi poprawiłem wiele detali UX.",
+            "description": "Przed wdrożeniem przeprowadziłem intensywne testy z rzeczywistymi użytkownikami. Zaprosiłem grupę redaktorów do testów beta, gdzie mogli tworzyć prawdziwe formularze i zgłaszać problemy. Dzięki ich feedbackowi poprawiłem wiele detali UX.",
             "details": [
-              "Przeprowadzilem testy beta z 5 redaktorami z roznych spolek",
-              "Naprawilem bledy zwiazane z walidacja i zapisywaniem stanu",
-              "Zoptymalizowalem wydajnosc przy duzych formularzach",
-              "Dodałem tooltips i podpowiedzi na podstawie feedbacku uzytkownikow"
+              "Przeprowadziłem testy beta z 5 redaktorami z różnych spółek",
+              "Naprawiłem błędy związane z walidacją i zapisywaniem stanu",
+              "Zoptymalizowałem wydajność przy dużych formularzach",
+              "Dodałem tooltips i podpowiedzi na podstawie feedbacku użytkowników"
             ]
           },
           {
             "id": "deployment",
-            "title": "Wdrozenie",
-            "period": "Tydzien 18-20",
+            "title": "Wdrożenie",
+            "period": "Tydzień 18-20",
             "icon": "deployment",
-            "description": "Wdrozenie odbywalo sie etapami. Najpierw na srodowisku testowym, potem na wybranych stronach grupy, a na koncu na wszystkich witrynach. Przeprowadzilem tez szkolenia dla zespolow redakcyjnych, zeby mogli w pelni wykorzystac mozliwosci narzedzia.",
+            "description": "Wdrożenie odbywało się etapami. Najpierw na środowisku testowym, potem na wybranych stronach grupy, a na końcu na wszystkich witrynach. Przeprowadziłem też szkolenia dla zespołów redakcyjnych, żeby mogli w pełni wykorzystać możliwości narzędzia.",
             "details": [
-              "Wdrozylem narzedzie na srodowisko produkcyjne w trybie readonly",
-              "Przeprowadzilem 3 sesje szkoleniowe dla zespolow redakcyjnych",
-              "Monitorowalem metryki i zbieralem feedback po wdrozeniu",
-              "Opracowalem dokumentację uzytkownika i FAQ"
+              "Wdrożyłem narzędzie na środowisko produkcyjne w trybie readonly",
+              "Przeprowadziłem 3 sesje szkoleniowe dla zespołów redakcyjnych",
+              "Monitorowałem metryki i zbierałem feedback po wdrożeniu",
+              "Opracowałem dokumentację użytkownika i FAQ"
             ]
           }
         ]
