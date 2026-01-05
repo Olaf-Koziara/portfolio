@@ -80,6 +80,21 @@
         "year": "2021-2023",
         "description": "Narzędzie do budowania formularzy zintegrowane z platformą CMS. Panel oparty na Angular z TypeScriptem, zintegrowany z backendem Symfony/Twig.",
         "scope": ["Angular", "TypeScript", "RxJS", "TWIG", "SCSS"]
+      },
+      {
+        "id": "gkpge-newsletter-pwa",
+        "name": "PGE Newsletter (PWA / Offline-first)",
+        "client": "Grupa Kapitalowa PGE",
+        "year": "2022-2023",
+        "description": "Progressive Web App do dystrybucji newslettera wewnętrznego z architekturą offline-first, Service Workers i implementacją w React zorientowaną na wydajność, osiągając stały wynik Lighthouse 95+ dla performance i accessibility.",
+        "scope": [
+          "React",
+          "TypeScript",
+          "PWA",
+          "Service Workers",
+          "Lighthouse",
+          "Accessibility"
+        ]
       }
     ]
   },
@@ -181,10 +196,6 @@
         {
           "title": "System Priorytetów",
           "description": "Klasyfikacja priorytetów: Niski, Średni, Wysoki i Pilny"
-        },
-        {
-          "title": "Synchronizacja Real-time",
-          "description": "Aktualizacje na żywo między wszystkimi połączonymi urządzeniami"
         },
         {
           "title": "Przeciągnij i Upuść",
@@ -454,6 +465,79 @@
           }
         ]
       }
+    },
+    "gkpge-newsletter-pwa": {
+      "title": "PGE Newsletter PWA",
+      "tagline": "Aplikacja offline-first do newslettera wewnętrznego",
+      "description": "Progressive Web App dla newslettera wewnętrznego Grupy Kapitalowej PGE, zaprojektowana z architekturą offline-first, Service Workers i stackiem React zorientowanym na wydajność, osiągając stały wynik Lighthouse 95+ dla performance i accessibility.",
+      "overview": {
+        "intro": "PGE Newsletter PWA to wewnętrzna aplikacja webowa służąca do dystrybucji wiadomości i aktualizacji w Grupie Kapitalowej PGE. Głównym celem było zapewnienie szybkiego ładowania, dostępu offline do treści oraz niezawodnego działania na urządzeniach z niestabilnym połączeniem sieciowym.",
+        "goals": [
+          "Zapewnienie dostępu offline-first do treści newslettera dla pracowników",
+          "Osiągnięcie i utrzymanie wysokich wyników Lighthouse dla wydajności i dostępności (95+)",
+          "Optymalizacja czasów ładowania przy niskiej przepustowości sieci",
+          "Zapewnienie prostej, łatwej w utrzymaniu bazy kodu React do przyszłych rozszerzeń"
+        ]
+      },
+      "features": [
+        {
+          "title": "Architektura Offline-first",
+          "description": "Kluczowe widoki newslettera i zasoby cachowane przez Service Workers, aby użytkownicy mieli dostęp do treści bez połączenia sieciowego."
+        },
+        {
+          "title": "Instalowalna PWA",
+          "description": "Wsparcie dla funkcji dodawania do ekranu głównego na desktop i mobile, z konfiguracją manifestu i UX podobnym do aplikacji natywnych."
+        },
+        {
+          "title": "Zoptymalizowana Wydajność",
+          "description": "Code splitting, optymalizacja obrazów i strategie cachowania zaprojektowane w celu osiągnięcia stałego wyniku Lighthouse 95+."
+        },
+        {
+          "title": "Dostępny Interfejs",
+          "description": "Semantyczny HTML, nawigacja klawiaturą i atrybuty ARIA zgodnie z wewnętrznymi wymaganiami dostępności."
+        }
+      ],
+      "techStack": {
+        "frontend": [
+          "React",
+          "TypeScript",
+          "React Router",
+          "Styled Components / SCSS",
+          "Lighthouse audits"
+        ],
+        "backend": [
+          "REST API (wewnętrzne)",
+          "Node.js lub istniejący backend PGE (warstwa integracji)",
+          "Warstwa cachowania dla statycznych treści"
+        ]
+      },
+      "highlights": [
+        {
+          "id": "offline-first-strategy",
+          "title": "Strategia Offline-first z Service Workers",
+          "problem": "Pracownicy potrzebowali dostępu do treści newslettera na urządzeniach z niestabilnym lub ograniczonym połączeniem, szczególnie w lokalizacjach terenowych.",
+          "solution": "Implementacja Service Workera ze strategią cache-first dla statycznych zasobów i kluczowych widoków, z network-first dla dynamicznych treści, gdzie świeżość danych była ważna.",
+          "impact": "Użytkownicy mogą otworzyć aplikację i czytać wcześniej załadowane newslettery nawet bez aktywnego połączenia, zmniejszając liczbę zgłoszeń do supportu związanych z problemami dostępu."
+        },
+        {
+          "id": "lighthouse-optimisation",
+          "title": "Lighthouse 95+ dla Performance i Accessibility",
+          "problem": "Początkowe prototypy pokazywały niespójne wyniki wydajności i nie przechodziły testów dostępności.",
+          "solution": "Iteracyjne audyty Lighthouse, optymalizacja obrazów i fontów, lazy loading dla modułów niekrytycznych oraz poprawki dostępności (etykiety, role, kontrast).",
+          "impact": "Stabilne wyniki Lighthouse 95+ dla performance i accessibility w pipeline CI, dając zespołowi mierzalny benchmark jakości."
+        },
+        {
+          "id": "background-refetch",
+          "title": "Background Refetch z Fallbackiem dla iOS",
+          "problem": "Użytkownicy potrzebowali świeżych treści newslettera gdy urządzenie wracało online, nawet jeśli aplikacja nie była aktywnie otwarta. Background Sync API działa na Androidzie, ale nie jest wspierane na iOS/Safari.",
+          "solution": "Implementacja Background Sync API dla Androida z fallbackiem opartym na Workbox dla iOS. Na iOS wykorzystałem nasłuchiwanie na event online w połączeniu z aktywacją service workera, aby uruchomić refetch gdy użytkownik ponownie otwiera aplikację lub odblokowuje ekran.",
+          "impact": "Użytkownicy Androida otrzymują prawdziwą synchronizację w tle gdy połączenie wraca. Użytkownicy iOS otrzymują automatyczne odświeżenie treści przy ponownym otwarciu aplikacji, zapewniając aktualne treści na wszystkich platformach pomimo ograniczeń API.",
+          "code": {
+            "registration": "// Rejestracja background sync (Android)\nconst registration = await navigator.serviceWorker.ready;\nawait registration.sync.register('newsletter-sync');\n\n// Listener w Service Workerze\nself.addEventListener('sync', event => {\n  if (event.tag === 'newsletter-sync') {\n    event.waitUntil(fetchLatestNewsletters());\n  }\n});",
+            "iosFallback": "// Fallback dla iOS - wykrywanie online i trigger sync\nwindow.addEventListener('online', async () => {\n  if ('serviceWorker' in navigator) {\n    const registration = await navigator.serviceWorker.ready;\n    // Ręczne uruchomienie sync przez message\n    registration.active.postMessage({\n      type: 'MANUAL_SYNC',\n      tag: 'newsletter-sync'\n    });\n  }\n});\n\n// Service Worker - obsługa manual sync\nself.addEventListener('message', event => {\n  if (event.data.type === 'MANUAL_SYNC') {\n    event.waitUntil(fetchLatestNewsletters());\n  }\n});"
+          }
+        }
+      ]
     }
   }
 }

@@ -80,6 +80,21 @@
         "year": "2021-2023",
         "description": "Form-building tool integrated with the CMS platform. Panel built with Angular and TypeScript, integrated with Symfony/Twig backend.",
         "scope": ["Angular", "TypeScript", "RxJS", "TWIG", "SCSS"]
+      },
+      {
+        "id": "gkpge-newsletter-pwa",
+        "name": "PGE Newsletter (PWA / Offline-first)",
+        "client": "PGE Capital Group",
+        "year": "2022-2023",
+        "description": "Progressive Web App for internal newsletter distribution with offline-first architecture, Service Workers and performance-focused React implementation, achieving consistent Lighthouse scores of 95+ for performance and accessibility.",
+        "scope": [
+          "React",
+          "TypeScript",
+          "PWA",
+          "Service Workers",
+          "Lighthouse",
+          "Accessibility"
+        ]
       }
     ]
   },
@@ -454,6 +469,79 @@
           }
         ]
       }
+    },
+    "gkpge-newsletter-pwa": {
+      "title": "PGE Newsletter PWA",
+      "tagline": "Offline-first internal newsletter application",
+      "description": "Progressive Web App for PGE Capital Group's internal newsletter, designed with offline-first architecture, Service Workers, and a performance-focused React stack, consistently reaching Lighthouse scores of 95+ for performance and accessibility.",
+      "overview": {
+        "intro": "PGE Newsletter PWA is an internal web application used to distribute news and updates across the PGE Capital Group. The main goal was to ensure fast loading, offline access to content, and reliable behavior on devices with unstable network connectivity.",
+        "goals": [
+          "Provide offline-first access to newsletter content for employees",
+          "Achieve and maintain high Lighthouse scores for performance and accessibility (95+)",
+          "Optimize loading times on low-bandwidth connections",
+          "Ensure a simple, maintainable React codebase for future extensions"
+        ]
+      },
+      "features": [
+        {
+          "title": "Offline-first Architecture",
+          "description": "Key newsletter views and assets cached via Service Workers so users can access content without network connectivity."
+        },
+        {
+          "title": "Installable PWA",
+          "description": "Support for add-to-home-screen behavior on desktop and mobile, with manifest configuration and app-like UX."
+        },
+        {
+          "title": "Optimized Performance",
+          "description": "Code splitting, image optimization and caching strategies designed to reach a sustained Lighthouse score of 95+."
+        },
+        {
+          "title": "Accessible UI",
+          "description": "Semantic HTML, keyboard navigation and ARIA attributes to align with internal accessibility requirements."
+        }
+      ],
+      "techStack": {
+        "frontend": [
+          "React",
+          "TypeScript",
+          "React Router",
+          "Styled Components or SCSS",
+          "Lighthouse audits"
+        ],
+        "backend": [
+          "REST API (internal)",
+          "Node.js or existing PGE backend (integration layer)",
+          "Caching layer for static content"
+        ]
+      },
+      "highlights": [
+        {
+          "id": "offline-first-strategy",
+          "title": "Offline-first Strategy with Service Workers",
+          "problem": "Employees needed access to newsletter content on devices with unstable or limited connectivity, especially in field locations.",
+          "solution": "Implemented a Service Worker with a cache-first strategy for static assets and critical views, with network-first for dynamic content where freshness mattered.",
+          "impact": "Users can open the app and read previously loaded newsletters even without an active connection, reducing support tickets related to access issues."
+        },
+        {
+          "id": "lighthouse-optimisation",
+          "title": "Lighthouse 95+ Performance and Accessibility",
+          "problem": "Initial prototypes showed inconsistent performance scores and missed accessibility checks.",
+          "solution": "Iterative Lighthouse audits, image and font optimization, lazy loading for non-critical modules, and accessibility fixes (labels, roles, contrast).",
+          "impact": "Stable Lighthouse scores of 95+ for performance and accessibility in CI pipeline, giving the team a measurable quality benchmark."
+        },
+        {
+          "id": "background-refetch",
+          "title": "Background Refetch with Fallback for iOS",
+          "problem": "Users needed fresh newsletter content when their device came back online, even if the app wasn't actively open. Background Sync API works on Android but is not supported on iOS/Safari.",
+          "solution": "Implemented Background Sync API for Android with Workbox-powered fallback for iOS. On iOS, used online event listeners combined with service worker activation to trigger refetch when user reopens the app or unlocks the screen.",
+          "impact": "Android users get true background synchronization when connectivity returns. iOS users get automatic content refresh on app reopen, ensuring up-to-date content across all platforms despite API limitations.",
+          "code": {
+            "registration": "// Register background sync (Android)\nconst registration = await navigator.serviceWorker.ready;\nawait registration.sync.register('newsletter-sync');\n\n// Service Worker listener\nself.addEventListener('sync', event => {\n  if (event.tag === 'newsletter-sync') {\n    event.waitUntil(fetchLatestNewsletters());\n  }\n});",
+            "iosFallback": "// iOS fallback - detect online and trigger sync\nwindow.addEventListener('online', async () => {\n  if ('serviceWorker' in navigator) {\n    const registration = await navigator.serviceWorker.ready;\n    // Trigger sync manually via message\n    registration.active.postMessage({\n      type: 'MANUAL_SYNC',\n      tag: 'newsletter-sync'\n    });\n  }\n});\n\n// Service Worker - handle manual sync\nself.addEventListener('message', event => {\n  if (event.data.type === 'MANUAL_SYNC') {\n    event.waitUntil(fetchLatestNewsletters());\n  }\n});"
+          }
+        }
+      ]
     }
   }
 }
