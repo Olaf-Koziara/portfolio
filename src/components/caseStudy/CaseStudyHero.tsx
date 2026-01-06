@@ -93,8 +93,8 @@ export function CaseStudyHero({
           </div>
           <div>
             <Image
-              width={1200}
-              height={900}
+              width={800}
+              height={450}
               src={`/${title.replaceAll(" ", "")}.webp`}
               alt={title + " preview"}
             />
