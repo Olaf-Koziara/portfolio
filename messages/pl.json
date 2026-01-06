@@ -314,14 +314,6 @@
           "description": "Zgodność z WCAG 2.1 dla zapewnienia dostępności dla wszystkich użytkowników"
         },
         {
-          "title": "Dokumentacja",
-          "description": "Szczegółowa dokumentacja każdego komponentu z przykładami użycia"
-        },
-        {
-          "title": "Skalowalność",
-          "description": "Architektura umożliwiająca łatwe dodawanie nowych komponentów"
-        },
-        {
           "title": "Wydajność",
           "description": "Zoptymalizowany kod CSS i JS dla szybkiego ładowania stron"
         }
@@ -351,10 +343,8 @@
         "intro": "FormBuilder to narzędzie pozwalające redaktorom treści na tworzenie złożonych formularzy bez udziału programistów. Panel administracyjny oparty na Angular umożliwia wizualne projektowanie formularzy, które następnie są eksportowane jako JSON i renderowane przez backend Symfony. Po stronie przeglądarki stworzyłem dedykowany silnik w TypeScript, który na podstawie grafu zależności odtwarza wszystkie dynamiczne zachowania zdefiniowane w builderze.",
         "goals": [
           "Umożliwienie redaktorom samodzielnego tworzenia formularzy",
-          "Implementacja systemu zależności między polami",
-          "Stworzenie intuicyjnego interfejsu drag & drop",
-          "Zapewnienie pełnej walidacji po stronie klienta i serwera",
-          "Budowa silnika grafu zależności do odtwarzania dynamicznych zachowań"
+          "System zależności między polami z silnikiem grafu TypeScript",
+          "Drag & drop interface z walidacją real-time"
         ]
       },
       "features": [
@@ -363,24 +353,12 @@
           "description": "Intuicyjne przeciąganie komponentów formularza na canvas"
         },
         {
-          "title": "Zależności Pól",
-          "description": "Definiowanie warunków pokazywania i ukrywania pól"
-        },
-        {
           "title": "Silnik Grafu Zależności",
           "description": "Dedykowany silnik TypeScript odtwarzający zależności na podstawie grafu połączeń między polami"
         },
         {
-          "title": "Niestandardowe Akcje",
-          "description": "Konfiguracja zachowania po wysłaniu formularza"
-        },
-        {
           "title": "Walidacja",
           "description": "Walidacja w czasie rzeczywistym po stronie klienta"
-        },
-        {
-          "title": "Eksport JSON",
-          "description": "Struktura formularza eksportowana do JSON dla backendu"
         }
       ],
       "techStack": {
