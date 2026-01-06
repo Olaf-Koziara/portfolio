@@ -40,7 +40,7 @@ export default function CaseStudyPage({
 
   // Check if this is a CMS case study with before/after comparison
   const isCMSProject = projectKey === "gkpge-cms";
-  
+
   // Check if this is a FormBuilder case study with process timeline
   const isFormBuilderProject = projectKey === "gkpge-formbuilder";
 
@@ -88,11 +88,13 @@ export default function CaseStudyPage({
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
                 {projectData.comparison.title}
               </h2>
-              <p className="text-muted mb-12 text-center">{t("visualComparison")}</p>
-              
+              <p className="text-muted mb-12 text-center">
+                {t("visualComparison")}
+              </p>
+
               <BeforeAfterComparison
-                beforeImage="/cms-before.webp"
-                afterImage="/cms-after.webp"
+                beforeImage="/gkpge_old_main.webp"
+                afterImage="/gkpge_new_main.webp"
                 beforeLabel={projectData.comparison.beforeLabel}
                 afterLabel={projectData.comparison.afterLabel}
               />
