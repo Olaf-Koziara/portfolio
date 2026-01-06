@@ -40,8 +40,8 @@
           "Node.js",
           "MongoDB"
         ],
-        "liveUrl": "https://example.com",
-        "githubUrl": "https://github.com",
+        "liveUrl": "https://orbitask.olafwebdev.site/",
+        "githubUrl": "https://github.com/Olaf-Koziara/orbitask-manager",
         "caseStudies": [
           {
             "title": ""
@@ -66,14 +66,6 @@
     "viewCaseStudy": "View case study",
     "items": [
       {
-        "id": "gkpge-cms",
-        "name": "CMS Theme and Components for PGE Group",
-        "client": "PGE Capital Group",
-        "year": "2021-2023",
-        "description": "Created a new theme and reusable component library for PGE Group's CMS. The project included unifying visual identity and streamlining content management processes.",
-        "scope": ["Web Design", "Web Development", "TWIG", "SCSS", "JavaScript"]
-      },
-      {
         "id": "gkpge-formbuilder",
         "name": "FormBuilder for Internal CMS",
         "client": "PGE Systemy",
@@ -81,6 +73,15 @@
         "description": "Form-building tool integrated with the CMS platform. Panel built with Angular and TypeScript, integrated with Symfony/Twig backend.",
         "scope": ["Angular", "TypeScript", "RxJS", "TWIG", "SCSS"]
       },
+      {
+        "id": "gkpge-cms",
+        "name": "CMS Theme and Components for PGE Group",
+        "client": "PGE Capital Group",
+        "year": "2021-2023",
+        "description": "Created a new theme and reusable component library for PGE Group's CMS. The project included unifying visual identity and streamlining content management processes.",
+        "scope": ["Web Design", "Web Development", "TWIG", "SCSS", "JavaScript"]
+      },
+
       {
         "id": "gkpge-newsletter-pwa",
         "name": "PGE Newsletter (PWA / Offline-first)",

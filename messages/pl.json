@@ -40,8 +40,8 @@
           "Node.js",
           "MongoDB"
         ],
-        "liveUrl": "https://example.com",
-        "githubUrl": "https://github.com",
+        "liveUrl": "https://orbitask.olafwebdev.site/",
+        "githubUrl": "https://github.com/Olaf-Koziara/orbitask-manager",
         "caseStudies": [
           {
             "title": ""
@@ -66,14 +66,6 @@
     "viewCaseStudy": "Zobacz case study",
     "items": [
       {
-        "id": "gkpge-cms",
-        "name": "Motyw i komponenty CMS dla Grupy PGE",
-        "client": "Grupa Kapitalowa PGE",
-        "year": "2021-2023",
-        "description": "Stworzenie motywu oraz biblioteki reużywalnych komponentów dla CMS Grupy PGE. Projekt obejmował unifikację identyfikacji wizualnej i usprawnienie procesu zarządzania contentem.",
-        "scope": ["Web Design", "Web Development", "TWIG", "SCSS", "JavaScript"]
-      },
-      {
         "id": "gkpge-formbuilder",
         "name": "FormBuilder dla wewnętrznego CMS",
         "client": "PGE Systemy",
@@ -81,6 +73,15 @@
         "description": "Narzędzie do budowania formularzy zintegrowane z platformą CMS. Panel oparty na Angular z TypeScriptem, zintegrowany z backendem Symfony/Twig.",
         "scope": ["Angular", "TypeScript", "RxJS", "TWIG", "SCSS"]
       },
+      {
+        "id": "gkpge-cms",
+        "name": "Motyw i komponenty CMS dla Grupy PGE",
+        "client": "Grupa Kapitalowa PGE",
+        "year": "2021-2023",
+        "description": "Stworzenie motywu oraz biblioteki reużywalnych komponentów dla CMS Grupy PGE. Projekt obejmował unifikację identyfikacji wizualnej i usprawnienie procesu zarządzania contentem.",
+        "scope": ["Web Design", "Web Development", "TWIG", "SCSS", "JavaScript"]
+      },
+
       {
         "id": "gkpge-newsletter-pwa",
         "name": "PGE Newsletter (PWA / Offline-first)",
@@ -180,7 +181,7 @@
         "password": "12test34"
       },
       "overview": {
-        "intro": "OrbiTask Manager to aplikacja full-stack demonstrująca nowoczesne praktyki tworzenia aplikacji webowych. Zbudowana jako narzędzie do zwiększania produktywności, łączy potężne technologie z intuicyjnym interfejsem użytkownika.",
+        "intro": "OrbiTask Manager to aplikacja full-stack demonstrująca nowoczesne praktyki tworzenia aplikacji webowych. Zbudowana jako osobiste narzędzie do zwiększania produktywności.",
         "goals": [
           "Usprawnienie zarządzania zadaniami i planowania projektów",
           "Implementacja skalowalnej architektury dla rosnącej złożoności",
