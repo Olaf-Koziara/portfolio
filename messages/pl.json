@@ -168,11 +168,12 @@
       "title": "OrbiTask Manager",
       "tagline": "Zarządzanie Zadaniami i Projektami",
       "description": "Aplikacja do zarządzania zadaniami i projektami, zaprojektowana w celu zwiększenia produktywności poprzez inteligentną organizację, wizualne przepływy pracy i współpracę.",
-      "demoUrl": "https://orbitask-manager-1.onrender.com/",
+      "demoUrl": "http://orbitask.olafwebdev.site",
       "demoCredentials": {
         "email": "test@gmail.com",
         "password": "12test34"
       },
+      "heroImageUrl": "/OrbiTaskManager.webp",
       "overview": {
         "intro": "OrbiTask Manager to aplikacja full-stack demonstrująca nowoczesne praktyki tworzenia aplikacji webowych. Zbudowana jako osobiste narzędzie do zwiększania produktywności.",
         "goals": [

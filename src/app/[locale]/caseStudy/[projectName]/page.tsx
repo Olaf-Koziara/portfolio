@@ -53,6 +53,7 @@ export default function CaseStudyPage({
         description={projectData.description}
         demoUrl={projectData.demoUrl}
         demoCredentials={projectData.demoCredentials}
+        heroImageUrl={projectData.heroImageUrl ?? ""}
         onBackClick={handleBack}
         backToProjectsText={t("backToProjects")}
         demoAccountText={t("demoAccount")}

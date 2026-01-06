@@ -173,6 +173,7 @@
         "email": "test@gmail.com",
         "password": "12test34"
       },
+      "heroImageUrl": "/OrbiTaskManager.webp",
       "overview": {
         "intro": "OrbiTask Manager is a full-stack application demonstrating modern web development practices. Built as a productivity tool, it combines powerful technologies with an intuitive user interface.",
         "goals": [

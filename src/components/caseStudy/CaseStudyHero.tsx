@@ -16,6 +16,7 @@ interface CaseStudyHeroProps {
   onBackClick: () => void;
   backToProjectsText: string;
   demoAccountText: string;
+  heroImageUrl?: string;
 }
 
 export function CaseStudyHero({
@@ -27,6 +28,7 @@ export function CaseStudyHero({
   onBackClick,
   backToProjectsText,
   demoAccountText,
+  heroImageUrl,
 }: CaseStudyHeroProps) {
   return (
     <motion.section
@@ -91,14 +93,16 @@ export function CaseStudyHero({
               </motion.div>
             )}
           </div>
-          <div>
-            <Image
-              width={800}
-              height={450}
-              src={`/${title.replaceAll(" ", "")}.webp`}
-              alt={title + " preview"}
-            />
-          </div>
+          {heroImageUrl && (
+            <div>
+              <Image
+                width={800}
+                height={450}
+                src={heroImageUrl}
+                alt={title + " preview"}
+              />
+            </div>
+          )}
         </motion.div>
       </div>
     </motion.section>

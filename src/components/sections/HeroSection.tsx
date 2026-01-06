@@ -65,7 +65,7 @@ export default function HeroSection() {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <a
-              href="#projects"
+              href="#business-projects"
               className="px-8 py-4 bg-accent text-white rounded-xl font-medium hover:bg-accent-hover transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
               {t("cta.projects")}
