@@ -47,13 +47,6 @@
             "title": ""
           }
         ]
-      },
-      {
-        "name": "Angular finance",
-        "description": "Finance management app with dashboard and data visualization.",
-        "stack": ["Angular", "TypeScript", "RxJS", "Node.js"],
-        "liveUrl": "https://example.com",
-        "githubUrl": "https://github.com"
       }
     ]
   },
@@ -174,8 +167,8 @@
     "orbitaskmanager": {
       "title": "OrbiTask Manager",
       "tagline": "Task and Project Management",
-      "description": "Task and project management application designed to increase productivity through intelligent organization, visual workflows, and collaboration.",
-      "demoUrl": "https://orbitask-manager-1.onrender.com/",
+      "description": "",
+      "demoUrl": "http://orbitask.olafwebdev.site/",
       "demoCredentials": {
         "email": "test@gmail.com",
         "password": "12test34"
@@ -191,17 +184,10 @@
       },
       "features": [
         {
-          "title": "Multiple View Modes",
-          "description": "Kanban board, Calendar view, and List for different workflows"
-        },
-        {
           "title": "Priority System",
           "description": "Priority classification: Low, Medium, High, and Urgent"
         },
-        {
-          "title": "Real-time Sync",
-          "description": "Live updates across all connected devices"
-        },
+
         {
           "title": "Drag & Drop",
           "description": "Intuitive task management with smooth dragging"
@@ -248,17 +234,6 @@
           }
         },
         {
-          "id": "drag-drop",
-          "title": "Kanban with Drag & Clickable Buttons",
-          "problem": "Standard dragging blocks ALL clicks during drag. You can't click the Delete button inside a dragged card.",
-          "solution": "Custom sensor detecting data-no-dnd attribute, allowing interactive elements inside dragged cards.",
-          "impact": "Users can smoothly drag cards AND click buttons inside them.",
-          "code": {
-            "sensor": "export class CustomSensor extends PointerSensor {\n  static activators = [{\n    eventName: 'onPointerDown' as const,\n    handler: ({nativeEvent: event}) => {\n      let element = event.target as HTMLElement;\n      while (element) {\n        if (element.dataset?.noDnd) {\n          return false;\n        }\n        element = element.parentElement;\n      }\n      return true;\n    }\n  }];\n}",
-            "usage": "export const TaskCard = ({ task }) => (\n  <div className=\"task-card\">\n    <h3>{task.title}</h3>\n    <div className=\"actions\" data-no-dnd>\n      <Button onClick={handleEdit}>\n        <PencilIcon /> Edit\n      </Button>\n      <Button onClick={handleDelete}>\n        <TrashIcon /> Delete\n      </Button>\n    </div>\n  </div>\n);"
-          }
-        },
-        {
           "id": "optimistic-updates",
           "title": "Optimistic Updates with Rollback",
           "problem": "User clicks 'Mark as Done' → waits 500ms for API → finally sees change. Feels slow.",
@@ -266,27 +241,6 @@
           "impact": "App feels instant. No waiting for API. Automatic rollback on errors.",
           "code": {
             "implementation": "export const useTasks = () => {\n  const updateTaskStatus = useCallback(\n    async (taskId: string, newStatus: TaskStatus) => {\n      const originalTasks = [...tasks];\n      \n      const optimisticTasks = tasks.map(task =>\n        task._id === taskId ? { ...task, status: newStatus } : task\n      );\n      setTasks(optimisticTasks);\n      \n      try {\n        await utils.client.tasks.update.mutate({\n          id: taskId,\n          data: { status: newStatus },\n        });\n        \n        await utils.tasks.invalidate();\n      } catch (error) {\n        setTasks(originalTasks);\n        toast.error(\"Failed to update task.\");\n      }\n    },\n    [tasks, utils]\n  );\n};"
-          }
-        },
-        {
-          "id": "debouncing",
-          "title": "Smart Debouncing for Search",
-          "problem": "User types 'authentication implementation' in search → 28 characters = 28 API requests in 2 seconds!",
-          "solution": "Custom debounce hook that waits 300ms after user stops typing before sending request.",
-          "impact": "28 requests → 1 request. Much happier API server!",
-          "code": {
-            "hook": "export function useDebounce<T>(value: T, delay: number): T {\n  const [debouncedValue, setDebouncedValue] = useState<T>(value);\n\n  useEffect(() => {\n    const handler = setTimeout(() => {\n      setDebouncedValue(value);\n    }, delay);\n\n    return () => clearTimeout(handler);\n  }, [value, delay]);\n\n  return debouncedValue;\n}",
-            "usage": "export const useTasks = () => {\n  const { taskFilters } = useFiltersStore();\n  \n  const debouncedFilters = useDebounce(taskFilters, 300);\n  \n  const queryInput = useMemo(\n    () => FilterService.prepareQueryFilters(debouncedFilters),\n    [debouncedFilters]\n  );\n  \n  const { data: tasks } = trpc.tasks.list.useQuery(queryInput, {\n    staleTime: 30000,\n  });\n};"
-          }
-        },
-        {
-          "id": "performance",
-          "title": "Performance Optimization",
-          "problem": "List of 50 task cards re-renders completely on every parent state change, even if tasks didn't change.",
-          "solution": "Strategic use of useMemo, useCallback, and React.memo to prevent unnecessary re-renders.",
-          "impact": "73% faster rendering! From 450ms to 120ms for 50 tasks.",
-          "code": {
-            "optimized": "export const KanbanBoard = () => {\n  const { tasks } = useTasks();\n  \n  const tasksByStatus = useMemo(() => {\n    return COLUMNS.reduce((acc, col) => {\n      acc[col.status] = tasks.filter(t => t.status === col.status);\n      return acc;\n    }, {} as Record<TaskStatus, Task[]>);\n  }, [tasks]);\n  \n  const handleDragEnd = useCallback((event: DragEndEvent) => {\n    const taskId = event.active.id as string;\n    const newStatus = event.over.id as TaskStatus;\n    setTaskStatus(taskId, newStatus);\n  }, [setTaskStatus]);\n  \n  return (\n    <DndContext onDragEnd={handleDragEnd}>\n      {COLUMNS.map(col => (\n        <Column \n          key={col.status}\n          tasks={tasksByStatus[col.status]}\n        />\n      ))}\n    </DndContext>\n  );\n};"
           }
         }
       ]

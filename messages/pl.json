@@ -47,13 +47,6 @@
             "title": ""
           }
         ]
-      },
-      {
-        "name": "Angular finance",
-        "description": "Aplikacja do zarządzania finansami z dashboardem i wizualizacją danych.",
-        "stack": ["Angular", "TypeScript", "RxJS", "Node.js"],
-        "liveUrl": "https://example.com",
-        "githubUrl": "https://github.com"
       }
     ]
   },
@@ -243,17 +236,7 @@
             "frontend": "export const useTasks = () => {\n  const createTask = trpc.tasks.create.useMutation();\n  \n  // TypeScript ZNA WSZYSTKO o tym API\n  createTask.mutate({\n    title: \"Nowe zadanie\",\n    priority: \"high\",\n    dueDate: new Date('2026-02-01'),\n  });\n};"
           }
         },
-        {
-          "id": "drag-drop",
-          "title": "Kanban z Przeciąganiem i Klikalnym Przyciskami",
-          "problem": "Standardowe przeciąganie blokuje WSZYSTKIE kliknięcia podczas przeciągania. Nie można kliknąć przycisku Usuń wewnątrz przeciąganej karty.",
-          "solution": "Niestandardowy sensor wykrywający atrybut data-no-dnd, pozwalający na interaktywne elementy wewnątrz przeciąganych kart.",
-          "impact": "Użytkownicy mogą płynnie przeciągać karty ORAZ klikać przyciski w ich wnętrzu.",
-          "code": {
-            "sensor": "export class CustomSensor extends PointerSensor {\n  static activators = [{\n    eventName: 'onPointerDown' as const,\n    handler: ({nativeEvent: event}) => {\n      let element = event.target as HTMLElement;\n      while (element) {\n        if (element.dataset?.noDnd) {\n          return false;\n        }\n        element = element.parentElement;\n      }\n      return true;\n    }\n  }];\n}",
-            "usage": "export const TaskCard = ({ task }) => (\n  <div className=\"task-card\">\n    <h3>{task.title}</h3>\n    <div className=\"actions\" data-no-dnd>\n      <Button onClick={handleEdit}>\n        <PencilIcon /> Edytuj\n      </Button>\n      <Button onClick={handleDelete}>\n        <TrashIcon /> Usuń\n      </Button>\n    </div>\n  </div>\n);"
-          }
-        },
+
         {
           "id": "optimistic-updates",
           "title": "Optymistyczne Aktualizacje z Cofnięciem",
@@ -264,26 +247,13 @@
             "implementation": "export const useTasks = () => {\n  const updateTaskStatus = useCallback(\n    async (taskId: string, newStatus: TaskStatus) => {\n      const originalTasks = [...tasks];\n      \n      const optimisticTasks = tasks.map(task =>\n        task._id === taskId ? { ...task, status: newStatus } : task\n      );\n      setTasks(optimisticTasks);\n      \n      try {\n        await utils.client.tasks.update.mutate({\n          id: taskId,\n          data: { status: newStatus },\n        });\n        \n        await utils.tasks.invalidate();\n      } catch (error) {\n        setTasks(originalTasks);\n        toast.error(\"Nie udało się zaktualizować zadania.\");\n      }\n    },\n    [tasks, utils]\n  );\n};"
           }
         },
+
         {
-          "id": "debouncing",
-          "title": "Inteligentne Debouncing dla Wyszukiwania",
-          "problem": "Użytkownik wpisuje 'implementacja autentykacji' w wyszukiwarkę → 28 znaków = 28 zapytań API w 2 sekundy!",
-          "solution": "Niestandardowy hook debounce, który czeka 300ms po tym jak użytkownik przestanie pisać przed wysłaniem zapytania.",
-          "impact": "28 zapytań → 1 zapytanie. Znacznie szczęśliwszy serwer API!",
-          "code": {
-            "hook": "export function useDebounce<T>(value: T, delay: number): T {\n  const [debouncedValue, setDebouncedValue] = useState<T>(value);\n\n  useEffect(() => {\n    const handler = setTimeout(() => {\n      setDebouncedValue(value);\n    }, delay);\n\n    return () => clearTimeout(handler);\n  }, [value, delay]);\n\n  return debouncedValue;\n}",
-            "usage": "export const useTasks = () => {\n  const { taskFilters } = useFiltersStore();\n  \n  const debouncedFilters = useDebounce(taskFilters, 300);\n  \n  const queryInput = useMemo(\n    () => FilterService.prepareQueryFilters(debouncedFilters),\n    [debouncedFilters]\n  );\n  \n  const { data: tasks } = trpc.tasks.list.useQuery(queryInput, {\n    staleTime: 30000,\n  });\n};"
-          }
-        },
-        {
-          "id": "performance",
-          "title": "Optymalizacja Wydajności",
-          "problem": "Lista 50 kart zadań renderuje się całkowicie przy każdej zmianie stanu rodzica, nawet jeśli zadania się nie zmieniły.",
-          "solution": "Strategiczne użycie useMemo, useCallback i React.memo aby zapobiec niepotrzebnym re-renderom.",
-          "impact": "O 73% szybsze renderowanie! Z 450ms do 120ms dla 50 zadań.",
-          "code": {
-            "optimized": "export const KanbanBoard = () => {\n  const { tasks } = useTasks();\n  \n  const tasksByStatus = useMemo(() => {\n    return COLUMNS.reduce((acc, col) => {\n      acc[col.status] = tasks.filter(t => t.status === col.status);\n      return acc;\n    }, {} as Record<TaskStatus, Task[]>);\n  }, [tasks]);\n  \n  const handleDragEnd = useCallback((event: DragEndEvent) => {\n    const taskId = event.active.id as string;\n    const newStatus = event.over.id as TaskStatus;\n    setTaskStatus(taskId, newStatus);\n  }, [setTaskStatus]);\n  \n  return (\n    <DndContext onDragEnd={handleDragEnd}>\n      {COLUMNS.map(col => (\n        <Column \n          key={col.status}\n          tasks={tasksByStatus[col.status]}\n        />\n      ))}\n    </DndContext>\n  );\n};"
-          }
+          "id": "drag-drop-preview",
+          "title": "Drag & Drop Preview w Sortowanych Listach",
+          "problem": "Podczas przeciągania zadań użytkownik nie widzi gdzie dokładnie element zostanie upuszczony. W posortowanych listach (np. po priorytecie) trudno przewidzieć finalne położenie elementu.",
+          "solution": "Implementacja preview overlay pokazującego dokładną pozycję docelową z uwzględnieniem aktualnego sortowania. Dynamiczne wyliczanie pozycji na podstawie algorytmu sortowania listy.",
+          "impact": "Użytkownik zawsze widzi gdzie element wyląduje przed upuszczeniem. Eliminuje frustrację z nieprzewidywalnym zachowaniem drag & drop w sortowanych listach."
         }
       ]
     },
