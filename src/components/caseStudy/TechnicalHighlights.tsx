@@ -41,7 +41,7 @@ export function TechnicalHighlights({
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">{title}</h2>
-          <p className="text-muted mb-12">{subtitle}</p>
+          {/* <p className="text-muted mb-12">{subtitle}</p> */}
 
           {/* Slider Navigation */}
           <div className="flex gap-2 mb-8 overflow-x-auto pb-4">
@@ -49,7 +49,7 @@ export function TechnicalHighlights({
               <button
                 key={highlight.id}
                 onClick={() => setActiveHighlight(index)}
-                className={`px-6 py-3 rounded-xl font-medium whitespace-nowrap transition-all ${
+                className={`px-6 py-3 rounded-xl font-medium whitespace-nowrap transition-all cursor-pointer ${
                   activeHighlight === index
                     ? "bg-accent text-white"
                     : "bg-background text-muted hover:text-foreground border border-border"
@@ -107,19 +107,22 @@ export function TechnicalHighlights({
 
                 {/* Code Examples */}
                 <div className="space-y-4">
-                  {Object.entries(
-                    highlights[activeHighlight].code as Record<string, string>
-                  ).map(([key, code]) => (
-                    <CodeBlock
-                      key={key}
-                      title={key}
-                      code={code}
-                      isExpanded={expandedCode === `${activeHighlight}-${key}`}
-                      onToggle={() =>
-                        toggleCodeExpand(`${activeHighlight}-${key}`)
-                      }
-                    />
-                  ))}
+                  {highlights[activeHighlight].code &&
+                    Object.entries(
+                      highlights[activeHighlight].code as Record<string, string>
+                    ).map(([key, code]) => (
+                      <CodeBlock
+                        key={key}
+                        title={key}
+                        code={code}
+                        isExpanded={
+                          expandedCode === `${activeHighlight}-${key}`
+                        }
+                        onToggle={() =>
+                          toggleCodeExpand(`${activeHighlight}-${key}`)
+                        }
+                      />
+                    ))}
                 </div>
               </div>
 

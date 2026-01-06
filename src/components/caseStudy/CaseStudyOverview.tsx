@@ -5,7 +5,7 @@ import { FiTarget } from "react-icons/fi";
 
 interface CaseStudyOverviewProps {
   title: string;
-  intro: string;
+  intro?: string;
   goals: string[];
 }
 
@@ -27,7 +27,9 @@ export function CaseStudyOverview({
             <FiTarget className="text-accent" />
             {title}
           </h2>
-          <p className="text-lg text-muted mb-8 leading-relaxed">{intro}</p>
+          {intro && (
+            <p className="text-lg text-muted mb-8 leading-relaxed">{intro}</p>
+          )}
           <ul className="grid md:grid-cols-2 gap-4">
             {goals.map((goal: string, index: number) => (
               <motion.li
