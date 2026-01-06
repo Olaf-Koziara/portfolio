@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export type NavItem = {
   id: string;
@@ -18,11 +18,11 @@ type FloatingNavProps = {
 
 const defaultNavItems: NavItem[] = [
   { id: "hero", labelKey: "hero" },
-  { id: "skills", labelKey: "skills" },
-  { id: "projects", labelKey: "projects" },
-  { id: "business-projects", labelKey: "businessProjects" },
-  { id: "experience", labelKey: "experience" },
   { id: "about", labelKey: "about" },
+  { id: "business-projects", labelKey: "businessProjects" },
+  { id: "projects", labelKey: "projects" },
+  { id: "skills", labelKey: "skills" },
+  { id: "experience", labelKey: "experience" },
   { id: "contact", labelKey: "contact" },
 ];
 
