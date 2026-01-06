@@ -96,6 +96,7 @@ export function CaseStudyHero({
               width={1200}
               height={900}
               src={`/${title.replaceAll(" ", "")}.webp`}
+              alt={title + " preview"}
             />
           </div>
         </motion.div>
