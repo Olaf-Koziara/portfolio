@@ -72,6 +72,7 @@ export default function HeroSection() {
             </a>
             <a
               href="/cv.pdf"
+              download="CV-Olaf-Koziara.pdf"
               className="px-8 py-4 border-2 border-border rounded-xl font-medium hover:border-accent hover:text-accent transition-all duration-300 hover:scale-105"
             >
               {t("cta.cv")}
