@@ -21,7 +21,6 @@ interface TechnicalHighlightsProps {
 
 export function TechnicalHighlights({
   title,
-  subtitle,
   highlights,
 }: TechnicalHighlightsProps) {
   const [activeHighlight, setActiveHighlight] = useState(0);
