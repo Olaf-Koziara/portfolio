@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { routing } from "@/i18n/routing";
+import { routing, Link } from "@/i18n/routing";
+import { FaCode } from "react-icons/fa6";
 import ThemeProvider from "@/components/ThemeProvider";
+import ParallaxBackground from "@/components/ParallaxBackground";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import ThemeToggle from "@/components/ThemeToggle";
 import "../globals.css";
@@ -42,7 +44,7 @@ export default async function LocaleLayout({
   const { locale } = await params;
 
   // Ensure that the incoming `locale` is valid
-  if (!routing.locales.includes(locale as any)) {
+  if (!routing.locales.includes(locale as (typeof routing.locales)[number])) {
     notFound();
   }
 
@@ -54,14 +56,15 @@ export default async function LocaleLayout({
     <html lang={locale} suppressHydrationWarning>
       <body className="antialiased">
         <ThemeProvider>
+          <ParallaxBackground />
           <NextIntlClientProvider messages={messages}>
             {/* Navigation */}
             <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
               <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
-                  <a href="#" className="text-xl font-bold">
-                    Portfolio
-                  </a>
+                  <Link href="/" className="text-accent hover:text-accent-hover transition-colors" aria-label="Home">
+                    <FaCode size={28} />
+                  </Link>
                   <div className="flex items-center gap-4">
                     <LanguageSwitcher />
                     <ThemeToggle />
