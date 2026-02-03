@@ -1,4 +1,14 @@
 {
+  "common": {
+    "skipToContent": "Przejdź do treści",
+    "toggleTheme": "Przełącz motyw",
+    "switchLanguage": "Zmień język na {language}",
+    "language_en": "angielski",
+    "language_pl": "polski",
+    "dragToCompare": "Przeciągnij, aby porównać",
+    "projectPreviewAlt": "Podgląd projektu {title}",
+    "languageSwitcher": "Przełącznik języka"
+  },
   "nav": {
     "hero": "Start",
     "skills": "Umiejętności",
@@ -108,7 +118,7 @@
         "role": "Frontend Developer",
         "period": "Kwi 2025 - Lip 2025",
         "points": [
-          "Rozwijałem bibliotekę reużywalnych komponentów webowych (PHP, JS, CSS) w pełnej zgodności z WCAG 2.2",
+          "Rozwijałem bibliotekę reużywalnych komponentów webowych (PHP, JS, CSS) w pełnej zgodności w WCAG 2.2",
           "Biblioteka została wdrożona na ponad 100 stronach landing page, zapewniając spójność wizualną i dostępność",
           "Współpracowałem z zespołem UI/UX przy implementacji pixel-perfect interfejsów"
         ]
