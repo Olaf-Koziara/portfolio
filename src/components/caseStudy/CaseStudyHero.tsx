@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { FiArrowLeft, FiExternalLink } from "react-icons/fi";
 
@@ -27,7 +28,10 @@ export function CaseStudyHero({
   onBackClick,
   backToProjectsText,
   demoAccountText,
-}: CaseStudyHeroProps) {
+  projectId,
+}: CaseStudyHeroProps & { projectId?: string }) {
+  const tCommon = useTranslations("common");
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -91,8 +95,17 @@ export function CaseStudyHero({
               </motion.div>
             )}
           </div>
-          <div>
-            <Image src={`/${title.replaceAll(" ", "")}.webp`} />
+          <div className="relative w-full aspect-video md:w-[600px] shrink-0">
+            <Image
+              src={
+                projectId?.includes("gkpge")
+                  ? "/gkpge_new_main.webp"
+                  : "/OrbiTaskManager.webp"
+              }
+              alt={tCommon("projectPreviewAlt", { title })}
+              fill
+              className="object-cover rounded-xl border border-border"
+            />
           </div>
         </motion.div>
       </div>

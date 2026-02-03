@@ -2,6 +2,7 @@
 
 import { useState, useRef, useCallback, useEffect } from "react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 interface BeforeAfterComparisonProps {
@@ -22,6 +23,7 @@ export function BeforeAfterComparison({
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+  const t = useTranslations("common");
 
   const handleMove = useCallback(
     (clientX: number) => {
@@ -162,7 +164,7 @@ export function BeforeAfterComparison({
             transition={{ duration: 2, repeat: Infinity }}
             className="absolute bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 bg-black/60 text-white text-sm rounded-lg backdrop-blur-sm pointer-events-none"
           >
-            Przeciagnij, aby porownac
+            {t("dragToCompare")}
           </motion.div>
         )}
       </div>

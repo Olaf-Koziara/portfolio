@@ -56,6 +56,7 @@ export default function CaseStudyPage({
         onBackClick={handleBack}
         backToProjectsText={t("backToProjects")}
         demoAccountText={t("demoAccount")}
+        projectId={projectKey}
       />
 
       {/* Overview Section */}

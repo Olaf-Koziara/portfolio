@@ -1,11 +1,12 @@
 "use client";
 
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useRouter, usePathname } from "@/i18n/routing";
 import { motion } from "framer-motion";
 
 export default function LanguageSwitcher() {
   const locale = useLocale();
+  const t = useTranslations("common");
   const router = useRouter();
   const pathname = usePathname();
 
@@ -14,11 +15,17 @@ export default function LanguageSwitcher() {
   };
 
   return (
-    <div className="flex gap-2 bg-card-bg border border-border rounded-xl p-1">
+    <div
+      role="group"
+      aria-label={t("languageSwitcher")}
+      className="flex gap-2 bg-card-bg border border-border rounded-xl p-1"
+    >
       <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => switchLanguage("en")}
+        aria-label={t("switchLanguage", { language: t("language_en") })}
+        aria-pressed={locale === "en"}
         className={`cursor-pointer px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
           locale === "en"
             ? "bg-accent text-white"
@@ -31,7 +38,9 @@ export default function LanguageSwitcher() {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => switchLanguage("pl")}
-        className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+        aria-label={t("switchLanguage", { language: t("language_pl") })}
+        aria-pressed={locale === "pl"}
+        className={`cursor-pointer px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
           locale === "pl"
             ? "bg-accent text-white"
             : "text-muted hover:text-foreground"

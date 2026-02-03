@@ -1,4 +1,14 @@
 {
+  "common": {
+    "skipToContent": "Skip to content",
+    "toggleTheme": "Toggle theme",
+    "switchLanguage": "Switch language to {language}",
+    "language_en": "English",
+    "language_pl": "Polish",
+    "dragToCompare": "Drag to compare",
+    "projectPreviewAlt": "Preview of {title} project",
+    "languageSwitcher": "Language switcher"
+  },
   "nav": {
     "hero": "Home",
     "skills": "Skills",
@@ -399,7 +409,7 @@
       },
       "process": {
         "title": "Project Implementation Process",
-        "subtitle": "From initial business discussions to production deployment",
+        "subtitle": "From initial discussions to production deployment",
         "steps": [
           {
             "id": "discovery",
