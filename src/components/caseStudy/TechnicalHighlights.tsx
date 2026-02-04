@@ -41,7 +41,7 @@ export function TechnicalHighlights({
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">{title}</h2>
-          {/* <p className="text-muted mb-12">{subtitle}</p> */}
+          <p className="text-muted mb-12">{subtitle}</p>
 
           {/* Slider Navigation */}
           <div className="flex gap-2 mb-8 overflow-x-auto pb-4">
