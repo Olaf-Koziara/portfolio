@@ -1,4 +1,12 @@
 {
+  "common": {
+    "skipToContent": "Przejdź do treści",
+    "switchToDarkMode": "Przełącz na tryb ciemny",
+    "switchToLightMode": "Przełącz na tryb jasny",
+    "switchToEnglish": "Zmień na angielski",
+    "switchToPolish": "Zmień na polski",
+    "languageSelection": "Wybór języka"
+  },
   "nav": {
     "hero": "Start",
     "skills": "Umiejętności",

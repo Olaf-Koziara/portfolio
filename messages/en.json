@@ -1,4 +1,12 @@
 {
+  "common": {
+    "skipToContent": "Skip to content",
+    "switchToDarkMode": "Switch to dark mode",
+    "switchToLightMode": "Switch to light mode",
+    "switchToEnglish": "Switch to English",
+    "switchToPolish": "Switch to Polish",
+    "languageSelection": "Language selection"
+  },
   "nav": {
     "hero": "Home",
     "skills": "Skills",
