@@ -20,6 +20,7 @@ export default function CaseStudyPage({
 }) {
   const resolvedParams = use(params);
   const t = useTranslations("caseStudy");
+  const tProjects = useTranslations("projects");
   const router = useRouter();
 
   // Get project data from translations
@@ -56,6 +57,7 @@ export default function CaseStudyPage({
         onBackClick={handleBack}
         backToProjectsText={t("backToProjects")}
         demoAccountText={t("demoAccount")}
+        viewLiveText={tProjects("viewLive")}
       />
 
       {/* Overview Section */}

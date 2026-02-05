@@ -1,4 +1,11 @@
 {
+  "common": {
+    "skipToContent": "Przejdź do treści",
+    "languageSwitcher": "Wybór języka",
+    "toggleTheme": "Przełącz motyw",
+    "english": "Angielski",
+    "polish": "Polski"
+  },
   "nav": {
     "hero": "Start",
     "skills": "Umiejętności",
