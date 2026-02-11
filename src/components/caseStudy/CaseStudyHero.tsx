@@ -52,9 +52,9 @@ export function CaseStudyHero({
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="flex"
+          className="flex flex-col lg:flex-row items-center lg:items-start gap-12"
         >
-          <div>
+          <div className="flex-1">
             <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-foreground to-muted bg-clip-text text-transparent">
               {title}
             </h1>
@@ -91,8 +91,14 @@ export function CaseStudyHero({
               </motion.div>
             )}
           </div>
-          <div>
-            <Image src={`/${title.replaceAll(" ", "")}.webp`} />
+          <div className="w-full lg:w-auto">
+            <Image
+              src={`/${title.replaceAll(" ", "")}.webp`}
+              alt={title}
+              width={600}
+              height={400}
+              className="rounded-2xl shadow-2xl w-full max-w-[600px] mx-auto"
+            />
           </div>
         </motion.div>
       </div>
