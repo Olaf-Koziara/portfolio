@@ -161,6 +161,19 @@
   "footer": {
     "rights": "All rights reserved."
   },
+  "common": {
+    "theme": {
+      "toggle": "Toggle theme",
+      "switchToLight": "Switch to light mode",
+      "switchToDark": "Switch to dark mode"
+    },
+    "language": {
+      "switcher": "Language switcher",
+      "en": "English",
+      "pl": "Polish",
+      "select": "Select {lang} language"
+    }
+  },
   "caseStudy": {
     "backToProjects": "Back to Projects",
     "overview": "Overview",
