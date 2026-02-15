@@ -161,6 +161,19 @@
   "footer": {
     "rights": "Wszelkie prawa zastrzeżone."
   },
+  "common": {
+    "theme": {
+      "toggle": "Przełącz motyw",
+      "switchToLight": "Przełącz na tryb jasny",
+      "switchToDark": "Przełącz na tryb ciemny"
+    },
+    "language": {
+      "switcher": "Przełącznik języka",
+      "en": "Angielski",
+      "pl": "Polski",
+      "select": "Wybierz język {lang}"
+    }
+  },
   "caseStudy": {
     "backToProjects": "Powrót do Projektów",
     "overview": "Przegląd",
