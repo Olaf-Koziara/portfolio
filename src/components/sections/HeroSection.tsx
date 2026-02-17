@@ -20,6 +20,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             src="/profile.webp"
+            alt={t("name")}
             className="w-70 rounded-full my-4"
           ></motion.img>
           <motion.p
