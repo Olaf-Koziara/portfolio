@@ -1,4 +1,18 @@
 {
+  "common": {
+    "themeToggle": {
+      "ariaLabel": "Toggle theme",
+      "switchToDark": "Switch to dark theme",
+      "switchToLight": "Switch to light theme"
+    },
+    "languageSwitcher": {
+      "ariaLabel": "Select language",
+      "en": "English",
+      "pl": "Polish",
+      "switchToEn": "Switch to English",
+      "switchToPl": "Switch to Polish"
+    }
+  },
   "nav": {
     "hero": "Home",
     "skills": "Skills",
