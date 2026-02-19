@@ -1,4 +1,18 @@
 {
+  "common": {
+    "themeToggle": {
+      "ariaLabel": "Przełącz motyw",
+      "switchToDark": "Przełącz na ciemny motyw",
+      "switchToLight": "Przełącz na jasny motyw"
+    },
+    "languageSwitcher": {
+      "ariaLabel": "Wybierz język",
+      "en": "Angielski",
+      "pl": "Polski",
+      "switchToEn": "Zmień na angielski",
+      "switchToPl": "Zmień na polski"
+    }
+  },
   "nav": {
     "hero": "Start",
     "skills": "Umiejętności",
