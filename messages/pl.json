@@ -1,4 +1,15 @@
 {
+  "common": {
+    "languageSwitcher": {
+      "en": "Przełącz na angielski",
+      "pl": "Przełącz na polski"
+    },
+    "themeToggle": {
+      "dark": "Przełącz na tryb ciemny",
+      "light": "Przełącz na tryb jasny"
+    },
+    "profileImageAlt": "Olaf Koziara - Zdjęcie profilowe"
+  },
   "nav": {
     "hero": "Start",
     "skills": "Umiejętności",

@@ -1,4 +1,15 @@
 {
+  "common": {
+    "languageSwitcher": {
+      "en": "Switch to English",
+      "pl": "Switch to Polish"
+    },
+    "themeToggle": {
+      "dark": "Switch to dark mode",
+      "light": "Switch to light mode"
+    },
+    "profileImageAlt": "Olaf Koziara - Profile picture"
+  },
   "nav": {
     "hero": "Home",
     "skills": "Skills",
