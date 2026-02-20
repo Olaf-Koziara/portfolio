@@ -91,8 +91,14 @@ export function CaseStudyHero({
               </motion.div>
             )}
           </div>
-          <div>
-            <Image src={`/${title.replaceAll(" ", "")}.webp`} />
+          <div className="hidden lg:block flex-shrink-0">
+            <Image
+              src={`/${title.replaceAll(" ", "")}.webp`}
+              alt={title}
+              width={500}
+              height={300}
+              className="rounded-xl shadow-2xl border border-border"
+            />
           </div>
         </motion.div>
       </div>
