@@ -1,0 +1,3 @@
+## 2025-05-14 - Standardizing Focus States and ARIA Labels
+**Learning:** Inconsistent focus indicators (`focus-visible`) and missing ARIA labels on interactive elements (especially theme and language toggles) create a disjointed experience for keyboard and screen reader users. Bundling these into a single "Accessibility Pass" improves the overall feel of the app significantly.
+**Action:** Use a consistent set of utility classes for focus states (`focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-hidden`) and ensure all icon-only or state-switching buttons have dynamic, localized ARIA labels.
