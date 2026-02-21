@@ -1,4 +1,9 @@
 {
+  "common": {
+    "languageSwitcher": "Wybierz język",
+    "switchToDark": "Przełącz na ciemny motyw",
+    "switchToLight": "Przełącz na jasny motyw"
+  },
   "nav": {
     "hero": "Start",
     "skills": "Umiejętności",

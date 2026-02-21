@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 export default function ThemeToggle() {
+  const t = useTranslations("common");
   const [isDark, setIsDark] = useState(() => {
     if (typeof window !== "undefined") {
       return document.documentElement.classList.contains("dark");
@@ -29,8 +31,8 @@ export default function ThemeToggle() {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       onClick={toggleTheme}
-      className="p-3 cursor-pointer rounded-xl bg-card-bg border border-border hover:bg-card-hover transition-all duration-300"
-      aria-label="Toggle theme"
+      className="p-3 cursor-pointer rounded-xl bg-card-bg border border-border hover:bg-card-hover transition-all duration-300 focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-hidden"
+      aria-label={isDark ? t("switchToLight") : t("switchToDark")}
     >
       {isDark ? (
         <svg

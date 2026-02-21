@@ -1,4 +1,9 @@
 {
+  "common": {
+    "languageSwitcher": "Select language",
+    "switchToDark": "Switch to dark theme",
+    "switchToLight": "Switch to light theme"
+  },
   "nav": {
     "hero": "Home",
     "skills": "Skills",
