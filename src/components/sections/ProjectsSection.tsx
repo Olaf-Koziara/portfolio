@@ -7,7 +7,6 @@ import { Link } from "@/i18n/routing";
 
 interface ProjectCardProps {
   project: Project;
-  index: number;
 }
 const projectCardMotionVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
@@ -16,7 +15,7 @@ const projectCardMotionVariants: Variants = {
     y: 0,
   },
 };
-function ProjectCard({ project, index }: ProjectCardProps) {
+function ProjectCard({ project }: ProjectCardProps) {
   const t = useTranslations("projects");
   return (
     <motion.div
@@ -98,8 +97,8 @@ export default function ProjectsSection() {
           whileInView="show"
           className="grid md:grid-cols-2 gap-8"
         >
-          {projects.map((project, index) => (
-            <ProjectCard key={project.name} project={project} index={index} />
+          {projects.map((project) => (
+            <ProjectCard key={project.name} project={project} />
           ))}
         </motion.div>
       </div>
