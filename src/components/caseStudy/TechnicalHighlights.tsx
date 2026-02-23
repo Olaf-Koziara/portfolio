@@ -21,7 +21,6 @@ interface TechnicalHighlightsProps {
 
 export function TechnicalHighlights({
   title,
-  subtitle,
   highlights,
 }: TechnicalHighlightsProps) {
   const [activeHighlight, setActiveHighlight] = useState(0);
@@ -45,7 +44,7 @@ export function TechnicalHighlights({
 
           {/* Slider Navigation */}
           <div className="flex gap-2 mb-8 overflow-x-auto pb-4">
-            {highlights.map((highlight, index: number) => (
+            {highlights.map((highlight, index) => (
               <button
                 key={highlight.id}
                 onClick={() => setActiveHighlight(index)}

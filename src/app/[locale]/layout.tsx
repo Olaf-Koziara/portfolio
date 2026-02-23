@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import ThemeProvider from "@/components/ThemeProvider";
@@ -42,7 +42,7 @@ export default async function LocaleLayout({
   const { locale } = await params;
 
   // Ensure that the incoming `locale` is valid
-  if (!routing.locales.includes(locale as any)) {
+  if (!routing.locales.includes(locale as (typeof routing.locales)[number])) {
     notFound();
   }
 
@@ -50,9 +50,17 @@ export default async function LocaleLayout({
   // side is the easiest way to get started
   const messages = await getMessages();
 
+  const t = await getTranslations("common");
+
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className="antialiased">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-accent focus:text-white focus:rounded-lg focus:font-medium focus:shadow-xl transition-all"
+        >
+          {t("skipToContent")}
+        </a>
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
             {/* Navigation */}
@@ -73,7 +81,9 @@ export default async function LocaleLayout({
             {/* Floating side navigation */}
 
             {/* Main content with top padding for fixed nav */}
-            <div className="pt-16">{children}</div>
+            <main id="main-content" className="pt-16">
+              {children}
+            </main>
 
             {/* Footer */}
             <footer className="border-t border-border py-8 px-4 sm:px-6 lg:px-8">
