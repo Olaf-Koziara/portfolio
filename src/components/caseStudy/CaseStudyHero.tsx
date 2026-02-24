@@ -91,8 +91,14 @@ export function CaseStudyHero({
               </motion.div>
             )}
           </div>
-          <div>
-            <Image src={`/${title.replaceAll(" ", "")}.webp`} />
+          <div className="relative w-full aspect-video lg:aspect-auto lg:h-[400px]">
+            <Image
+              src={`/${title.replaceAll(" ", "")}.webp`}
+              alt={title}
+              fill
+              className="object-cover rounded-2xl border border-border"
+              priority
+            />
           </div>
         </motion.div>
       </div>
