@@ -158,6 +158,11 @@
       "send": "Wyślij Wiadomość"
     }
   },
+  "common": {
+    "skipToContent": "Przejdź do treści",
+    "languageSwitcher": "Przełącznik języka",
+    "themeToggle": "Przełącz motyw"
+  },
   "footer": {
     "rights": "Wszelkie prawa zastrzeżone."
   },

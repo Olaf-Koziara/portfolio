@@ -1,0 +1,3 @@
+## 2025-05-15 - Global Accessibility and Semantic Structure
+**Learning:** In a multi-locale Next.js app using next-intl, global accessibility features like 'Skip to Content' must be implemented in the locale layout ([locale]/layout.tsx) with localized strings from a 'common' namespace. Placing the primary <main> tag in the layout requires page-level components to use non-landmark wrappers (like <div>) to avoid invalid semantic nesting.
+**Action:** When adding landmark roles to layouts, audit all child pages for redundant roles and ensure localized strings are consistently grouped in a 'common' translation namespace.
