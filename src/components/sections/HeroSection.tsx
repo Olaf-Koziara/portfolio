@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function HeroSection() {
   const t = useTranslations("hero");
@@ -15,13 +16,20 @@ export default function HeroSection() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center flex flex-col items-center"
         >
-          <motion.img
+          <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            src="/profile.webp"
-            className="w-70 rounded-full my-4"
-          ></motion.img>
+            className="relative w-64 h-64 sm:w-70 sm:h-70 my-4"
+          >
+            <Image
+              src="/profile.webp"
+              alt={t("name")}
+              fill
+              className="rounded-full object-cover"
+              priority
+            />
+          </motion.div>
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

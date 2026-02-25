@@ -9,7 +9,7 @@ import SkillsSection from "@/components/sections/SkillsSection";
 
 export default function Home() {
   return (
-    <main>
+    <div>
       <FloatingNav />
       <section id="hero">
         <HeroSection />
@@ -32,6 +32,6 @@ export default function Home() {
       <section id="contact">
         <ContactSection />
       </section>
-    </main>
+    </div>
   );
 }

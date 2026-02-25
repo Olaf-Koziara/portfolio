@@ -158,6 +158,11 @@
       "send": "Send Message"
     }
   },
+  "common": {
+    "skipToContent": "Skip to content",
+    "languageSwitcher": "Language switcher",
+    "themeToggle": "Toggle theme"
+  },
   "footer": {
     "rights": "All rights reserved."
   },
