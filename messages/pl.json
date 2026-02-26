@@ -1,4 +1,9 @@
 {
+  "common": {
+    "skipToContent": "Przejdź do treści",
+    "switchLanguageEn": "Switch to English",
+    "switchLanguagePl": "Przełącz na polski"
+  },
   "nav": {
     "hero": "Start",
     "skills": "Umiejętności",
