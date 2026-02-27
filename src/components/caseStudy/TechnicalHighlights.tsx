@@ -21,9 +21,8 @@ interface TechnicalHighlightsProps {
 
 export function TechnicalHighlights({
   title,
-  subtitle,
   highlights,
-}: TechnicalHighlightsProps) {
+}: Omit<TechnicalHighlightsProps, "subtitle">) {
   const [activeHighlight, setActiveHighlight] = useState(0);
   const [expandedCode, setExpandedCode] = useState<string | null>(null);
 
