@@ -113,7 +113,12 @@ export default function FloatingNav({
     // If route is provided, render as Link
     if (item.route) {
       return (
-        <Link href={item.route} key={item.id} aria-label={t(item.labelKey)}>
+        <Link
+          href={item.route}
+          key={item.id}
+          aria-label={t(item.labelKey)}
+          aria-current={activeSection === item.id ? "location" : undefined}
+        >
           <motion.div {...motionProps} className={commonClassName}>
             {content}
           </motion.div>
@@ -129,6 +134,7 @@ export default function FloatingNav({
         onClick={() => scrollToSection(item.id)}
         className={commonClassName}
         aria-label={t(item.labelKey)}
+        aria-current={activeSection === item.id ? "location" : undefined}
       >
         {content}
       </motion.button>

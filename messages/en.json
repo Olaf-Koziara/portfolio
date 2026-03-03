@@ -1,4 +1,8 @@
 {
+  "common": {
+    "skipToContent": "Skip to content",
+    "profileImageAlt": "Olaf Koziara - Frontend Developer profile picture"
+  },
   "nav": {
     "hero": "Home",
     "skills": "Skills",
