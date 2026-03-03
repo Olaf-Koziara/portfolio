@@ -19,6 +19,8 @@ export default function LanguageSwitcher() {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => switchLanguage("en")}
+        aria-label="Switch to English"
+        aria-pressed={locale === "en"}
         className={`cursor-pointer px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
           locale === "en"
             ? "bg-accent text-white"
@@ -31,6 +33,8 @@ export default function LanguageSwitcher() {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => switchLanguage("pl")}
+        aria-label="Switch to Polish"
+        aria-pressed={locale === "pl"}
         className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
           locale === "pl"
             ? "bg-accent text-white"

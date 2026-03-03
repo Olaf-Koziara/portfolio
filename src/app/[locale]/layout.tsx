@@ -6,6 +6,7 @@ import { routing } from "@/i18n/routing";
 import ThemeProvider from "@/components/ThemeProvider";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import ThemeToggle from "@/components/ThemeToggle";
+import { getTranslations } from "next-intl/server";
 import "../globals.css";
 
 export const metadata: Metadata = {
@@ -42,19 +43,28 @@ export default async function LocaleLayout({
   const { locale } = await params;
 
   // Ensure that the incoming `locale` is valid
-  if (!routing.locales.includes(locale as any)) {
+  if (!routing.locales.includes(locale as (typeof routing.locales)[number])) {
     notFound();
   }
 
   // Providing all messages to the client
   // side is the easiest way to get started
   const messages = await getMessages();
+  const t = await getTranslations("common");
 
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className="antialiased">
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
+            {/* Skip to content link */}
+            <a
+              href="#main-content"
+              className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-accent focus:text-white focus:rounded-lg transition-all duration-200"
+            >
+              {t("skipToContent")}
+            </a>
+
             {/* Navigation */}
             <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
               <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

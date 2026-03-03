@@ -1,0 +1,4 @@
+## 2025-05-15 - [Accessibility and Navigation UX Enhancements]
+**Learning:** Adding a 'Skip to Content' link is a fundamental accessibility requirement that is often overlooked. It requires a clear target (`main#main-content`) and localized strings to be effective in internationalized apps. ARIA states like `aria-pressed` for toggles (language switcher) and `aria-current` for navigation links provide essential context for screen reader users. TypeScript strictness around `any` in locale checks can be addressed by casting to `(typeof routing.locales)[number]`.
+
+**Action:** Always include a 'Skip to Content' link in the root layout. Ensure main content areas use the `<main>` tag with a consistent ID. Use appropriate ARIA attributes for all interactive elements. Fix `any` types in internationalization logic early to avoid linting blockers.
