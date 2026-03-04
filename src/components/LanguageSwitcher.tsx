@@ -19,7 +19,7 @@ export default function LanguageSwitcher() {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => switchLanguage("en")}
-        className={`cursor-pointer px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+        className={`cursor-pointer px-4 py-2 rounded-lg font-medium focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-hidden transition-all duration-300 ${
           locale === "en"
             ? "bg-accent text-white"
             : "text-muted hover:text-foreground"
@@ -31,7 +31,7 @@ export default function LanguageSwitcher() {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => switchLanguage("pl")}
-        className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+        className={`cursor-pointer px-4 py-2 rounded-lg font-medium focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-hidden transition-all duration-300 ${
           locale === "pl"
             ? "bg-accent text-white"
             : "text-muted hover:text-foreground"
