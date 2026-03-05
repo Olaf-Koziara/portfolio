@@ -1,4 +1,16 @@
 {
+  "common": {
+    "skipToContent": "Przejdź do treści",
+    "theme": {
+      "switchToDark": "Przełącz na ciemny motyw",
+      "switchToLight": "Przełącz na jasny motyw"
+    },
+    "language": {
+      "select": "Wybierz język",
+      "en": "Angielski",
+      "pl": "Polski"
+    }
+  },
   "nav": {
     "hero": "Start",
     "skills": "Umiejętności",
