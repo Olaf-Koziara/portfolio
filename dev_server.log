@@ -1,0 +1,21 @@
+
+> portfolio@0.1.0 dev /app
+> next dev
+
+▲ Next.js 16.1.1 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.2:3000
+
+✓ Starting...
+⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+✓ Ready in 2.2s
+○ Compiling /[locale] ...
+ GET /en 200 in 12.9s (compile: 11.3s, proxy.ts: 143ms, generate-params: 1084ms, render: 1392ms)
+ GET /en 200 in 257ms (compile: 52ms, proxy.ts: 12ms, generate-params: 34ms, render: 193ms)
+ GET /en 200 in 197ms (compile: 41ms, proxy.ts: 6ms, generate-params: 32ms, render: 149ms)
+○ Compiling /[locale]/caseStudy/[projectName] ...
+ GET /en/caseStudy/orbitaskmanager 200 in 5.7s (compile: 4.9s, proxy.ts: 8ms, render: 865ms)
+ GET /pl 200 in 258ms (compile: 44ms, proxy.ts: 7ms, generate-params: 36ms, render: 207ms)
+ GET /en 200 in 235ms (compile: 48ms, proxy.ts: 7ms, generate-params: 38ms, render: 180ms)
+ GET /en/caseStudy/orbitaskmanager 200 in 246ms (compile: 46ms, proxy.ts: 6ms, render: 194ms)
+ GET /pl 200 in 195ms (compile: 45ms, proxy.ts: 6ms, generate-params: 37ms, render: 145ms)
