@@ -9,7 +9,7 @@ import SkillsSection from "@/components/sections/SkillsSection";
 
 export default function Home() {
   return (
-    <main>
+    <main id="main-content">
       <FloatingNav />
       <section id="hero">
         <HeroSection />
