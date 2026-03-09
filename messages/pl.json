@@ -1,4 +1,7 @@
 {
+  "common": {
+    "skipToContent": "Skocz do treści"
+  },
   "nav": {
     "hero": "Start",
     "skills": "Umiejętności",
