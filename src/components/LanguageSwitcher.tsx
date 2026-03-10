@@ -1,6 +1,6 @@
 "use client";
 
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useRouter, usePathname } from "@/i18n/routing";
 import { motion } from "framer-motion";
 
@@ -8,13 +8,18 @@ export default function LanguageSwitcher() {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
+  const t = useTranslations("common");
 
   const switchLanguage = (newLocale: "en" | "pl") => {
     router.replace(pathname, { locale: newLocale });
   };
 
   return (
-    <div className="flex gap-2 bg-card-bg border border-border rounded-xl p-1">
+    <div
+      className="flex gap-2 bg-card-bg border border-border rounded-xl p-1"
+      role="group"
+      aria-label={t("languageSwitcher")}
+    >
       <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
@@ -24,6 +29,8 @@ export default function LanguageSwitcher() {
             ? "bg-accent text-white"
             : "text-muted hover:text-foreground"
         }`}
+        aria-label={t("languages.en")}
+        aria-pressed={locale === "en"}
       >
         EN
       </motion.button>
@@ -36,6 +43,8 @@ export default function LanguageSwitcher() {
             ? "bg-accent text-white"
             : "text-muted hover:text-foreground"
         }`}
+        aria-label={t("languages.pl")}
+        aria-pressed={locale === "pl"}
       >
         PL
       </motion.button>
