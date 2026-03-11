@@ -16,6 +16,7 @@ interface CaseStudyHeroProps {
   onBackClick: () => void;
   backToProjectsText: string;
   demoAccountText: string;
+  viewLiveText?: string;
 }
 
 export function CaseStudyHero({
@@ -27,6 +28,7 @@ export function CaseStudyHero({
   onBackClick,
   backToProjectsText,
   demoAccountText,
+  viewLiveText = "Live Demo",
 }: CaseStudyHeroProps) {
   return (
     <motion.section
@@ -73,7 +75,7 @@ export function CaseStudyHero({
                 whileTap={{ scale: 0.95 }}
               >
                 <FiExternalLink />
-                Live Demo
+                {viewLiveText}
               </motion.a>
             )}
 
@@ -91,8 +93,14 @@ export function CaseStudyHero({
               </motion.div>
             )}
           </div>
-          <div>
-            <Image src={`/${title.replaceAll(" ", "")}.webp`} />
+          <div className="hidden lg:block relative w-[400px] h-[300px] ml-8">
+            <Image
+              src={`/${title.replaceAll(" ", "")}.webp`}
+              alt={title}
+              fill
+              className="object-contain"
+              priority
+            />
           </div>
         </motion.div>
       </div>
