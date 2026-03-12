@@ -92,7 +92,7 @@ export function CaseStudyHero({
             )}
           </div>
           <div>
-            <Image src={`/${title.replaceAll(" ", "")}.webp`} />
+            <Image alt={title} src={`/${title.replaceAll(" ", "")}.webp`} />
           </div>
         </motion.div>
       </div>
