@@ -1,4 +1,7 @@
 {
+  "common": {
+    "skipToContent": "Skip to content"
+  },
   "nav": {
     "hero": "Home",
     "skills": "Skills",
@@ -16,7 +19,8 @@
     "cta": {
       "projects": "View Projects",
       "cv": "Download CV"
-    }
+    },
+    "profileAlt": "Olaf Koziara's profile picture"
   },
   "skills": {
     "title": "Technologies",
