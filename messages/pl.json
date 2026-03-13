@@ -1,4 +1,8 @@
 {
+  "common": {
+    "skipToContent": "Przejdź do treści",
+    "profileAlt": "Zdjęcie profilowe Olafa Koziary"
+  },
   "nav": {
     "hero": "Start",
     "skills": "Umiejętności",
@@ -448,7 +452,7 @@
     "gkpge-newsletter-pwa": {
       "title": "PGE Newsletter PWA",
       "tagline": "Aplikacja offline-first do newslettera wewnętrznego",
-      "description": "Progressive Web App dla newslettera wewnętrznego Grupy Kapitalowej PGE, zaprojektowana z architekturą offline-first, Service Workers i stackiem React zorientowanym na wydajność, osiągając stały wynik Lighthouse 95+ dla performance i accessibility.",
+      "description": "Progressive Web App for newslettera wewnętrznego Grupy Kapitalowej PGE, zaprojektowana z architekturą offline-first, Service Workers i stackiem React zorientowanym na wydajność, osiągając stały wynik Lighthouse 95+ dla performance i accessibility.",
       "overview": {
         "intro": "PGE Newsletter PWA to wewnętrzna aplikacja webowa służąca do dystrybucji wiadomości i aktualizacji w Grupie Kapitalowej PGE. Głównym celem było zapewnienie szybkiego ładowania, dostępu offline do treści oraz niezawodnego działania na urządzeniach z niestabilnym połączeniem sieciowym.",
         "goals": [
@@ -495,7 +499,7 @@
           "id": "offline-first-strategy",
           "title": "Strategia Offline-first z Service Workers",
           "problem": "Pracownicy potrzebowali dostępu do treści newslettera na urządzeniach z niestabilnym lub ograniczonym połączeniem, szczególnie w lokalizacjach terenowych.",
-          "solution": "Implementacja Service Workera ze strategią cache-first dla statycznych zasobów i kluczowych widoków, z network-first dla dynamicznych treści, gdzie świeżość danych była ważna.",
+          "solution": "Implementacja Service Workera ze strategią cache-first dla statycznych zasobów i kluczowych widoków, z network-first for dynamicznych treści, gdzie świeżość danych była ważna.",
           "impact": "Użytkownicy mogą otworzyć aplikację i czytać wcześniej załadowane newslettery nawet bez aktywnego połączenia, zmniejszając liczbę zgłoszeń do supportu związanych z problemami dostępu."
         },
         {

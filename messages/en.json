@@ -1,4 +1,8 @@
 {
+  "common": {
+    "skipToContent": "Skip to content",
+    "profileAlt": "Profile picture of Olaf Koziara"
+  },
   "nav": {
     "hero": "Home",
     "skills": "Skills",
@@ -399,7 +403,7 @@
       },
       "process": {
         "title": "Project Implementation Process",
-        "subtitle": "From initial business discussions to production deployment",
+        "subtitle": "From initial discussions to production deployment",
         "steps": [
           {
             "id": "discovery",

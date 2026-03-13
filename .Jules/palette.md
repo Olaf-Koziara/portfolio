@@ -1,0 +1,3 @@
+## 2025-05-15 - Accessible Navigation Pattern
+**Learning:** In a multi-lingual Next.js app using next-intl, a 'Skip to Content' link must be localized and the target <main> element should be placed in the locale-specific layout to ensure it wraps all page content consistently. To avoid invalid semantic nesting, individual page components must use <div> instead of <main> when the layout already provides the <main> tag.
+**Action:** Always check for root <main> tags in layouts before adding them to pages, and prioritize a 'Skip to Content' link for keyboard accessibility in any dashboard or portfolio-style application.
