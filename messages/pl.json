@@ -1,4 +1,11 @@
 {
+  "common": {
+    "languageSwitcher": {
+      "label": "Zmień język",
+      "switchToEn": "Przełącz na angielski",
+      "switchToPl": "Przełącz na polski"
+    }
+  },
   "nav": {
     "hero": "Start",
     "skills": "Umiejętności",

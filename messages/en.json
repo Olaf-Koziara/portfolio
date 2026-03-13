@@ -1,4 +1,11 @@
 {
+  "common": {
+    "languageSwitcher": {
+      "label": "Change language",
+      "switchToEn": "Switch to English",
+      "switchToPl": "Switch to Polish"
+    }
+  },
   "nav": {
     "hero": "Home",
     "skills": "Skills",
