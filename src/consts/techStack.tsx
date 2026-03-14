@@ -1,4 +1,5 @@
 import { Skill } from "@/types/portfolio";
+import { FaAws } from "react-icons/fa";
 import {
   SiTypescript,
   SiJavascript,
@@ -11,7 +12,6 @@ import {
   SiMongodb,
   SiGit,
   SiDocker,
-  SiAmazon,
 } from "react-icons/si";
 
 export const techStack: Skill[] = [
@@ -73,6 +73,6 @@ export const techStack: Skill[] = [
   {
     name: "AWS",
     category: "Cloud",
-    icon: <SiAmazon className="w-8 h-8 sm:w-10 sm:h-10 text-[#FF9900]" />,
+    icon: <FaAws className="w-8 h-8 sm:w-10 sm:h-10 text-[#FF9900]" />,
   },
 ];
