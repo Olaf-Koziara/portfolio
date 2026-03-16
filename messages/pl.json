@@ -1,4 +1,10 @@
 {
+  "common": {
+    "skipToContent": "Przejdź do treści",
+    "homeLink": "Strona główna portfolio",
+    "switchToEn": "Zmień język na angielski",
+    "switchToPl": "Zmień język na polski"
+  },
   "nav": {
     "hero": "Start",
     "skills": "Umiejętności",

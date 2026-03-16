@@ -1,4 +1,10 @@
 {
+  "common": {
+    "skipToContent": "Skip to content",
+    "homeLink": "Portfolio Home",
+    "switchToEn": "Switch language to English",
+    "switchToPl": "Switch language to Polish"
+  },
   "nav": {
     "hero": "Home",
     "skills": "Skills",

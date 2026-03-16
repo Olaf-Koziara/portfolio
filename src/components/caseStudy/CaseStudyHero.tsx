@@ -52,9 +52,9 @@ export function CaseStudyHero({
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="flex"
+          className="flex flex-col lg:flex-row gap-12 items-center"
         >
-          <div>
+          <div className="flex-1">
             <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-foreground to-muted bg-clip-text text-transparent">
               {title}
             </h1>
@@ -63,36 +63,45 @@ export function CaseStudyHero({
               {description}
             </p>
 
-            {demoUrl && (
-              <motion.a
-                href={demoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 mr-3 bg-accent text-white rounded-xl hover:bg-accent-hover transition-colors"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <FiExternalLink />
-                Live Demo
-              </motion.a>
-            )}
+            <div className="flex flex-wrap gap-4 items-center">
+              {demoUrl && (
+                <motion.a
+                  href={demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-white rounded-xl hover:bg-accent-hover transition-colors"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <FiExternalLink />
+                  Live Demo
+                </motion.a>
+              )}
 
-            {demoCredentials && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.4 }}
-                className="mt-6 p-4 bg-card-bg rounded-xl border border-border inline-block"
-              >
-                <p className="text-sm text-muted mb-2">{demoAccountText}:</p>
-                <p className="text-sm font-mono">
-                  {demoCredentials.email} / {demoCredentials.password}
-                </p>
-              </motion.div>
-            )}
+              {demoCredentials && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.4 }}
+                  className="p-4 bg-card-bg rounded-xl border border-border inline-block"
+                >
+                  <p className="text-sm text-muted mb-1">{demoAccountText}:</p>
+                  <p className="text-sm font-mono">
+                    {demoCredentials.email} / {demoCredentials.password}
+                  </p>
+                </motion.div>
+              )}
+            </div>
           </div>
-          <div>
-            <Image alt={title} src={`/${title.replaceAll(" ", "")}.webp`} />
+          <div className="flex-1 w-full">
+            <Image
+              alt={title}
+              src={`/${title.replaceAll(" ", "")}.webp`}
+              width={800}
+              height={500}
+              className="rounded-2xl shadow-2xl w-full h-auto object-cover"
+              priority
+            />
           </div>
         </motion.div>
       </div>
