@@ -29,7 +29,7 @@ export default function ThemeToggle() {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       onClick={toggleTheme}
-      className="p-3 cursor-pointer rounded-xl bg-card-bg border border-border hover:bg-card-hover transition-all duration-300"
+      className="p-3 cursor-pointer rounded-xl bg-card-bg border border-border hover:bg-card-hover transition-all duration-300 focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-hidden"
       aria-label="Toggle theme"
     >
       {isDark ? (

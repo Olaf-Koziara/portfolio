@@ -1,4 +1,9 @@
 {
+  "common": {
+    "skipToContent": "Skip to content",
+    "switchToEnglish": "Switch to English",
+    "switchToPolish": "Switch to Polish"
+  },
   "nav": {
     "hero": "Home",
     "skills": "Skills",
