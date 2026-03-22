@@ -1,4 +1,10 @@
 {
+  "common": {
+    "skipToContent": "Przejdź do treści",
+    "home": "Strona główna",
+    "en": "Angielski",
+    "pl": "Polski"
+  },
   "nav": {
     "hero": "Start",
     "skills": "Umiejętności",
