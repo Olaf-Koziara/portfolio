@@ -91,8 +91,14 @@ export function CaseStudyHero({
               </motion.div>
             )}
           </div>
-          <div>
-            <Image alt={title} src={`/${title.replaceAll(" ", "")}.webp`} />
+          <div className="relative w-full aspect-video md:aspect-auto md:w-1/2 min-h-[300px]">
+            <Image
+              alt={title}
+              src={`/${title.replaceAll(" ", "")}.webp`}
+              fill
+              className="object-contain"
+              priority
+            />
           </div>
         </motion.div>
       </div>
