@@ -1,4 +1,8 @@
 {
+  "common": {
+    "skipToContent": "Skip to main content",
+    "home": "Home"
+  },
   "nav": {
     "hero": "Home",
     "skills": "Skills",

@@ -1,0 +1,3 @@
+## 2025-05-20 - [Accessibility and Image Implementation]
+**Learning:** Next.js 16 (Turbopack) strictly enforces required props for the `Image` component. Omitting `width`/`height` (unless using `fill`) causes a runtime error that can block the entire page. Additionally, 'Skip to content' links require a clear `#main-content` target with `tabIndex={-1}` and `outline-hidden` to provide a smooth keyboard navigation experience without persistent visual focus rings on the container.
+**Action:** Always ensure `Image` components have explicit dimensions or use the `fill` pattern with a relative parent. Verify skip link targets exist on every page template.
