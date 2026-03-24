@@ -16,7 +16,7 @@ const projectCardMotionVariants: Variants = {
     y: 0,
   },
 };
-function ProjectCard({ project, index }: ProjectCardProps) {
+function ProjectCard({ project }: ProjectCardProps) {
   const t = useTranslations("projects");
   return (
     <motion.div

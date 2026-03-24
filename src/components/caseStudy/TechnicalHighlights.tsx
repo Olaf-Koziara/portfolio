@@ -15,7 +15,7 @@ interface Highlight {
 
 interface TechnicalHighlightsProps {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   highlights: Highlight[];
 }
 
