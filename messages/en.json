@@ -1,4 +1,11 @@
 {
+  "common": {
+    "skipToContent": "Skip to content",
+    "home": "Home",
+    "switchLanguage": "Select language",
+    "switchLanguageEn": "Switch to English",
+    "switchLanguagePl": "Switch to Polish"
+  },
   "nav": {
     "hero": "Home",
     "skills": "Skills",

@@ -28,13 +28,14 @@ export function ImageGallery({ images }: ImageGalleryProps) {
             {displayImages.map((image, index) => (
               <div
                 key={index}
-                className="aspect-video bg-card-bg rounded-2xl border border-border flex items-center justify-center overflow-hidden"
+                className="relative aspect-video bg-card-bg rounded-2xl border border-border flex items-center justify-center overflow-hidden"
               >
                 {image.src ? (
                   <Image
                     src={image.src}
                     alt={image.alt}
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                 ) : (
                   <p className="text-muted">{image.alt}</p>
