@@ -1,4 +1,5 @@
 {
+  "common": { "skipToContent": "Przejdź do treści", "toggleTheme": "Przełącz motyw", "selectLanguage": "Wybierz język", "profileAlt": "Olaf Koziara - Zdjęcie profilowe" },
   "nav": {
     "hero": "Start",
     "skills": "Umiejętności",
@@ -508,7 +509,7 @@
         {
           "id": "background-refetch",
           "title": "Background Refetch z Fallbackiem dla iOS",
-          "problem": "Użytkownicy potrzebowali świeżych treści newslettera gdy urządzenie wracało online, nawet jeśli aplikacja nie była aktywnie otwarta. Background Sync API działa na Androidzie, ale nie jest wspierane na iOS/Safari.",
+          "problem": "Użytkownicy potrzebowali świeżych treści newslettera gdy urządzenie wracało online, even if the app wasn't actively open. Background Sync API works on Android but is not supported on iOS/Safari.",
           "solution": "Implementacja Background Sync API dla Androida z fallbackiem opartym na Workbox dla iOS. Na iOS wykorzystałem nasłuchiwanie na event online w połączeniu z aktywacją service workera, aby uruchomić refetch gdy użytkownik ponownie otwiera aplikację lub odblokowuje ekran.",
           "impact": "Użytkownicy Androida otrzymują prawdziwą synchronizację w tle gdy połączenie wraca. Użytkownicy iOS otrzymują automatyczne odświeżenie treści przy ponownym otwarciu aplikacji, zapewniając aktualne treści na wszystkich platformach pomimo ograniczeń API.",
           "code": {

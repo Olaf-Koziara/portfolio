@@ -1,4 +1,5 @@
 {
+  "common": { "skipToContent": "Skip to content" },
   "nav": {
     "hero": "Home",
     "skills": "Skills",
@@ -399,7 +400,7 @@
       },
       "process": {
         "title": "Project Implementation Process",
-        "subtitle": "From initial business discussions to production deployment",
+        "subtitle": "From initial discussions to production deployment",
         "steps": [
           {
             "id": "discovery",
@@ -491,7 +492,7 @@
         },
         {
           "title": "Installable PWA",
-          "description": "Support for add-to-home-screen behavior on desktop and mobile, with manifest configuration and app-like UX."
+          "description": "Support for add-to-home-screen behavior on desktop and mobile, with manifestation configuration and app-like UX."
         },
         {
           "title": "Optimized Performance",
