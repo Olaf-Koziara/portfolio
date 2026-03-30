@@ -1,4 +1,9 @@
 {
+  "common": {
+    "skipToContent": "Skip to content",
+    "languageSwitcher": "Language switcher",
+    "home": "Home"
+  },
   "nav": {
     "hero": "Home",
     "skills": "Skills",
