@@ -1,4 +1,9 @@
 {
+  "common": {
+    "skipToContent": "Przejdź do treści",
+    "languageSwitcher": "Przełącznik języka",
+    "home": "Strona główna"
+  },
   "nav": {
     "hero": "Start",
     "skills": "Umiejętności",
