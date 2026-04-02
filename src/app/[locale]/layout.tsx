@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { routing } from "@/i18n/routing";
+import { routing, Link } from "@/i18n/routing";
 import ThemeProvider from "@/components/ThemeProvider";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -42,26 +42,37 @@ export default async function LocaleLayout({
   const { locale } = await params;
 
   // Ensure that the incoming `locale` is valid
-  if (!routing.locales.includes(locale as any)) {
+  if (!routing.locales.includes(locale as (typeof routing.locales)[number])) {
     notFound();
   }
 
   // Providing all messages to the client
   // side is the easiest way to get started
   const messages = await getMessages();
+  const t = await getTranslations("common");
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning className="scroll-smooth">
       <body className="antialiased">
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
+            <a
+              href="#main-content"
+              className="fixed -top-20 focus:top-4 left-4 z-[100] bg-accent text-white px-4 py-2 rounded-lg transition-all"
+            >
+              {t("skipToContent")}
+            </a>
             {/* Navigation */}
             <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
               <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
-                  <a href="#" className="text-xl font-bold">
+                  <Link
+                    href="/"
+                    className="text-xl font-bold"
+                    aria-label={t("home")}
+                  >
                     Portfolio
-                  </a>
+                  </Link>
                   <div className="flex items-center gap-4">
                     <LanguageSwitcher />
                     <ThemeToggle />
@@ -80,9 +91,7 @@ export default async function LocaleLayout({
               <div className="max-w-6xl mx-auto text-center text-muted text-sm">
                 <p>
                   © {new Date().getFullYear()} Olaf Koziara{" "}
-                  {locale === "en"
-                    ? "All rights reserved."
-                    : "Wszelkie prawa zastrzeżone."}
+                  {t("allRightsReserved")}
                 </p>
               </div>
             </footer>
