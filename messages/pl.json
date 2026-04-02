@@ -1,4 +1,11 @@
 {
+  "common": {
+    "skipToContent": "Przejdź do treści",
+    "home": "Strona główna portfolio",
+    "languageEn": "Wybierz angielski",
+    "languagePl": "Wybierz polski",
+    "allRightsReserved": "Wszelkie prawa zastrzeżone."
+  },
   "nav": {
     "hero": "Start",
     "skills": "Umiejętności",

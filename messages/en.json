@@ -1,4 +1,11 @@
 {
+  "common": {
+    "skipToContent": "Skip to content",
+    "home": "Portfolio Home",
+    "languageEn": "Select English",
+    "languagePl": "Select Polish",
+    "allRightsReserved": "All rights reserved."
+  },
   "nav": {
     "hero": "Home",
     "skills": "Skills",
