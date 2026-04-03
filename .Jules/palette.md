@@ -1,0 +1,3 @@
+## 2025-05-14 - [Skip to Content Pattern]
+**Learning:** When implementing 'Skip to content' links in Tailwind 4, the 'off-screen until focus' pattern (e.g., `fixed -top-20 focus:top-4`) is more reliable for consistent visual styling on focus than toggling the `sr-only` class, which can lead to layout overlapping or missing backgrounds in some browsers/locales. Additionally, the target element (e.g., `<main id="main-content">`) should have `outline-none` to prevent a persistent focus ring from appearing around the entire content area after the skip link is clicked.
+**Action:** Use the `fixed -top-20 focus:top-4` pattern for skip links and apply `outline-none` to the target element.
