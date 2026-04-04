@@ -45,7 +45,11 @@ export default function CaseStudyPage({
   const isFormBuilderProject = projectKey === "gkpge-formbuilder";
 
   return (
-    <div className="min-h-screen bg-background">
+    <main
+      id="main-content"
+      tabIndex={-1}
+      className="min-h-screen bg-background outline-none"
+    >
       {/* Hero Section */}
       <CaseStudyHero
         title={projectData.title}
@@ -137,6 +141,6 @@ export default function CaseStudyPage({
           </motion.button>
         </div>
       </section>
-    </div>
+    </main>
   );
 }
