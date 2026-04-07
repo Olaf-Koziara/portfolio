@@ -1,4 +1,15 @@
 {
+  "common": {
+    "skipToContent": "Skip to content",
+    "themeToggle": {
+      "dark": "Switch to dark theme",
+      "light": "Switch to light theme"
+    },
+    "languageSwitcher": {
+      "en": "Switch to English",
+      "pl": "Switch to Polish"
+    }
+  },
   "nav": {
     "hero": "Home",
     "skills": "Skills",
