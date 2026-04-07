@@ -1,4 +1,15 @@
 {
+  "common": {
+    "skipToContent": "Przejdź do treści",
+    "themeToggle": {
+      "dark": "Przełącz na tryb ciemny",
+      "light": "Przełącz na tryb jasny"
+    },
+    "languageSwitcher": {
+      "en": "Zmień na angielski",
+      "pl": "Zmień na polski"
+    }
+  },
   "nav": {
     "hero": "Start",
     "skills": "Umiejętności",
