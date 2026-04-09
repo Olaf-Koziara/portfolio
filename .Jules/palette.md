@@ -1,0 +1,3 @@
+## 2025-05-14 - Accessible Skip-to-Content Implementation
+**Learning:** In Tailwind 4, using an off-screen positioning strategy (`fixed -top-20 focus:top-4`) for "Skip to Content" links is more reliable for ensuring consistent focus visibility across locales than toggling `sr-only`. Additionally, adding `outline-none` to the target container (e.g., `<main>`) prevents a distracting focus ring from appearing around the entire page content after the jump, while still allowing assistive technologies to move focus correctly.
+**Action:** Always apply `outline-none` and `tabIndex={-1}` to the main content target when implementing skip links to maintain a clean visual experience post-navigation.
