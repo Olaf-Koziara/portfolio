@@ -518,5 +518,10 @@
         }
       ]
     }
+  },
+  "common": {
+    "skipToContent": "Przejdź do treści",
+    "languageEn": "Angielski",
+    "languagePl": "Polski"
   }
 }
