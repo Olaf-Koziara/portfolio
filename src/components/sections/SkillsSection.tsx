@@ -46,6 +46,7 @@ export default function SkillsSection() {
             <motion.div
               key={skill.name}
               variants={item}
+              custom={index}
               whileHover={{ scale: 1.05, y: -5 }}
               className="bg-card-bg border border-border rounded-xl p-6 text-center hover:bg-card-hover hover:shadow-lg cursor-default flex flex-col items-center gap-3"
             >
