@@ -161,6 +161,9 @@
   "footer": {
     "rights": "Wszelkie prawa zastrzeżone."
   },
+  "common": {
+    "skipToContent": "Przejdź do treści"
+  },
   "caseStudy": {
     "backToProjects": "Powrót do Projektów",
     "overview": "Przegląd",
