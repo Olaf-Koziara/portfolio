@@ -1,4 +1,10 @@
 {
+  "common": {
+    "skipToContent": "Skip to content",
+    "languageEn": "English",
+    "languagePl": "Polish",
+    "toggleTheme": "Toggle theme"
+  },
   "nav": {
     "hero": "Home",
     "skills": "Skills",
