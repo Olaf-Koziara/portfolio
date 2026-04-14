@@ -8,6 +8,12 @@
     "about": "O mnie",
     "contact": "Kontakt"
   },
+  "common": {
+    "skipToContent": "Przejdź do treści",
+    "languageEn": "Język angielski",
+    "languagePl": "Język polski",
+    "toggleTheme": "Przełącz motyw"
+  },
   "hero": {
     "greeting": "Cześć, jestem",
     "name": "Olaf Koziara",

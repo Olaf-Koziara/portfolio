@@ -45,7 +45,11 @@ export default function CaseStudyPage({
   const isFormBuilderProject = projectKey === "gkpge-formbuilder";
 
   return (
-    <div className="min-h-screen bg-background">
+    <main
+      id="main-content"
+      tabIndex={-1}
+      className="min-h-screen bg-background outline-none"
+    >
       {/* Hero Section */}
       <CaseStudyHero
         title={projectData.title}
@@ -129,7 +133,7 @@ export default function CaseStudyPage({
         <div className="max-w-7xl mx-auto text-center">
           <motion.button
             onClick={handleBack}
-            className="px-8 py-4 bg-accent text-white rounded-xl hover:bg-accent-hover transition-colors text-lg font-medium"
+            className="px-8 py-4 bg-accent text-white rounded-xl hover:bg-accent-hover transition-colors text-lg font-medium cursor-pointer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -137,6 +141,6 @@ export default function CaseStudyPage({
           </motion.button>
         </div>
       </section>
-    </div>
+    </main>
   );
 }
