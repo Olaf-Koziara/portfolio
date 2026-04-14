@@ -8,6 +8,12 @@
     "about": "About",
     "contact": "Contact"
   },
+  "common": {
+    "skipToContent": "Skip to content",
+    "languageEn": "English language",
+    "languagePl": "Polish language",
+    "toggleTheme": "Toggle theme"
+  },
   "hero": {
     "greeting": "Hi, I'm",
     "name": "Olaf Koziara",
