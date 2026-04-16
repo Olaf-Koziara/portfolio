@@ -1,0 +1,3 @@
+## 2025-05-14 - Robust 'Skip to Content' Implementation
+**Learning:** In Next.js with Tailwind 4, the "off-screen until focus" pattern (e.g., `fixed -top-20 focus:top-4`) is significantly more reliable for 'Skip to Content' links than toggling the `sr-only` class. Toggling `sr-only` can sometimes cause layout overlap or missing backgrounds in specific browsers. Additionally, targeting a `<main>` element with `tabIndex={-1}` and `outline-none` is essential to ensure screen readers land correctly without creating a visible focus ring around the entire content area.
+**Action:** Use fixed positioning to hide skip links off-screen and transition them into view on focus. Always pair the link with a properly identified `<main>` target that handles programmatic focus silently.
