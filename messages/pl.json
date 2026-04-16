@@ -158,6 +158,12 @@
       "send": "Wyślij Wiadomość"
     }
   },
+  "common": {
+    "skipToContent": "Przejdź do treści",
+    "languageEn": "Język angielski",
+    "languagePl": "Język polski",
+    "toggleTheme": "Przełącz motyw"
+  },
   "footer": {
     "rights": "Wszelkie prawa zastrzeżone."
   },

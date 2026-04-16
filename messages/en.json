@@ -158,6 +158,12 @@
       "send": "Send Message"
     }
   },
+  "common": {
+    "skipToContent": "Skip to content",
+    "languageEn": "English language",
+    "languagePl": "Polish language",
+    "toggleTheme": "Toggle theme"
+  },
   "footer": {
     "rights": "All rights reserved."
   },
