@@ -161,6 +161,13 @@
   "footer": {
     "rights": "Wszelkie prawa zastrzeżone."
   },
+  "common": {
+    "skipToContent": "Przejdź do treści",
+    "languageEn": "Angielski",
+    "languagePl": "Polski",
+    "toggleTheme": "Zmień motyw",
+    "languageSwitcher": "Przełącznik języka"
+  },
   "caseStudy": {
     "backToProjects": "Powrót do Projektów",
     "overview": "Przegląd",

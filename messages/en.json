@@ -161,6 +161,13 @@
   "footer": {
     "rights": "All rights reserved."
   },
+  "common": {
+    "skipToContent": "Skip to content",
+    "languageEn": "English",
+    "languagePl": "Polish",
+    "toggleTheme": "Toggle theme",
+    "languageSwitcher": "Language switcher"
+  },
   "caseStudy": {
     "backToProjects": "Back to Projects",
     "overview": "Overview",
