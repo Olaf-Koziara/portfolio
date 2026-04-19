@@ -1,4 +1,11 @@
 {
+  "common": {
+    "languageSwitcher": "Wybór języka",
+    "languageEn": "Angielski",
+    "languagePl": "Polski",
+    "toggleTheme": "Zmień motyw",
+    "profileAlt": "Olaf Koziara - Frontend Developer"
+  },
   "nav": {
     "hero": "Start",
     "skills": "Umiejętności",
