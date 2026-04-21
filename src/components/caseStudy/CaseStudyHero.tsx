@@ -91,8 +91,14 @@ export function CaseStudyHero({
               </motion.div>
             )}
           </div>
-          <div>
-            <Image alt={title} src={`/${title.replaceAll(" ", "")}.webp`} />
+          <div className="relative hidden lg:block flex-1 min-h-[400px]">
+            <Image
+              alt={title}
+              src={`/${title.replaceAll(" ", "")}.webp`}
+              fill
+              className="object-contain"
+              priority
+            />
           </div>
         </motion.div>
       </div>

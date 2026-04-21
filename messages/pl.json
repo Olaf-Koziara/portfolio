@@ -518,5 +518,9 @@
         }
       ]
     }
+  },
+  "common": {
+    "skipToContent": "Przejdź do treści",
+    "profileAlt": "Zdjęcie profilowe Olafa Koziary"
   }
 }
