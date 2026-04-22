@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 
 export default function HeroSection() {
   const t = useTranslations("hero");
+  const tc = useTranslations("common");
 
   return (
     <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
@@ -20,8 +21,9 @@ export default function HeroSection() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             src="/profile.webp"
+            alt={tc("profileAlt")}
             className="w-70 rounded-full my-4"
-          ></motion.img>
+          />
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
