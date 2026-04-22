@@ -518,5 +518,13 @@
         }
       ]
     }
+  },
+  "common": {
+    "skipToContent": "Przejdź do treści",
+    "languageSwitcher": "Przełącznik języka",
+    "languageEn": "Angielski",
+    "languagePl": "Polski",
+    "toggleTheme": "Przełącz motyw",
+    "profileAlt": "Zdjęcie profilowe Olafa Koziary"
   }
 }
