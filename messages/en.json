@@ -1,4 +1,12 @@
 {
+  "common": {
+    "skipToContent": "Skip to content",
+    "languageSwitcher": "Language switcher",
+    "languageEn": "English",
+    "languagePl": "Polish",
+    "toggleTheme": "Toggle theme",
+    "profileAlt": "Olaf Koziara - Frontend Developer"
+  },
   "nav": {
     "hero": "Home",
     "skills": "Skills",
