@@ -1,4 +1,12 @@
 {
+  "common": {
+    "skipToContent": "Przejdź do treści",
+    "toggleTheme": "Zmień motyw",
+    "languageSwitcher": "Przełącznik języka",
+    "languageEn": "Angielski",
+    "languagePl": "Polski",
+    "profileAlt": "Zdjęcie profilowe Olafa Koziary"
+  },
   "nav": {
     "hero": "Start",
     "skills": "Umiejętności",

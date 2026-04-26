@@ -1,4 +1,12 @@
 {
+  "common": {
+    "skipToContent": "Skip to content",
+    "toggleTheme": "Toggle theme",
+    "languageSwitcher": "Language switcher",
+    "languageEn": "English",
+    "languagePl": "Polish",
+    "profileAlt": "Olaf Koziara profile picture"
+  },
   "nav": {
     "hero": "Home",
     "skills": "Skills",
